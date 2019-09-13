@@ -1,0 +1,53 @@
+{
+  "name": "react-star-picker",
+  "version": "0.1.0",
+  "description": "A star-rating component made with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmkari/react-star-picker.git"
+  },
+  "keywords": [
+    "star",
+    "rating",
+    "input",
+    "review",
+    "ratings",
+    "react"
+  ],
+  "author": "Miko Kari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmkari/react-star-picker/issues"
+  },
+  "homepage": "https://github.com/mmkari/react-star-picker#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "flow-bin": "^0.107.0",
+    "prettier-eslint": "^9.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "polished": "^3.4.1",
+    "styled-components": "^4.3.2"
+  }
+}
