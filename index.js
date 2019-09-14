@@ -1,1 +1,1 @@
-export { default as testFun } from './src/test';
+export { testFun } from './src';
