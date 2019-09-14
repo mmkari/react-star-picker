@@ -1,1 +1,1 @@
-export testFun from './src/test';
+export default from './src/test';
