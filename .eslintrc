@@ -1,8 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "windows"],
+    "prettier/prettier": ["error"],
+    "react/state-in-constructor": ["error", "never"],
+    "react/static-property-placement": ["error", "static public field"]
   }
 }
