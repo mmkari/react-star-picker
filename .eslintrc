@@ -6,6 +6,11 @@
     "linebreak-style": ["error", "windows"],
     "prettier/prettier": ["error"],
     "react/state-in-constructor": ["error", "never"],
-    "react/static-property-placement": ["error", "static public field"]
+    "react/static-property-placement": ["error", "static public field"],
+    "react/require-default-props": [0, { "forbidDefaultForRequired": false }],
+    "react/default-props-match-prop-types": [
+      0,
+      { "allowRequiredDefaults": false }
+    ]
   }
 }
