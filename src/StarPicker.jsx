@@ -7,11 +7,11 @@ import StarPickerButton from './StarPickerButton';
 
 import type { StarPickerProps } from './types';
 
-const valueToIndex = (value?: ?number, halfStars: boolean) => {
+const valueToIndex = (value?: ?number, halfStars: boolean): number => {
   if (!value) return -1;
   return halfStars ? value * 2 - 1 : value - 1;
 };
-const indexToValue = (index: number, halfStars: boolean) => {
+const indexToValue = (index: number, halfStars: boolean): number => {
   return halfStars ? (index + 1) / 2.0 : index + 1;
 };
 
@@ -20,7 +20,7 @@ const formatValue = (
   previousValue: ?number,
   halfStars: boolean,
   doubleTapResets: boolean
-) => {
+): ?number => {
   const newValue = indexToValue(index, halfStars);
   if (doubleTapResets && newValue === previousValue) {
     return null;
@@ -47,7 +47,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     doubleTapResets: false,
   };
 
-  updateValue = (index: number) => {
+  updateValue = (index: number): void => {
     const { onChange, value, halfStars, doubleTapResets, name } = this.props;
 
     if (onChange) {
@@ -55,7 +55,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     }
   };
 
-  onHoverChange = (index: ?number) => {
+  onHoverChange = (index: ?number): void => {
     this.setState({ hoverIndex: index });
   };
 
