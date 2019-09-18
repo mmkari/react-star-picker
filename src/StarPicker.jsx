@@ -45,6 +45,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     halfStars: false,
     starRenderer: defaultStarRenderer,
     doubleTapResets: false,
+    defaultStarRendererProps: {},
   };
 
   updateValue = (index: number): void => {

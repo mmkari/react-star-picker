@@ -6,8 +6,8 @@ type DefaultRendererProps = {|
   colorInactive?: string,
   charCodeSelected?: number,
   charCodeUnselected?: number,
-  colorBlendFractionAdd?: number,
-  colorBlendFractionRemove?: number,
+  colorBlendFractionAdd?: ?number,
+  colorBlendFractionRemove?: ?number,
   colorTransitionDuration?: number,
 |};
 
@@ -16,8 +16,8 @@ type DefaultRendererPropsWithDefaults = {|
   colorInactive: string,
   charCodeSelected: number,
   charCodeUnselected: number,
-  colorBlendFractionAdd: number,
-  colorBlendFractionRemove: number,
+  colorBlendFractionAdd: ?number,
+  colorBlendFractionRemove: ?number,
   colorTransitionDuration: number,
 |};
 
@@ -64,8 +64,8 @@ type StarPickerProps = {|
   ...SharedProps,
   onChange: (index: ?number, name?: string) => void,
   value: ?number,
-  name: string,
-  className: string,
+  name?: string,
+  className?: string,
   numberStars: number,
   doubleTapResets: boolean,
 |};
