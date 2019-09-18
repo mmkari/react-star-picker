@@ -159,7 +159,8 @@ _defineProperty(StarPicker, "defaultProps", {
   disabled: false,
   halfStars: false,
   starRenderer: _defaultStarRenderer["default"],
-  doubleTapResets: false
+  doubleTapResets: false,
+  defaultStarRendererProps: {}
 });
 
 var _default = StarPicker;
