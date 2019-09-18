@@ -6,8 +6,12 @@
   "scripts": {
     "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel src --out-dir dist"
+    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "build-pages": "./node_modules/.bin/babel examples --out-dir dist-examples",
+    "predeploy": "npm run build-pages",
+    "deploy": "gh-pages -d dist-examples"
   },
+  "homepage": "https://github.com/mmkari/react-star-picker#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmkari/react-star-picker.git"
@@ -25,7 +29,6 @@
   "bugs": {
     "url": "https://github.com/mmkari/react-star-picker/issues"
   },
-  "homepage": "https://github.com/mmkari/react-star-picker#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
@@ -46,6 +49,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "flow-bin": "^0.107.0",
+    "gh-pages": "^2.1.1",
     "prettier-eslint": "^9.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
