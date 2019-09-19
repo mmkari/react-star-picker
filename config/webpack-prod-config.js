@@ -17,7 +17,7 @@ module.exports = merge(common, {
   output: {
     filename: "[chunkhash]_[name].js",
     path: paths.appBuild,
-    publicPath: "/"
+    publicPath: "/react-star-picker/"
   },
   plugins: [
     // minify JS
