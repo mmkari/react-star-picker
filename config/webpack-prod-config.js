@@ -28,7 +28,7 @@ module.exports = merge(common, {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    // Extract text/(s)css from a bundle, or bundles, into a separate file.
+    // Extract styles from bundles into separate file
     new ExtractTextPlugin("styles.css")
   ],
   module: {
@@ -36,7 +36,6 @@ module.exports = merge(common, {
       {
         // look for .js or .jsx files
         test: /\.(js|jsx)$/,
-        // in the `src` directory
         include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
         exclude: /node_modules/,
         use: {
@@ -50,26 +49,9 @@ module.exports = merge(common, {
       {
         // look for .css or .scss files.
         test: /\.(css|scss)$/,
-        // in the `src` directory
         include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            {
-              loader: "css-loader",
-              options: {
-                discardDuplicates: true,
-                sourceMap: false,
-                // This enables local scoped CSS based in CSS Modules spec
-                modules: true,
-                // generates a unique name for each class (e.g. app__app___2x3cr)
-                localIdentName: "[name]__[local]___[hash:base64:5]"
-              }
-            }
-            // Add additional loaders here. (e.g. sass-loader)
-          ]
-        })
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },

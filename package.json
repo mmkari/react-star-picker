@@ -11,7 +11,7 @@
     "predeploy": "npm run build-pages",
     "deploy": "gh-pages -d dist-examples",
     "clean-examples": "rm -rf dist-examples/*",
-    "build-examples": "npm run clean-examples; webpack --config config/webpack-prod-config.js",
+    "build-examples": "npm run clean-examples && webpack --config config/webpack-prod-config.js",
     "start:dev": "node config/webpack-dev-server.js"
   },
   "homepage": "https://github.com/mmkari/react-star-picker#readme",
