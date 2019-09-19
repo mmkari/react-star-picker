@@ -7,12 +7,13 @@
     "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/babel src --out-dir dist",
-    "build-pages": "./node_modules/.bin/babel examples --out-dir dist-examples",
+    "start:dev": "node config/webpack-dev-server.js",
+    "clean-examples": "rm -rf dist-examples/*",
+    "build-pages": "npm run clean-examples && webpack --config config/webpack-prod-config.js",
     "predeploy": "npm run build-pages",
     "deploy": "gh-pages -d dist-examples",
-    "clean-examples": "rm -rf dist-examples/*",
-    "build-examples": "npm run clean-examples && webpack --config config/webpack-prod-config.js",
-    "start:dev": "node config/webpack-dev-server.js"
+    "start:prod": "npm run build-pages && serve dist-examples",
+    "start:prod-nb": "serve dist-examples"
   },
   "homepage": "https://github.com/mmkari/react-star-picker#readme",
   "repository": {
@@ -62,6 +63,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13",
+    "serve": "^11.1.0",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.40.2",
