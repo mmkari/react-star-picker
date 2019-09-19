@@ -15,7 +15,7 @@
     "start:prod": "npm run build-pages && serve dist-examples",
     "start:prod-nb": "serve dist-examples"
   },
-  "homepage": "https://github.com/mmkari/react-star-picker#readme",
+  "homepage": "https://mmkari.github.io/react-star-picker/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmkari/react-star-picker.git"
