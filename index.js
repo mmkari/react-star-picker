@@ -1,1 +1,1 @@
-export { testFun } from './src';
+export { testFun, StarPicker } from './src';

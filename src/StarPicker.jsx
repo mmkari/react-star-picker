@@ -5,7 +5,25 @@ import classnames from 'classnames';
 import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
-import type { StarPickerProps } from './types';
+// import type { StarPickerProps } from './types';
+import type { DefaultRendererProps, StarRendererFunction } from './types';
+
+type SharedProps = {|
+  defaultStarRendererProps: DefaultRendererProps,
+  starRenderer: StarRendererFunction,
+  halfStars: boolean,
+  disabled: boolean,
+  size: number,
+|};
+type StarPickerProps = {|
+  ...SharedProps,
+  onChange: (index: ?number, name?: string) => void,
+  value: ?number,
+  name?: string,
+  className?: string,
+  numberStars: number,
+  doubleTapResets: boolean,
+|};
 
 const valueToIndex = (value?: ?number, halfStars: boolean): number => {
   if (!value) return -1;
