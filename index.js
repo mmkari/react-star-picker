@@ -1,1 +1,1 @@
-export { testFun, StarPicker } from './src';
+export { testFun, StarPicker as default } from './src';
