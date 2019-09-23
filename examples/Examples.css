@@ -1,12 +1,3 @@
 .Examples {
   text-align: center;
 }
-
-.Examples .StarPicker.rating-enlarge .DefaultStarComponent {
-  /* background: green; */
-  transition: transform 0.2s ease-in-out, color 0.4s;
-}
-
-.Examples .StarPicker.rating-enlarge .DefaultStarComponent.selected {
-  transform: scale(1.2);
-}

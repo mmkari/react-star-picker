@@ -1,28 +1,23 @@
+The default styles are easily overriden with external CSS.
+
+```css { "file": "../Examples_overrides.css", "static": "true" }
+```
+
+The example below uses the `enlargeStar` class which has a style defined in the above CSS definitions.
+
 ```jsx
 import React from 'react';
-import styled from 'styled-components';
 import StarPicker from 'react-star-picker';
 
-const StyledStarPicker = styled(StarPicker)`
-  .DefaultStarComponent {
-    transition: transform 0.2s ease-in-out, color 0.4s;
-  }
-  .DefaultStarComponent.selected {
-    transform: scale(1.2);
-  }
-`;
-
 initialState = { value: null };
-<StyledStarPicker
-  name="rating5"
+<StarPicker
+  className="enlargeStar"
   value={state.value}
   onChange={(value) => setState({ value })}
   doubleTapResets
   defaultStarRendererProps={{
-    colorInactive: '#e4e4e4',
     colorBlendFractionAdd: null,
     colorBlendFractionRemove: null,
-    charCodeUnselected: 9733,
   }}
 />;
 ```

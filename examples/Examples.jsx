@@ -1,10 +1,84 @@
 // @flow
 import * as React from 'react';
 import './Examples.css';
+import './Examples_overrides.css';
+import classnames from 'classnames';
 
 import styled, { keyframes } from 'styled-components';
 import StarPicker from '../src/StarPicker';
 import type { StarRendererProps } from '../src/types';
+
+const LabelComp = ({
+  type,
+  label,
+}: {
+  type: 'right' | 'left',
+  label: ?string,
+}) => (
+  <div className={classnames('InputWithLabel-label', type)}>
+    {label && type === 'right' && <hr />}
+    {label}
+    {label && type === 'left' && <hr />}
+  </div>
+);
+
+const InputWithLabel = ({
+  label,
+  children,
+  placement = 'left',
+  className,
+}: {
+  label: string,
+  children: React.Node,
+  placement: 'left' | 'right',
+  className?: string,
+}) => {
+  return (
+    <div className={classnames('InputWithLabel', className, placement)}>
+      <LabelComp type="left" label={placement === 'left' && label} />
+      <div className="InputWithLabel-children">{children}</div>
+      <LabelComp type="right" label={placement === 'right' && label} />
+    </div>
+  );
+};
+
+const StyledInputWithLabel = styled(InputWithLabel)`
+  display: flex;
+  align-items: center;
+  color: transparent;
+  transition: color 1s;
+
+  .InputWithLabel-label {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    &.right {
+      margin-right: 1em;
+    }
+    &.left {
+      margin-left: 1em;
+    }
+
+    hr {
+      flex-grow: 1;
+      height: 1px;
+      border: 0;
+      background-color: transparent;
+      transition: background-color 1s;
+
+      margin: 0 5px;
+    }
+  }
+  :hover {
+    color: lightgray;
+
+    hr {
+      background-color: lightgray;
+    }
+  }
+`;
 
 const rotate = keyframes`
   0% {
@@ -66,11 +140,11 @@ type State = {
 };
 class Examples extends React.Component<Props, State> {
   state = {
-    rating1: null,
-    rating2: null,
-    rating3: null,
-    rating4: null,
-    rating5: null,
+    rating1: 4,
+    rating2: 3.5,
+    rating3: 3,
+    rating4: 3.5,
+    rating5: 5,
   };
 
   setValue = (value: ?number, name?: string) => {
@@ -84,76 +158,92 @@ class Examples extends React.Component<Props, State> {
 
     return (
       <div className="Examples">
-        <StarPicker
-          name="rating1"
-          value={rating1}
-          onChange={this.setValue}
-          defaultStarRendererProps={{
-            colorActive: '#df00ff',
-            colorInactive: '#ccccff',
-            colorBlendFractionAdd: 0.5,
-            colorBlendFractionRemove: 0.6,
-            charCodeUnselected: 9734,
-          }}
-        />
-        <StarPicker
-          name="rating2"
-          value={rating2}
-          onChange={this.setValue}
-          halfStars
-          size={50}
-          defaultStarRendererProps={{
-            colorActive: 'orange',
-            colorBlendFractionRemove: 0.4,
-            charCodeUnselected: 9734,
-          }}
-        />
+        <StyledInputWithLabel label="Customizable color mixings">
+          <StarPicker
+            name="rating1"
+            value={rating1}
+            onChange={this.setValue}
+            defaultStarRendererProps={{
+              colorActive: '#df00ff',
+              colorInactive: '#ccccff',
+              colorBlendFractionAdd: 0.5,
+              colorBlendFractionRemove: 0.6,
+              charCodeUnselected: 9734,
+            }}
+          />
+        </StyledInputWithLabel>
 
-        <StarPicker
-          name="rating3"
-          value={rating3}
-          onChange={this.setValue}
-          numberStars={4}
-          starRenderer={dollarRenderer}
-        />
-        <StarPicker
-          name="rating4"
-          value={rating4}
-          onChange={this.setValue}
-          halfStars
-          size={70}
-          defaultStarRendererProps={{
-            colorActive: '#ff3333',
-            colorInactive: '#e4e4e4',
-            colorBlendFractionRemove: 0.5,
-            charCodeSelected: 10029,
-            charCodeUnselected: 9733,
-          }}
-        />
+        <StyledInputWithLabel label="Half-star support">
+          <StarPicker
+            name="rating2"
+            value={rating2}
+            onChange={this.setValue}
+            halfStars
+            size={50}
+            defaultStarRendererProps={{
+              colorActive: 'orange',
+              colorBlendFractionRemove: 0.4,
+              charCodeUnselected: 9734,
+            }}
+          />
+        </StyledInputWithLabel>
 
-        <StarPicker
-          name="rating5"
-          className="rating-enlarge"
-          value={rating5}
-          onChange={this.setValue}
-          doubleTapResets
-          defaultStarRendererProps={{
-            colorInactive: '#e4e4e4',
-            colorBlendFractionAdd: null,
-            colorBlendFractionRemove: null,
-            charCodeUnselected: 9733,
-          }}
-        />
+        <StyledInputWithLabel
+          label="Custom star renderer with an SVG"
+          placement="right"
+        >
+          <StarPicker
+            name="rating3"
+            value={rating3}
+            onChange={this.setValue}
+            numberStars={4}
+            starRenderer={dollarRenderer}
+          />
+        </StyledInputWithLabel>
 
-        <StarPicker
-          value={2}
-          onChange={this.setValue}
-          numberStars={3}
-          disabled
-          defaultStarRendererProps={{
-            colorActive: 'blue',
-          }}
-        />
+        <StyledInputWithLabel
+          label="Customizable star characters"
+          placement="right"
+        >
+          <StarPicker
+            name="rating4"
+            value={rating4}
+            onChange={this.setValue}
+            halfStars
+            size={70}
+            defaultStarRendererProps={{
+              colorActive: '#ff3333',
+              colorBlendFractionRemove: 0.5,
+              charCodeSelected: 10029,
+            }}
+          />
+        </StyledInputWithLabel>
+
+        <StyledInputWithLabel label="Customizable style" placement="right">
+          <StarPicker
+            name="rating5"
+            className="enlargeStar"
+            value={rating5}
+            onChange={this.setValue}
+            doubleTapResets
+            defaultStarRendererProps={{
+              colorBlendFractionAdd: null,
+              colorBlendFractionRemove: null,
+            }}
+          />
+        </StyledInputWithLabel>
+
+        <StyledInputWithLabel label="(disabled)">
+          <StarPicker
+            value={2}
+            onChange={this.setValue}
+            numberStars={3}
+            disabled
+            defaultStarRendererProps={{
+              colorActive: 'blue',
+            }}
+          />
+        </StyledInputWithLabel>
       </div>
     );
   }

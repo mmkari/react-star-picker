@@ -1,68 +1,31 @@
 // @flow
 import * as React from 'react';
-import classnames from 'classnames';
-import styled from 'styled-components';
-import { mix } from 'polished';
+import DefaultStarComponent from './defaultStarRendererStarComponent';
 
-import type { StarRendererProps, DefaultStarComponentProps } from './types';
+// import type { StarRendererProps, DefaultStarComponentProps } from './types';
 
-const DefaultStarComponent = ({
-  index,
-  selectedIndex,
-  hoverIndex,
-  className,
-  charCodeSelected,
-  charCodeUnselected,
-}: DefaultStarComponentProps) => {
-  const selected = index <= selectedIndex;
-  const nextSelection = hoverIndex != null && index <= hoverIndex;
-  const hasHover = hoverIndex != null;
-
-  return (
-    <div
-      className={classnames(className, 'DefaultStarComponent', {
-        selected,
-        newSelection: hasHover && nextSelection && !selected,
-        lostSelection: hasHover && selected && !nextSelection,
-      })}
-    >
-      {selected
-        ? String.fromCharCode(charCodeSelected)
-        : String.fromCharCode(charCodeUnselected)}
-    </div>
-  );
-};
-
-const StyledDefaultStarComponent = styled(DefaultStarComponent)`
-  transition: color ${(props) => `${props.colorTransitionDuration}s`};
-  color: ${(props) => props.colorInactive};
-
-  &.selected {
-    color: ${(props) => props.colorActive};
-  }
-
-  &.newSelection {
-    color: ${(props) =>
-      props.colorBlendFractionAdd
-        ? mix(
-            props.colorBlendFractionAdd,
-            props.colorActive,
-            props.colorInactive
-          )
-        : props.colorInactive};
-  }
-
-  &.lostSelection {
-    color: ${(props) =>
-      props.colorBlendFractionRemove
-        ? mix(
-            props.colorBlendFractionRemove,
-            props.colorInactive,
-            props.colorActive
-          )
-        : props.colorActive};
-  }
-`;
+type DefaultRendererProps = {|
+  colorActive?: string,
+  colorInactive?: string,
+  charCodeSelected?: number,
+  charCodeUnselected?: number,
+  colorBlendFractionAdd?: ?number,
+  colorBlendFractionRemove?: ?number,
+  colorTransitionDuration?: number,
+|};
+type GenericRendererProps = {|
+  /** the zero based index of this star */
+  index: number,
+  /** index of the star matching the current rating  */
+  selectedIndex: number,
+  /** index of the star currently hovered on */
+  hoverIndex: ?number,
+  size: number,
+|};
+type StarRendererProps = {|
+  ...GenericRendererProps,
+  defaultStarRendererProps: DefaultRendererProps,
+|};
 
 const defaultStarRenderer = ({
   index,
@@ -77,13 +40,13 @@ const defaultStarRenderer = ({
     colorInactive = '#e4e4e4', // a light gray
     charCodeSelected = 9733,
     charCodeUnselected = 9733,
-    colorBlendFractionAdd = 0.3,
-    colorBlendFractionRemove = 0.3,
+    colorBlendFractionAdd = 0.2,
+    colorBlendFractionRemove = 0.5,
     colorTransitionDuration = 0.2,
   } = defaultStarRendererProps;
 
   return (
-    <StyledDefaultStarComponent
+    <DefaultStarComponent
       index={index}
       selectedIndex={selectedIndex}
       hoverIndex={hoverIndex}

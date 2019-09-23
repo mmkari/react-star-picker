@@ -1,1 +1,6 @@
-export { testFun, StarPicker as default } from './src';
+export {
+  testFun,
+  StarPicker as default,
+  defaultStarRenderer,
+  DefaultStarRendererStarComponent,
+} from './src';

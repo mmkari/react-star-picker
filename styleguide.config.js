@@ -1,14 +1,24 @@
 const path = require('path');
+const fs = require('fs');
+const wpc = require('./config/webpack-prod-config.js');
 
 module.exports = {
   sections: [
     {
       name: 'Introduction',
       content: 'src/StarPicker.md',
+      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      components: [
+        'src/StarPicker.jsx',
+        'src/defaultStarRenderer.jsx',
+        'src/defaultStarRendererStarComponent.jsx',
+      ],
+      skipComponentsWithoutExample: true,
     },
     {
       name: 'Demo',
       content: 'examples/Examples.md',
+      exampleMode: 'hide',
     },
     {
       name: 'Documentation',
@@ -34,6 +44,8 @@ module.exports = {
       // components: 'dist/ui/*.js',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      // sectionDepth: 1,
+
       sections: [
         {
           name: 'Custom StarRenderer',
@@ -53,11 +65,25 @@ module.exports = {
       ],
     },
   ],
-  webpackConfig: require('./config/webpack-prod-config.js'),
+  webpackConfig: wpc,
   components: 'src/**/*.{js,jsx}',
   styleguideDir: 'styleguidistHtml',
   pagePerSection: true,
   moduleAliases: {
     'react-star-picker': path.resolve(__dirname, 'index.js'),
+  },
+  require: [path.join(__dirname, 'examples/Examples_overrides.css')],
+  updateExample(props, exampleFilePath) {
+    const { settings, lang } = props;
+    if (typeof settings.file === 'string') {
+      const filepath = path.resolve(exampleFilePath, settings.file);
+      delete settings.file;
+      return {
+        content: fs.readFileSync(filepath, 'utf8'),
+        settings,
+        lang,
+      };
+    }
+    return props;
   },
 };

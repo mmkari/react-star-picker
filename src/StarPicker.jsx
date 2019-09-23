@@ -6,22 +6,58 @@ import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
 // import type { StarPickerProps } from './types';
-import type { DefaultRendererProps, StarRendererFunction } from './types';
+// import type { StarRendererFunction } from './types';
+
+// NOTE: Flowtypes must be defined in the component's file for react-docgen to pick them up for styleguide
+type DefaultRendererProps = {|
+  colorActive?: string,
+  colorInactive?: string,
+  charCodeSelected?: number,
+  charCodeUnselected?: number,
+  colorBlendFractionAdd?: ?number,
+  colorBlendFractionRemove?: ?number,
+  colorTransitionDuration?: number,
+|};
+
+type GenericRendererProps = {|
+  /** the zero based index of this star */
+  index: number,
+  /** index of the star matching the current rating  */
+  selectedIndex: number,
+  /** index of the star currently hovered on */
+  hoverIndex: ?number,
+  size: number,
+|};
+type StarRendererProps = {|
+  ...GenericRendererProps,
+  defaultStarRendererProps: DefaultRendererProps,
+|};
+
+type StarRendererFunction = (StarRendererProps) => React.Node;
 
 type SharedProps = {|
+  /** props supported by the default star-renderer. Will be passed to a custom star-renderer as well */
   defaultStarRendererProps: DefaultRendererProps,
+  /** if provided, replaces the default star-renderer */
   starRenderer: StarRendererFunction,
+  /** whether to use half-star precision */
   halfStars: boolean,
+  /** whether the input is disabled */
   disabled: boolean,
+  /** the size of the "stars" */
   size: number,
 |};
 type StarPickerProps = {|
   ...SharedProps,
+  /** function called with the selected value and the input name after a new pick */
   onChange: (index: ?number, name?: string) => void,
+  /** current value of the input */
   value: ?number,
+  /** input's name, supplied to the onChange function if provided */
   name?: string,
   className?: string,
   numberStars: number,
+  /** When true, picking the existing rating clears it */
   doubleTapResets: boolean,
 |};
 

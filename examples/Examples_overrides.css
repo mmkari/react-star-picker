@@ -1,0 +1,16 @@
+/* definitions for "enlargeStar" class */
+.StarPicker.enlargeStar .DefaultStarComponent {
+  transition: transform 0.2s ease-in-out, color 0.4s;
+}
+.StarPicker.enlargeStar .DefaultStarComponent.selected {
+  text-shadow: rgb(173, 140, 6) 1px 1px 1px;
+  transform: scale(1.2);
+}
+
+/* definitions for "rotateStar" class */
+.StarPicker.rotateStar .DefaultStarComponent {
+  transition: transform 0.2s ease-in-out, color 0.4s;
+}
+.StarPicker.rotateStar .DefaultStarComponent.selected {
+  transform: rotate(-60deg);
+}
