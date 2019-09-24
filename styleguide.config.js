@@ -61,6 +61,10 @@ module.exports = {
           content: 'examples/Examples_starChars.md',
         },
         {
+          name: 'Resetting',
+          content: 'examples/Examples_doubleTap.md',
+        },
+        {
           name: 'Styling the Default Renderer',
           content: 'examples/Examples_customStyling.md',
         },

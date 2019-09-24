@@ -3,47 +3,48 @@ import * as React from 'react';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
+type LabelObject = {
+  label: string,
+  linkRef?: string,
+};
 const LabelComp = ({
   type,
-  label,
-  linkRef,
+  labelObject = {},
 }: {
   type: 'right' | 'left',
-  label: ?string,
-  linkRef?: string,
-}) => (
-  <div className={classnames('InputWithLabel-label', type)}>
-    {label && type === 'right' && <hr />}
-    {linkRef ? <a href={linkRef}>{label}</a> : label}
-    {label && type === 'left' && <hr />}
-  </div>
-);
+  labelObject?: LabelObject,
+}) => {
+  const { label, linkRef } = labelObject;
+  return (
+    <div className={classnames('InputWithLabel-label', type)}>
+      {label && type === 'right' && <hr />}
+      {linkRef ? <a href={linkRef}>{label}</a> : label}
+      {label && type === 'left' && <hr />}
+    </div>
+  );
+};
 
 const InputWithLabel = ({
-  label,
   children,
-  placement = 'left',
   className,
-  linkRef,
+  labelLeft,
+  labelRight,
 }: {
-  label: string,
   children: React.Node,
-  placement: 'left' | 'right',
   className?: string,
-  linkRef?: string,
+  labelLeft?: LabelObject,
+  labelRight?: LabelObject,
 }) => {
   return (
-    <div className={classnames('InputWithLabel', className, placement)}>
+    <div className={classnames('InputWithLabel', className)}>
       <LabelComp
         type="left"
-        label={placement === 'left' ? label : undefined}
-        linkRef={linkRef}
+        labelObject={labelLeft != null ? labelLeft : undefined}
       />
       <div className="InputWithLabel-children">{children}</div>
       <LabelComp
         type="right"
-        label={placement === 'right' ? label : undefined}
-        linkRef={linkRef}
+        labelObject={labelRight != null ? labelRight : undefined}
       />
     </div>
   );
