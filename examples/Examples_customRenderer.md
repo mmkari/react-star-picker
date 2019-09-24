@@ -1,3 +1,5 @@
+The default star-renderer can be replaced with a custom `starRenderer`:
+
 ```jsx
 import React from 'react';
 import styled, { keyframes } from 'styled-components';

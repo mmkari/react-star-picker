@@ -1,4 +1,6 @@
-Half-star precision is turned on with `halfStars={true}`:
+The `react-star-picker` component is a highly customizable star-rating component.
+
+With the default props, the component has the following form:
 
 ```jsx
 import React, { useState } from 'react';
@@ -13,15 +15,7 @@ const ParentComponent = () => {
 
   return (
     <div>
-      <StarPicker
-        onChange={onChange}
-        value={rating}
-        halfStars
-        size={50}
-        defaultStarRendererProps={{
-          colorActive: 'green',
-        }}
-      />
+      <StarPicker onChange={onChange} value={rating} />
     </div>
   );
 };

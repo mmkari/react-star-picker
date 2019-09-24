@@ -20,9 +20,9 @@ const ParentComponent = () => {
         size={70}
         defaultStarRendererProps={{
           colorActive: '#ff9a00',
-          colorInactive: '#43aea6',
-          colorBlendFractionAdd: 0.5,
-          colorBlendFractionRemove: 0.3,
+          colorInactive: '#b5c7c7',
+          colorBlendFractionAdd: 0.3,
+          colorBlendFractionRemove: 0.4,
         }}
       />
     </div>

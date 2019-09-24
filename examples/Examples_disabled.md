@@ -1,4 +1,4 @@
-To use half-star precision, simply pass the `halfStar={true}` prop to the `StarPicker`:
+To use half-star precision, simply pass the `halfStar={true}` prop to `StarPicker`:
 
 ```jsx
 import React, { useState } from 'react';
@@ -16,7 +16,7 @@ const ParentComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', 'align-items': 'center' }}>
       <StarPicker
         onChange={onChange}
         value={rating}
@@ -29,7 +29,9 @@ const ParentComponent = () => {
           charCodeUnselected: 10023,
         }}
       />
-      <button onClick={toggleDisabling}>Toggle disabling</button>
+      <button onClick={toggleDisabling} style={{ height: '100%' }}>
+        {disabled ? 'Disabled' : 'Enabled'}
+      </button>
     </div>
   );
 };

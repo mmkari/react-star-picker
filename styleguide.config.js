@@ -11,6 +11,9 @@ module.exports = {
     },
     {
       name: 'Documentation',
+      content: 'examples/Documentation.md',
+      sectionDepth: 1,
+
       sections: [
         {
           name: 'Installation',
@@ -25,7 +28,7 @@ module.exports = {
     },
     {
       name: 'Components',
-      content: 'src/StarPicker.md',
+      content: 'examples/Components.md',
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
       components: [
         'src/StarPicker.jsx',

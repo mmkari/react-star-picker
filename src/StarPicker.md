@@ -1,48 +1,69 @@
-The `react-star-picker` component is a highly customizable star-rating component.
-
-With the default props, the component has the following form:
+The `StarPicker` component supports the following props:
 
 ```jsx
-import React, { useState } from 'react';
+import React from 'react';
 import StarPicker from 'react-star-picker';
 
-const ParentComponent = () => {
-  const [rating, setRating] = useState(null);
-
-  const onChange = (value) => {
-    setRating(value);
-  };
-
+const customRenderer = ({ index, selectedIndex, defaultStarRendererProps }) => {
+  const selected = selectedIndex != null && index <= selectedIndex;
+  const { colorActive, colorInactive } = defaultStarRendererProps;
   return (
-    <div>
-      <StarPicker onChange={onChange} value={rating} />
+    <div style={{ color: selected ? colorActive : colorInactive }}>
+      {selected ? 'X' : 'O'}
     </div>
   );
 };
 
-// class ParentComponent extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       rating: null,
-//     };
-//     this.onChange = this.onChange.bind(this);
-//   }
-//   onChange(value, name) {
-//     this.setState({ [name]: value });
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <StarPicker
-//           name="rating"
-//           onChange={this.onChange}
-//           value={this.state.rating}
-//         />
-//       </div>
-//     );
-//   }
-// }
+class ParentComponent extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      rating: null,
+      useDefault: false,
+    };
+    this.onChange = this.onChange.bind(this);
+    this.toggleDefaultRenderer = this.toggleDefaultRenderer.bind(this);
+  }
+  onChange(value, name) {
+    this.setState({ [name]: value });
+  }
+  toggleDefaultRenderer() {
+    this.setState((prevState) => ({ useDefault: !prevState.useDefault }));
+  }
+  render() {
+    return (
+      <div style={{ display: 'flex', 'align-items': 'center' }}>
+        <StarPicker
+          name="rating"
+          onChange={this.onChange}
+          value={this.state.rating}
+          className={'CustomStarPicker'}
+          disabled={false}
+          doubleTapResets={true}
+          halfStars={false}
+          numberStars={4}
+          size={70}
+          defaultStarRendererProps={{
+            colorActive: '#fc0606',
+            colorInactive: '#812020',
+            charCodeSelected: 9829,
+            charCodeUnselected: 9825,
+            colorBlendFractionAdd: 0.4,
+            colorBlendFractionRemove: 0.4,
+            colorTransitionDuration: 0.6,
+          }}
+          starRenderer={this.state.useDefault ? undefined : customRenderer}
+        />
+
+        <button onClick={this.toggleDefaultRenderer} style={{ height: '100%' }}>
+          {this.state.useDefault ? 'Default renderer' : 'Custom renderer'}
+        </button>
+      </div>
+    );
+  }
+}
 
 <ParentComponent />;
 ```
+
+The `defaultStarRendererProps`, which facilitate the easy customization of some of the color and character properties of the default renderer, are also passed on to a custom star-renderer if one is provided.
