@@ -46,6 +46,3 @@ const ParentComponent = () => {
 
 <ParentComponent />;
 ```
-
-<!-- initialState = { value: null };
-<StarPicker onChange={(value) => setState({ value })} value={state.value} />; -->

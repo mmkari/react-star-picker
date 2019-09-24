@@ -5,17 +5,6 @@ const wpc = require('./config/webpack-prod-config.js');
 module.exports = {
   sections: [
     {
-      name: 'Introduction',
-      content: 'src/StarPicker.md',
-      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      components: [
-        'src/StarPicker.jsx',
-        'src/defaultStarRenderer.jsx',
-        'src/defaultStarRendererStarComponent.jsx',
-      ],
-      skipComponentsWithoutExample: true,
-    },
-    {
       name: 'Demo',
       content: 'examples/Examples.md',
       exampleMode: 'hide',
@@ -30,38 +19,55 @@ module.exports = {
         },
         {
           name: 'Configuration',
-          //   content: 'docs/configuration.md',
+          content: 'examples/configuration.md',
         },
-        // {
-        //   name: 'Live Demo',
-        //   external: true,
-        //   href: 'http://example.com',
-        // },
       ],
     },
     {
-      name: 'Usage Examples',
+      name: 'Components',
+      content: 'src/StarPicker.md',
+      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      components: [
+        'src/StarPicker.jsx',
+        'src/defaultStarRenderer.jsx',
+        'src/defaultStarRendererStarComponent.jsx',
+      ],
+      skipComponentsWithoutExample: true,
+      sectionDepth: 1,
+    },
+    {
+      name: 'Examples',
       // components: 'dist/ui/*.js',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      // sectionDepth: 1,
+      sectionDepth: 1,
 
       sections: [
         {
-          name: 'Custom StarRenderer',
-          content: 'examples/Examples_customRenderer.md',
-          description: 'Using a custom star-renderer',
+          name: 'Color mixing',
+          content: 'examples/Examples_colorMixing.md',
         },
         {
-          name: 'Custom Styling of Default Renderer',
-          content: 'examples/Examples_customStyling.md',
-          description: 'Adding custom styles to the default setup',
+          name: 'Half stars',
+          content: 'examples/Examples_halfStars.md',
         },
-        // {
-        //   name: 'Live Demo',
-        //   external: true,
-        //   href: 'http://example.com',
-        // },
+        {
+          name: 'Using a Custom Renderer',
+          content: 'examples/Examples_customRenderer.md',
+          // description: 'Using a custom star-renderer',
+        },
+        {
+          name: 'Changing character',
+          content: 'examples/Examples_starChars.md',
+        },
+        {
+          name: 'Styling the Default Renderer',
+          content: 'examples/Examples_customStyling.md',
+        },
+        {
+          name: 'Disabling',
+          content: 'examples/Examples_disabled.md',
+        },
       ],
     },
   ],

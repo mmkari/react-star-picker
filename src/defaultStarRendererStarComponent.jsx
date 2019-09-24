@@ -9,7 +9,9 @@ import { mix } from 'polished';
 type DefaultRendererPropsWithDefaults = {|
   colorActive: string,
   colorInactive: string,
+  /** UTF-16 decimal */
   charCodeSelected: number,
+  /** UTF-16 decimal */
   charCodeUnselected: number,
   colorBlendFractionAdd: ?number,
   colorBlendFractionRemove: ?number,

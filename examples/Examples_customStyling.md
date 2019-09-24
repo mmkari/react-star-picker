@@ -1,4 +1,4 @@
-The default styles are easily overriden with external CSS.
+The default styles are easily overridden with external CSS.
 
 ```css { "file": "../Examples_overrides.css", "static": "true" }
 ```
