@@ -10,12 +10,12 @@
     "start:dev": "node config/webpack-dev-server.js",
     "clean-examples": "rm -rf dist-examples/*",
     "build-pages": "npm run clean-examples && webpack --config config/webpack-prod-config.js",
-    "predeploy": "npm run build-pages",
-    "deploy": "gh-pages -d dist-examples",
     "start:prod": "npm run build-pages && serve dist-examples",
     "start:prod-nb": "serve dist-examples",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "predeploy": "npm run styleguide:build",
+    "deploy": "gh-pages -d styleguidistHtml"
   },
   "homepage": "https://mmkari.github.io/react-star-picker/",
   "repository": {
