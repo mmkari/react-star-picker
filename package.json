@@ -14,7 +14,8 @@
     "start:prod-nb": "serve dist-examples",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "predeploy": "npm run styleguide:build",
+    "clean-styleguide": "rm -rf styleguidistHtml/*",
+    "predeploy": "npm run clean-styleguide && npm run styleguide:build",
     "deploy": "gh-pages -d styleguidistHtml"
   },
   "homepage": "https://mmkari.github.io/react-star-picker/",
