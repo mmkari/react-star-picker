@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import classnames from 'classnames';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 type LabelObject = {
   label: string,
@@ -50,6 +50,24 @@ const InputWithLabel = ({
   );
 };
 
+const blink = keyframes`
+  0% {
+    color: transparent;
+  }
+
+  25% {
+    color: lightgray;
+  }
+
+  50% {
+    color: lightgray;
+  }
+
+  100% {
+    color: #888fec;
+  }
+`;
+
 const StyledInputWithLabel = styled(InputWithLabel)`
   display: flex;
   align-items: center;
@@ -88,9 +106,12 @@ const StyledInputWithLabel = styled(InputWithLabel)`
     color: lightgray;
 
     a {
+      animation: ${blink} 4s;
+      animation-fill-mode: forwards;
+
       color: lightgray;
       :hover {
-        color: blue;
+        color: green;
       }
     }
     hr {

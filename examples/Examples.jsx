@@ -37,7 +37,7 @@ class Examples extends React.Component<Props, State> {
       <div className="Examples">
         <StyledInputWithLabel
           labelLeft={{
-            label: 'Customizable color mixing',
+            label: 'Color mixing',
             linkRef: '#/Examples/Color%20mixing',
           }}
         >
@@ -77,7 +77,7 @@ class Examples extends React.Component<Props, State> {
 
         <StyledInputWithLabel
           labelRight={{
-            label: 'Custom star renderer with an SVG',
+            label: 'Custom star renderer support',
             linkRef: '#/Examples/Using%20a%20Custom%20Renderer',
           }}
         >
@@ -92,7 +92,7 @@ class Examples extends React.Component<Props, State> {
 
         <StyledInputWithLabel
           labelRight={{
-            label: 'Customizable star characters',
+            label: 'UTF-16 characters',
             linkRef: '#/Examples/Changing%20character',
           }}
         >
@@ -116,7 +116,7 @@ class Examples extends React.Component<Props, State> {
             linkRef: '#/Examples/Resetting',
           }}
           labelRight={{
-            label: 'Customizable style',
+            label: 'Custom styling',
             linkRef: '#/Examples/Styling%20the%20Default%20Renderer',
           }}
         >

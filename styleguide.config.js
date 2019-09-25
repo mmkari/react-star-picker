@@ -4,11 +4,11 @@ const wpc = require('./config/webpack-prod-config.js');
 
 module.exports = {
   sections: [
-    {
-      name: 'Demo',
-      content: 'examples/Examples.md',
-      exampleMode: 'hide',
-    },
+    // {
+    //   name: 'Demo',
+    //   content: 'examples/Examples.md',
+    //   exampleMode: 'hide',
+    // },
     {
       name: 'Documentation',
       content: 'examples/Documentation.md',
@@ -41,9 +41,10 @@ module.exports = {
     {
       name: 'Examples',
       // components: 'dist/ui/*.js',
-      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
       sectionDepth: 1,
+      content: 'examples/Examples.md',
 
       sections: [
         {

@@ -9,7 +9,7 @@ const customRenderer = ({ index, selectedIndex, defaultStarRendererProps }) => {
   const { colorActive, colorInactive } = defaultStarRendererProps;
   return (
     <div style={{ color: selected ? colorActive : colorInactive }}>
-      {selected ? 'X' : 'O'}
+      {selected ? 'A' : 'Z'}
     </div>
   );
 };
@@ -46,8 +46,8 @@ class ParentComponent extends React.Component {
           defaultStarRendererProps={{
             colorActive: '#fc0606',
             colorInactive: '#812020',
-            charCodeSelected: 9829,
-            charCodeUnselected: 9825,
+            charCodeSelected: 9820,
+            charCodeUnselected: 9814,
             colorBlendFractionAdd: 0.4,
             colorBlendFractionRemove: 0.4,
             colorTransitionDuration: 0.6,
