@@ -1,4 +1,6 @@
-`StarPicker` is the default export
+# `<StarPicker />`
+
+`StarPicker` is the default export:
 
 ```jsx
 import React, { useState } from 'react';
@@ -19,6 +21,8 @@ const ParentComponent = () => {
 };
 ```
 
+## StarPicker Props
+
 Props:
 
 ```js
@@ -37,13 +41,18 @@ type StarPickerProps = {|
 |};
 ```
 
+### Required Props
+
+- `onChange`: function called with the selected value and the input name after a new pick
+- `value`: current value of the input
+
+### Optional Props
+
 - `defaultStarRendererProps`: props supported by the default star-renderer. Will be passed to a custom star-renderer as well
 - `starRenderer`: if provided, replaces the default star-renderer
 - `halfStars`: whether to use half-star precision
 - `disabled`: whether the input is disabled
 - `size`: the size of the "stars"
-- `onChange`: function called with the selected value and the input name after a new pick
-- `value`: current value of the input
 - `name`: input's name, supplied to the onChange function if provided
 - `className`
 - `numberStars`

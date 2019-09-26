@@ -11,7 +11,6 @@ type DefaultRendererProps = {|
   charCodeUnselected?: number,
   colorBlendFractionAdd?: ?number,
   colorBlendFractionRemove?: ?number,
-  colorTransitionDuration?: number,
 |};
 type GenericRendererProps = {|
   /** the zero based index of this star */
@@ -42,7 +41,6 @@ const defaultStarRenderer = ({
     charCodeUnselected = 9733,
     colorBlendFractionAdd = 0.2,
     colorBlendFractionRemove = 0.5,
-    colorTransitionDuration = 0.2,
   } = defaultStarRendererProps;
 
   return (
@@ -57,7 +55,6 @@ const defaultStarRenderer = ({
       charCodeUnselected={charCodeUnselected}
       colorBlendFractionAdd={colorBlendFractionAdd}
       colorBlendFractionRemove={colorBlendFractionRemove}
-      colorTransitionDuration={colorTransitionDuration}
     />
   );
 };

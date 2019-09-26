@@ -15,7 +15,6 @@ type DefaultRendererPropsWithDefaults = {|
   charCodeUnselected: number,
   colorBlendFractionAdd: ?number,
   colorBlendFractionRemove: ?number,
-  colorTransitionDuration: number,
 |};
 type GenericRendererProps = {|
   /** the zero based index of this star */
@@ -60,7 +59,7 @@ const DefaultStarComponent = ({
 };
 
 const StyledDefaultStarComponent = styled(DefaultStarComponent)`
-  transition: color ${(props) => `${props.colorTransitionDuration}s`};
+  transition: color 0.2s;
   color: ${(props) => props.colorInactive};
 
   &.selected {

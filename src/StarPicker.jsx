@@ -16,7 +16,6 @@ type DefaultRendererProps = {|
   charCodeUnselected?: number,
   colorBlendFractionAdd?: ?number,
   colorBlendFractionRemove?: ?number,
-  colorTransitionDuration?: number,
 |};
 
 type GenericRendererProps = {|

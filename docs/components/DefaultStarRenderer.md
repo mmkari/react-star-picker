@@ -1,13 +1,12 @@
+# `starRenderer()`
+
+`<StarPicker />` accepts a star-renderer prop (`starRenderer`) which, if given, overrides the default star-renderer (see [`defaultStarRenderer.jsx`](/src/defaultStarRenderer.jsx));
+
+## general starRenderer Props
+
+The `starRenderer` render function gets the following props from `<StarPicker />`:
+
 ```js
-type DefaultRendererProps = {|
-  colorActive?: string,
-  colorInactive?: string,
-  charCodeSelected?: number,
-  charCodeUnselected?: number,
-  colorBlendFractionAdd?: ?number,
-  colorBlendFractionRemove?: ?number,
-  colorTransitionDuration?: number,
-|};
 type StarRendererProps = {|
   index: number,
   selectedIndex: number,
@@ -20,10 +19,25 @@ type StarRendererProps = {|
 - `index`: the zero based index of this star
 - `selectedIndex`: index of the star matching the current rating
 - `hoverIndex`: index of the star currently hovered on
-- `size`:
-- `defaultStarRendererProps`
+- `size`: used for font-size, button size, etc.
+- `defaultStarRendererProps`: optional formatting props (explained separately below)
 
-The `defaultStarRendererProps` are:
+The `defaultStarRendererProps` prop contains optional styling props that are explained below.
+
+## Optional Props in defaultStarRendererProps
+
+```js
+type DefaultRendererProps = {|
+  colorActive?: string,
+  colorInactive?: string,
+  charCodeSelected?: number,
+  charCodeUnselected?: number,
+  colorBlendFractionAdd?: ?number,
+  colorBlendFractionRemove?: ?number,
+|};
+```
+
+The props in `defaultStarRendererProps` are:
 
 - `colorActive`: color of an active star
 - `colorInactive`: color of an inactive star
@@ -31,4 +45,3 @@ The `defaultStarRendererProps` are:
 - `charCodeUnselected`: UTF-16 character code for unselected star
 - `colorBlendFractionAdd`: fraction of `colorActive` in the base color of `colorInactive` when hovered
 - `colorBlendFractionRemove`: fraction of `colorInactive` in the base color of `colorActive` when hovered
-- `colorTransitionDuration`: time taken to transition between colors

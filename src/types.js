@@ -8,7 +8,6 @@ type DefaultRendererProps = {|
   charCodeUnselected?: number,
   colorBlendFractionAdd?: ?number,
   colorBlendFractionRemove?: ?number,
-  colorTransitionDuration?: number,
 |};
 
 type DefaultRendererPropsWithDefaults = {|
@@ -18,7 +17,6 @@ type DefaultRendererPropsWithDefaults = {|
   charCodeUnselected: number,
   colorBlendFractionAdd: ?number,
   colorBlendFractionRemove: ?number,
-  colorTransitionDuration: number,
 |};
 
 type GenericRendererProps = {|

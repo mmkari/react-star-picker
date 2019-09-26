@@ -19,6 +19,5 @@ import { DefaultStarRendererStarComponent } from 'react-star-picker';
   charCodeUnselected={9733}
   colorBlendFractionAdd={0.5}
   colorBlendFractionRemove={0.2}
-  colorTransitionDuration={3}
 />;
 ```
