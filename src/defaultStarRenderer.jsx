@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { mix } from 'polished';
 import DefaultStarComponent from './defaultStarRendererStarComponent';
 
 // import type { StarRendererProps, DefaultStarComponentProps } from './types';
@@ -9,8 +10,8 @@ type DefaultRendererProps = {|
   colorInactive?: string,
   charCodeSelected?: number,
   charCodeUnselected?: number,
-  colorBlendFractionAdd?: ?number,
-  colorBlendFractionRemove?: ?number,
+  colorAdd?: ?string,
+  colorRemove?: ?string,
 |};
 type GenericRendererProps = {|
   /** the zero based index of this star */
@@ -32,15 +33,15 @@ const defaultStarRenderer = ({
   hoverIndex,
   size,
   defaultStarRendererProps,
-}: StarRendererProps) => {
+}: StarRendererProps): React.Node => {
   // default renderer props:
   const {
     colorActive = 'gold',
     colorInactive = '#e4e4e4', // a light gray
+    colorAdd = mix(0.2, colorActive, colorInactive), // mix colors for cue on stars to be added
+    colorRemove = mix(0.6, colorInactive, colorActive), // mix colors for cue on stars to be removed
     charCodeSelected = 9733,
     charCodeUnselected = 9733,
-    colorBlendFractionAdd = 0.2,
-    colorBlendFractionRemove = 0.5,
   } = defaultStarRendererProps;
 
   return (
@@ -53,8 +54,8 @@ const defaultStarRenderer = ({
       colorInactive={colorInactive}
       charCodeSelected={charCodeSelected}
       charCodeUnselected={charCodeUnselected}
-      colorBlendFractionAdd={colorBlendFractionAdd}
-      colorBlendFractionRemove={colorBlendFractionRemove}
+      colorAdd={colorAdd}
+      colorRemove={colorRemove}
     />
   );
 };

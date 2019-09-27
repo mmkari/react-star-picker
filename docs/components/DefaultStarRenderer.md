@@ -32,8 +32,8 @@ type DefaultRendererProps = {|
   colorInactive?: string,
   charCodeSelected?: number,
   charCodeUnselected?: number,
-  colorBlendFractionAdd?: ?number,
-  colorBlendFractionRemove?: ?number,
+  colorAdd?: ?string,
+  colorRemove?: ?string,
 |};
 ```
 
@@ -43,5 +43,5 @@ The props in `defaultStarRendererProps` are:
 - `colorInactive`: color of an inactive star
 - `charCodeSelected`: UTF-16 character code for selected star
 - `charCodeUnselected`: UTF-16 character code for unselected star
-- `colorBlendFractionAdd`: fraction of `colorActive` in the base color of `colorInactive` when hovered
-- `colorBlendFractionRemove`: fraction of `colorInactive` in the base color of `colorActive` when hovered
+- `colorAdd`: color shown on hover for inactive stars about to turn active
+- `colorRemove`: color shown on hover for active stars about to turn inactive

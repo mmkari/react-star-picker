@@ -6,8 +6,8 @@ type DefaultRendererProps = {|
   colorInactive?: string,
   charCodeSelected?: number,
   charCodeUnselected?: number,
-  colorBlendFractionAdd?: ?number,
-  colorBlendFractionRemove?: ?number,
+  colorAdd?: ?string,
+  colorRemove?: ?string,
 |};
 
 type DefaultRendererPropsWithDefaults = {|
@@ -15,8 +15,8 @@ type DefaultRendererPropsWithDefaults = {|
   colorInactive: string,
   charCodeSelected: number,
   charCodeUnselected: number,
-  colorBlendFractionAdd: ?number,
-  colorBlendFractionRemove: ?number,
+  colorAdd: ?string,
+  colorRemove: ?string,
 |};
 
 type GenericRendererProps = {|

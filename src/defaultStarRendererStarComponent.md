@@ -17,7 +17,5 @@ import { DefaultStarRendererStarComponent } from 'react-star-picker';
   colorInactive={'#ffd204'}
   charCodeSelected={9733}
   charCodeUnselected={9733}
-  colorBlendFractionAdd={0.5}
-  colorBlendFractionRemove={0.2}
 />;
 ```

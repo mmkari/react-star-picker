@@ -1,4 +1,4 @@
-The default renderer mixes the `colorActive` and `colorInactive` colors to form the addition and removal highlighting. The mixing fractions can be customized with the `colorBlendFractionAdd` (fraction of colorActive in colorInactive) and `colorBlendFractionRemove` (fraction of colorInactive in colorActive).
+The default renderer mixes the `colorActive` and `colorInactive` colors to form the addition and removal highlighting. The `colorAdd` and `colorRemove` can however be given as well.
 
 ```jsx
 import React, { useState } from 'react';
@@ -21,8 +21,8 @@ const ParentComponent = () => {
         defaultStarRendererProps={{
           colorActive: '#ff9a00',
           colorInactive: '#b5c7c7',
-          colorBlendFractionAdd: 0.3,
-          colorBlendFractionRemove: 0.4,
+          colorAdd: 'green',
+          colorRemove: 'red',
         }}
       />
     </div>

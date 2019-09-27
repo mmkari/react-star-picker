@@ -19,8 +19,8 @@ const ParentComponent = () => {
         size={50}
         doubleTapResets
         defaultStarRendererProps={{
-          colorBlendFractionAdd: null,
-          colorBlendFractionRemove: null,
+          colorAdd: null,
+          colorRemove: null,
         }}
       />
     </div>

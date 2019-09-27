@@ -48,8 +48,6 @@ class ParentComponent extends React.Component {
             colorInactive: '#812020',
             charCodeSelected: 9820,
             charCodeUnselected: 9814,
-            colorBlendFractionAdd: 0.4,
-            colorBlendFractionRemove: 0.4,
           }}
           starRenderer={this.state.useDefault ? undefined : customRenderer}
         />

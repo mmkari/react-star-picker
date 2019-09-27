@@ -13,8 +13,8 @@ type DefaultRendererPropsWithDefaults = {|
   charCodeSelected: number,
   /** UTF-16 decimal */
   charCodeUnselected: number,
-  colorBlendFractionAdd: ?number,
-  colorBlendFractionRemove: ?number,
+  colorAdd: ?string,
+  colorRemove: ?string,
 |};
 type GenericRendererProps = {|
   /** the zero based index of this star */
@@ -67,25 +67,11 @@ const StyledDefaultStarComponent = styled(DefaultStarComponent)`
   }
 
   &.newSelection {
-    color: ${(props) =>
-      props.colorBlendFractionAdd
-        ? mix(
-            props.colorBlendFractionAdd,
-            props.colorActive,
-            props.colorInactive
-          )
-        : props.colorInactive};
+    color: ${(props) => props.colorAdd};
   }
 
   &.lostSelection {
-    color: ${(props) =>
-      props.colorBlendFractionRemove
-        ? mix(
-            props.colorBlendFractionRemove,
-            props.colorInactive,
-            props.colorActive
-          )
-        : props.colorActive};
+    color: ${(props) => props.colorRemove};
   }
 `;
 

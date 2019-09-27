@@ -48,8 +48,8 @@ class Examples extends React.Component<Props, State> {
             defaultStarRendererProps={{
               colorActive: '#df00ff',
               colorInactive: '#ccccff',
-              colorBlendFractionAdd: 0.5,
-              colorBlendFractionRemove: 0.6,
+              colorAdd: 'green',
+              colorRemove: 'red',
               charCodeUnselected: 9734,
             }}
           />
@@ -69,7 +69,6 @@ class Examples extends React.Component<Props, State> {
             size={50}
             defaultStarRendererProps={{
               colorActive: 'orange',
-              colorBlendFractionRemove: 0.4,
               charCodeUnselected: 9734,
             }}
           />
@@ -104,7 +103,6 @@ class Examples extends React.Component<Props, State> {
             size={70}
             defaultStarRendererProps={{
               colorActive: '#ff3333',
-              colorBlendFractionRemove: 0.5,
               charCodeSelected: 10029,
             }}
           />
@@ -127,8 +125,8 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             doubleTapResets
             defaultStarRendererProps={{
-              colorBlendFractionAdd: null,
-              colorBlendFractionRemove: null,
+              colorAdd: null,
+              colorRemove: null,
             }}
           />
         </StyledInputWithLabel>
