@@ -97,7 +97,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     halfStars: false,
     doubleTapResets: false,
     starRenderer: defaultStarRenderer,
-    starRendererProps: Object.seal({}), // sealed object for correct type checking
+    starRendererProps: Object.freeze({}), // frozen object for correct type checking
   };
 
   updateValue = (index: number): void => {
