@@ -1,4 +1,4 @@
-To use half-star precision, simply pass the `halfStar={true}` prop to `StarPicker`:
+Disabling is controlled with the `disabled` prop:
 
 ```jsx
 import React, { useState } from 'react';

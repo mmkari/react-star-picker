@@ -7,24 +7,24 @@ A **highly customizable** star-rating component
 
 ## ...
 
-### default features
+### Default features include
 
-- supports half-star precision
-- UTF-16 character icons
-- responsive focus highlighting
+- [supports half-star precision](https://mmkari.github.io/react-star-picker/#/Examples/Half%20stars)
+- [UTF-16 character icons](https://mmkari.github.io/react-star-picker/#/Examples/Changing%20character)
+- [responsive hover highlighting](https://mmkari.github.io/react-star-picker/#/Examples/Color%20mixing)
 - custom number of stars
-- value clearing option
-- disableable
+- [value clearing option](https://mmkari.github.io/react-star-picker/#/Examples/Resetting)
+- [input disabling](https://mmkari.github.io/react-star-picker/#/Examples/Disabling)
 
-### support for custom star-renderer
+### Support for custom star-renderer
 
-Even more customizability is provided by the ability to use your own star-renderer.
+Even more customizability is provided by the ability to use your own star-renderer. [See example in styleguide.](https://mmkari.github.io/react-star-picker/#/Examples/Using%20a%20Custom%20Renderer)
 
 ## Documentation
 
-### Installation
+### [Installation](/docs/general/Installation.md)
 
-### Configuration
+### [Configuration](/docs/general/Configuration.md)
 
 ## Component APIs
 
@@ -32,5 +32,3 @@ Even more customizability is provided by the ability to use your own star-render
 - [`defaultStarRenderer()`](/docs/components/DefaultStarRenderer.md)
 
 ### DefaultStarRenderer
-
-### DefaultStarRendererStarComponent
