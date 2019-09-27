@@ -18,7 +18,7 @@ const ParentComponent = () => {
         value={rating}
         size={50}
         doubleTapResets
-        defaultStarRendererProps={{
+        starRendererProps={{
           colorAdd: null,
           colorRemove: null,
         }}

@@ -2,7 +2,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import styled from 'styled-components';
-import { mix } from 'polished';
 
 // import type { StarRendererProps, DefaultStarComponentProps } from './types';
 
@@ -23,7 +22,6 @@ type GenericRendererProps = {|
   selectedIndex: number,
   /** index of the star currently hovered on */
   hoverIndex: ?number,
-  size: number,
 |};
 type DefaultStarComponentProps = {|
   className: string,

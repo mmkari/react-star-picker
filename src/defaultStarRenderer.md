@@ -14,7 +14,7 @@ defaultStarRenderer({
   selectedIndex: 1,
   hoverIndex: null,
   size: 34,
-  defaultStarRendererProps: {},
+  starRendererProps: {},
 });
 ```
 
@@ -28,7 +28,7 @@ defaultStarRenderer({
   selectedIndex: null,
   hoverIndex: null,
   size: 34,
-  defaultStarRendererProps: {},
+  starRendererProps: {},
 });
 ```
 
@@ -42,7 +42,7 @@ defaultStarRenderer({
   selectedIndex: 1,
   hoverIndex: 0,
   size: 34,
-  defaultStarRendererProps: {},
+  starRendererProps: {},
 });
 ```
 
@@ -56,6 +56,6 @@ defaultStarRenderer({
   selectedIndex: null,
   hoverIndex: 1,
   size: 34,
-  defaultStarRendererProps: {},
+  starRendererProps: {},
 });
 ```

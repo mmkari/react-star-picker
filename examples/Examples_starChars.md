@@ -1,4 +1,4 @@
-The character icons used by the default star-renderer can be controlled with the `charCodeSelected` and `charCodeUnselected` as part of the <span style="color:red">`defaultStarRendererProps`</span>:
+The character icons used by the default star-renderer can be controlled with the `charCodeSelected` and `charCodeUnselected` as part of the <span style="color:red">`starRendererProps`</span>:
 
 ```jsx
 import React, { useState } from 'react';
@@ -17,7 +17,7 @@ const ParentComponent = () => {
         onChange={onChange}
         value={rating}
         size={50}
-        defaultStarRendererProps={{
+        starRendererProps={{
           charCodeSelected: 10029,
           charCodeUnselected: 10029,
         }}

@@ -18,7 +18,7 @@ const ParentComponent = () => {
         value={rating}
         halfStars
         size={50}
-        defaultStarRendererProps={{
+        starRendererProps={{
           colorActive: 'green',
         }}
       />

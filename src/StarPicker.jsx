@@ -25,18 +25,17 @@ type GenericRendererProps = {|
   selectedIndex: number,
   /** index of the star currently hovered on */
   hoverIndex: ?number,
-  size: number,
 |};
 type StarRendererProps = {|
   ...GenericRendererProps,
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
 |};
 
 type StarRendererFunction = (StarRendererProps) => React.Node;
 
 type SharedProps = {|
   /** props supported by the default star-renderer. Will be passed to a custom star-renderer as well */
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
   /** if provided, replaces the default star-renderer */
   starRenderer: StarRendererFunction,
   /** whether to use half-star precision */
@@ -96,9 +95,9 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     size: 34, // in px, used for font-size and width stylings
     disabled: false,
     halfStars: false,
-    starRenderer: defaultStarRenderer,
     doubleTapResets: false,
-    defaultStarRendererProps: {},
+    starRenderer: defaultStarRenderer,
+    starRendererProps: {},
   };
 
   updateValue = (index: number): void => {
@@ -122,7 +121,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
       disabled,
       halfStars,
       starRenderer,
-      defaultStarRendererProps,
+      starRendererProps,
     } = this.props;
     const { hoverIndex } = this.state;
 
@@ -140,7 +139,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
             onClick={this.updateValue}
             onHoverChange={this.onHoverChange}
             starRenderer={starRenderer}
-            defaultStarRendererProps={defaultStarRendererProps}
+            starRendererProps={starRendererProps}
             halfStars={halfStars}
             disabled={disabled}
             size={size}

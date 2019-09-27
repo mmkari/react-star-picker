@@ -20,19 +20,17 @@ type GenericRendererProps = {|
   selectedIndex: number,
   /** index of the star currently hovered on */
   hoverIndex: ?number,
-  size: number,
 |};
 type StarRendererProps = {|
   ...GenericRendererProps,
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
 |};
 
 const defaultStarRenderer = ({
   index,
   selectedIndex,
   hoverIndex,
-  size,
-  defaultStarRendererProps,
+  starRendererProps,
 }: StarRendererProps): React.Node => {
   // default renderer props:
   const {
@@ -42,14 +40,13 @@ const defaultStarRenderer = ({
     colorRemove = mix(0.6, colorInactive, colorActive), // mix colors for cue on stars to be removed
     charCodeSelected = 9733,
     charCodeUnselected = 9733,
-  } = defaultStarRendererProps;
+  } = starRendererProps;
 
   return (
     <DefaultStarComponent
       index={index}
       selectedIndex={selectedIndex}
       hoverIndex={hoverIndex}
-      size={size}
       colorActive={colorActive}
       colorInactive={colorInactive}
       charCodeSelected={charCodeSelected}

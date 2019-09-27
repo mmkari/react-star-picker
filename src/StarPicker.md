@@ -4,9 +4,9 @@ The `StarPicker` component supports the following props:
 import React from 'react';
 import StarPicker from 'react-star-picker';
 
-const customRenderer = ({ index, selectedIndex, defaultStarRendererProps }) => {
+const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
   const selected = selectedIndex != null && index <= selectedIndex;
-  const { colorActive, colorInactive } = defaultStarRendererProps;
+  const { colorActive, colorInactive } = starRendererProps;
   return (
     <div style={{ color: selected ? colorActive : colorInactive }}>
       {selected ? 'A' : 'Z'}
@@ -43,7 +43,7 @@ class ParentComponent extends React.Component {
           halfStars={false}
           numberStars={4}
           size={70}
-          defaultStarRendererProps={{
+          starRendererProps={{
             colorActive: '#fc0606',
             colorInactive: '#812020',
             charCodeSelected: 9820,
@@ -63,4 +63,4 @@ class ParentComponent extends React.Component {
 <ParentComponent />;
 ```
 
-The `defaultStarRendererProps`, which facilitate the easy customization of some of the color and character properties of the default renderer, are also passed on to a custom star-renderer if one is provided.
+The `starRendererProps`, which facilitate the easy customization of some of the color and character properties of the default renderer, are also passed on to a custom star-renderer if one is provided.

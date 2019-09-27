@@ -12,7 +12,7 @@ type StarRendererProps = {|
   selectedIndex: number,
   hoverIndex: ?number,
   size: number,
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
 |};
 ```
 
@@ -20,11 +20,11 @@ type StarRendererProps = {|
 - `selectedIndex`: index of the star matching the current rating
 - `hoverIndex`: index of the star currently hovered on
 - `size`: used for font-size, button size, etc.
-- `defaultStarRendererProps`: optional formatting props (explained separately below)
+- `starRendererProps`: optional formatting props (explained separately below)
 
-The `defaultStarRendererProps` prop contains optional styling props that are explained below.
+The `starRendererProps` prop contains optional styling props that are explained below.
 
-## Optional Props in defaultStarRendererProps
+## Optional Props in starRendererProps
 
 ```js
 type DefaultRendererProps = {|
@@ -37,7 +37,7 @@ type DefaultRendererProps = {|
 |};
 ```
 
-The props in `defaultStarRendererProps` are:
+The props in `starRendererProps` are:
 
 - `colorActive`: color of an active star
 - `colorInactive`: color of an inactive star

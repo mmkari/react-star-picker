@@ -27,7 +27,7 @@ Props:
 
 ```js
 type StarPickerProps = {|
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
   starRenderer: StarRendererFunction,
   halfStars: boolean,
   disabled: boolean,
@@ -48,7 +48,7 @@ type StarPickerProps = {|
 
 ### Optional Props
 
-- `defaultStarRendererProps`: props supported by the default star-renderer. Will be passed to a custom star-renderer as well
+- `starRendererProps`: props supported by the default star-renderer. Will be passed to a custom star-renderer as well
 - `starRenderer`: if provided, replaces the default star-renderer
 - `halfStars`: whether to use half-star precision
 - `disabled`: whether the input is disabled

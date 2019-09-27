@@ -45,7 +45,7 @@ class Examples extends React.Component<Props, State> {
             name="rating1"
             value={rating1}
             onChange={this.setValue}
-            defaultStarRendererProps={{
+            starRendererProps={{
               colorActive: '#df00ff',
               colorInactive: '#ccccff',
               colorAdd: 'green',
@@ -67,7 +67,7 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             halfStars
             size={50}
-            defaultStarRendererProps={{
+            starRendererProps={{
               colorActive: 'orange',
               charCodeUnselected: 9734,
             }}
@@ -101,7 +101,7 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             halfStars
             size={70}
-            defaultStarRendererProps={{
+            starRendererProps={{
               colorActive: '#ff3333',
               charCodeSelected: 10029,
             }}
@@ -124,7 +124,7 @@ class Examples extends React.Component<Props, State> {
             value={rating5}
             onChange={this.setValue}
             doubleTapResets
-            defaultStarRendererProps={{
+            starRendererProps={{
               colorAdd: null,
               colorRemove: null,
             }}
@@ -142,7 +142,7 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             numberStars={3}
             disabled
-            defaultStarRendererProps={{
+            starRendererProps={{
               colorActive: 'blue',
             }}
           />

@@ -23,7 +23,6 @@ type GenericRendererProps = {|
   index: number,
   selectedIndex: number,
   hoverIndex: ?number,
-  size: number,
 |};
 
 type DefaultStarComponentProps = {|
@@ -34,13 +33,13 @@ type DefaultStarComponentProps = {|
 
 type StarRendererProps = {|
   ...GenericRendererProps,
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
 |};
 
 type StarRendererFunction = (StarRendererProps) => React.Node;
 
 type SharedProps = {|
-  defaultStarRendererProps: DefaultRendererProps,
+  starRendererProps: DefaultRendererProps,
   starRenderer: StarRendererFunction,
   halfStars: boolean,
   disabled: boolean,

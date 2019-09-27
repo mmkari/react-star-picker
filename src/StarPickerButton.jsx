@@ -6,24 +6,23 @@ import styled from 'styled-components';
 import type { StarPickerButtonProps } from './types';
 
 const StarPickerButton = ({
+  className,
   index,
-  onClick,
   selectedIndex,
   hoverIndex,
+  onClick,
   onHoverChange,
-  disabled,
-  className,
   starRenderer,
+  starRendererProps,
   halfStars,
-  size,
-  defaultStarRendererProps,
+  disabled,
 }: StarPickerButtonProps) => {
-  const handleMouseEnter = () => {
+  const onMouseEnter = () => {
     if (!disabled) {
       onHoverChange(index);
     }
   };
-  const handleMouseLeave = () => {
+  const onMouseLeave = () => {
     if (!disabled) {
       onHoverChange(null);
     }
@@ -40,8 +39,8 @@ const StarPickerButton = ({
       })}
       type="button"
       onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       disabled={disabled}
     >
       <div className="StarPickerButton-buttonContent">
@@ -49,8 +48,7 @@ const StarPickerButton = ({
           index,
           selectedIndex,
           hoverIndex,
-          size,
-          defaultStarRendererProps,
+          starRendererProps,
         })}
       </div>
     </button>

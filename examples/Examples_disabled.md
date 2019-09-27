@@ -22,7 +22,7 @@ const ParentComponent = () => {
         value={rating}
         disabled={disabled}
         size={70}
-        defaultStarRendererProps={{
+        starRendererProps={{
           colorActive: '#ff3333',
           charCodeSelected: 10022,
           charCodeUnselected: 10023,

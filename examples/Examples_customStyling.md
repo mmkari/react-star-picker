@@ -15,7 +15,7 @@ initialState = { value: null };
   value={state.value}
   onChange={(value) => setState({ value })}
   doubleTapResets
-  defaultStarRendererProps={{
+  starRendererProps={{
     colorAdd: null,
     colorRemove: null,
   }}
