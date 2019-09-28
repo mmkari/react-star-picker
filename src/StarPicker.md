@@ -9,10 +9,11 @@ const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
   const { colorActive, colorInactive } = starRendererProps;
   return (
     <div style={{ color: selected ? colorActive : colorInactive }}>
-      {selected ? 'A' : 'Z'}
+      {String.fromCharCode(9856 + index)}
     </div>
   );
 };
+//9856
 
 class ParentComponent extends React.Component {
   constructor() {
@@ -41,7 +42,7 @@ class ParentComponent extends React.Component {
           disabled={false}
           doubleTapResets={true}
           halfStars={false}
-          numberStars={4}
+          numberStars={6}
           size={70}
           starRendererProps={{
             colorActive: '#fc0606',
@@ -62,5 +63,3 @@ class ParentComponent extends React.Component {
 
 <ParentComponent />;
 ```
-
-The `starRendererProps`, which facilitate the easy customization of some of the color and character properties of the default renderer, are also passed on to a custom star-renderer if one is provided.

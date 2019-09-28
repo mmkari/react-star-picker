@@ -1,4 +1,4 @@
-The default renderer mixes the `colorActive` and `colorInactive` colors to form the addition and removal highlighting. The `colorAdd` and `colorRemove` can however be given as well.
+The default renderer mixes the `colorActive` and `colorInactive` colors to form the addition and removal highlighting. These defaultly mixed colors can be overridden with explicitly passed `colorAdd` and `colorRemove` props as part of the <span style="color:red">`starRendererProps`</span>.
 
 ```jsx
 import React, { useState } from 'react';

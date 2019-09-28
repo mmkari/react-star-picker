@@ -10,7 +10,7 @@ A **highly customizable** star-rating component
 ### Default features include
 
 - [supports half-star precision](https://mmkari.github.io/react-star-picker/#/Examples/Half%20stars)
-- [UTF-16 character icons](https://mmkari.github.io/react-star-picker/#/Examples/Changing%20character)
+- [UTF-16 character icons](https://mmkari.github.io/react-star-picker/#/Examples/Custom%20characters)
 - [responsive hover highlighting](https://mmkari.github.io/react-star-picker/#/Examples/Color%20mixing)
 - custom number of stars
 - [value clearing option](https://mmkari.github.io/react-star-picker/#/Examples/Resetting)

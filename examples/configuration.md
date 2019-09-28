@@ -1,4 +1,4 @@
-The suggested way of using the `StarPicker` component is to wrap it in a wrapper component and define consistent default values for yourself.
+The suggested way of using `react-star-picker` is to wrap the `StarPicker` in a component that defines consistent default values:
 
 ```jsx static
 import React from 'react';

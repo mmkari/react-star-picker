@@ -1,4 +1,4 @@
-The StarPicker resets selections on double-tap when the prop value `doubleTapResets={true}` is given:
+The number of stars is controlled with the `numberStars` prop:
 
 ```jsx
 import React, { useState } from 'react';
@@ -16,12 +16,8 @@ const ParentComponent = () => {
       <StarPicker
         onChange={onChange}
         value={rating}
+        numberStars={7}
         size={50}
-        doubleTapResets
-        starRendererProps={{
-          colorAdd: null,
-          colorRemove: null,
-        }}
       />
     </div>
   );

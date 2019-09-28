@@ -48,8 +48,7 @@ class Examples extends React.Component<Props, State> {
             starRendererProps={{
               colorActive: '#df00ff',
               colorInactive: '#ccccff',
-              colorAdd: 'green',
-              colorRemove: 'red',
+              colorRemove: '#a900c1',
               charCodeUnselected: 9734,
             }}
           />
@@ -92,7 +91,7 @@ class Examples extends React.Component<Props, State> {
         <StyledInputWithLabel
           labelRight={{
             label: 'UTF-16 characters',
-            linkRef: '#/Examples/Changing%20character',
+            linkRef: '#/Examples/Custom%20characters',
           }}
         >
           <StarPicker
@@ -135,6 +134,10 @@ class Examples extends React.Component<Props, State> {
           labelLeft={{
             label: '(disabled)',
             linkRef: '#/Examples/Disabling',
+          }}
+          labelRight={{
+            label: 'Custom number of stars',
+            linkRef: '#/Examples/Number%20of%20stars',
           }}
         >
           <StarPicker

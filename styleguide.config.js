@@ -61,7 +61,7 @@ module.exports = {
           // description: 'Using a custom star-renderer',
         },
         {
-          name: 'Changing character',
+          name: 'Custom characters',
           content: 'examples/Examples_starChars.md',
         },
         {
@@ -75,6 +75,10 @@ module.exports = {
         {
           name: 'Disabling',
           content: 'examples/Examples_disabled.md',
+        },
+        {
+          name: 'Number of stars',
+          content: 'examples/Examples_numberStars.md',
         },
       ],
     },
