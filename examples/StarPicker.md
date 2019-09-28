@@ -1,4 +1,6 @@
-The `StarPicker` component supports the following props:
+The `StarPicker` component renders a number of buttons. By default, each button's content is rendered using the `defaultStarRenderer`. Alternatively, you can provide a custom `starRenderer` prop to get control over the button contents.
+
+The following example covers the use of all available props. The used star-renderer function (custom or default) can be toggled from the button and the values of the remaining props can be changed in the source code of the live playground:
 
 ```jsx
 import React from 'react';
@@ -13,7 +15,6 @@ const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
     </div>
   );
 };
-//9856
 
 class ParentComponent extends React.Component {
   constructor() {
@@ -49,6 +50,8 @@ class ParentComponent extends React.Component {
             colorInactive: '#812020',
             charCodeSelected: 9820,
             charCodeUnselected: 9814,
+            colorAdd: undefined,
+            colorRemove: undefined,
           }}
           starRenderer={this.state.useDefault ? undefined : customRenderer}
         />

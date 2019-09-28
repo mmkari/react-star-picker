@@ -3,6 +3,13 @@ const fs = require('fs');
 const wpc = require('./config/webpack-prod-config.js');
 
 module.exports = {
+  getExampleFilename(componentPath) {
+    if (componentPath.indexOf('src') > -1) {
+      return componentPath.replace(/src/, 'examples').replace(/\.jsx?$/, '.md');
+    }
+    return componentPath;
+  },
+
   sections: [
     // {
     //   name: 'Demo',
@@ -28,15 +35,26 @@ module.exports = {
     },
     {
       name: 'Components',
-      content: 'examples/Components.md',
+      // content: 'examples/Components.md',
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      components: [
-        'src/StarPicker.jsx',
-        'src/defaultStarRenderer.jsx',
-        'src/defaultStarRendererStarComponent.jsx',
-      ],
+      components: ['src/StarPicker.jsx'],
       skipComponentsWithoutExample: true,
-      sectionDepth: 1,
+      // sectionDepth: 1,
+    },
+    {
+      name: 'Props',
+      // content: 'examples/Components.md',
+      exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
+      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      components: ['src/defaultStarRenderer.jsx'],
+      skipComponentsWithoutExample: true,
+      // sectionDepth: 1,
+      sections: [
+        {
+          name: 'starRendererProps',
+          content: 'examples/Props_starRendererProps.md',
+        },
+      ],
     },
     {
       name: 'Examples',
