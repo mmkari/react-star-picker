@@ -1,5 +1,4 @@
 export {
-  testFun,
   StarPicker as default,
   defaultStarRenderer,
   DefaultStarRendererStarComponent,
