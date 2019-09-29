@@ -3,6 +3,37 @@ import * as React from 'react';
 import classnames from 'classnames';
 import styled, { keyframes } from 'styled-components';
 
+// example toggle button
+const ToggleButton = ({
+  label,
+  onClick,
+  content,
+}: {
+  label: string,
+  onClick: () => void,
+  content: string,
+}) => {
+  return (
+    <div
+      style={{
+        marginLeft: '2em',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <div>{label}</div>
+      <button
+        type="button"
+        onClick={onClick}
+        style={{ height: '100%', width: '120px' }}
+      >
+        {content}
+      </button>
+    </div>
+  );
+};
+
 type LabelObject = {
   label: string,
   linkRef?: string,
@@ -121,3 +152,4 @@ const StyledInputWithLabel = styled(InputWithLabel)`
 `;
 
 export default StyledInputWithLabel;
+export { ToggleButton };

@@ -14,7 +14,7 @@ type DefaultRendererProps = {|
   colorRemove?: ?string,
 |};
 type GenericRendererProps = {|
-  /** the zero based index of this star */
+  /** the zero based index of the star being rendered */
   index: number,
   /** index of the star matching the current rating  */
   selectedIndex: number,

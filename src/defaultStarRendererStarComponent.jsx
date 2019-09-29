@@ -3,31 +3,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-// import type { StarRendererProps, DefaultStarComponentProps } from './types';
-
-type DefaultRendererPropsWithDefaults = {|
-  colorActive: string,
-  colorInactive: string,
-  /** UTF-16 decimal */
-  charCodeSelected: number,
-  /** UTF-16 decimal */
-  charCodeUnselected: number,
-  colorAdd: ?string,
-  colorRemove: ?string,
-|};
-type GenericRendererProps = {|
-  /** the zero based index of this star */
-  index: number,
-  /** index of the star matching the current rating  */
-  selectedIndex: number,
-  /** index of the star currently hovered on */
-  hoverIndex: ?number,
-|};
-type DefaultStarComponentProps = {|
-  className: string,
-  ...GenericRendererProps,
-  ...DefaultRendererPropsWithDefaults,
-|};
+import type { DefaultStarComponentProps } from './types';
 
 const DefaultStarComponent = ({
   index,

@@ -5,7 +5,7 @@ import React from 'react';
 import StarPicker from 'react-star-picker';
 import classnames from 'classnames';
 
-// const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex, size }) => {
+// const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
 //   // style the "star" according to the index, selectedIndex, hoverIndex...
 //   return {...};   // return it here
 // };
@@ -37,5 +37,6 @@ const MyStarPicker = ({
     />
   );
 };
-<MyStarPicker />;
+
+export default MyStarPicker;
 ```

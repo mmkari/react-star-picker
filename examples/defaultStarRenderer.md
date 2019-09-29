@@ -1,3 +1,5 @@
+The default star-renderer, `defaultStarRenderer`, styles characters based on the values of the `index`, `selectedIndex` and `hoverIndex` values:
+
 <style>
     .DefaultStarComponent {
         font-size: 34px;

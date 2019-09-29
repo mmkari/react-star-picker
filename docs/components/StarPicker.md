@@ -48,7 +48,7 @@ type StarPickerProps = {|
 
 ### Optional Props
 
-- `starRendererProps`: props supported by the default star-renderer. Will be passed to a custom star-renderer as well
+- `starRendererProps`: [props passed on to starRenderer](https://github.com/mmkari/react-star-picker/blob/master/docs/components/StarRenderer.md#optional-props-in-starrendererprops)
 - `starRenderer`: if provided, replaces the default star-renderer
 - `halfStars`: whether to use half-star precision
 - `disabled`: whether the input is disabled

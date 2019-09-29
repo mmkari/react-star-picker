@@ -6,7 +6,6 @@ import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
 // import type { StarPickerProps } from './types';
-// import type { StarRendererFunction } from './types';
 
 // NOTE: Flowtypes must be defined in the component's file for react-docgen to pick them up for styleguide
 type DefaultRendererProps = {|
@@ -19,7 +18,7 @@ type DefaultRendererProps = {|
 |};
 
 type GenericRendererProps = {|
-  /** the zero based index of this star */
+  /** the zero based index of the star being rendered */
   index: number,
   /** index of the star matching the current rating  */
   selectedIndex: number,
@@ -42,12 +41,12 @@ type SharedProps = {|
   halfStars: boolean,
   /** whether the input is disabled */
   disabled: boolean,
-  /** the size of the "stars" */
+  /** the size of the stars in px (used for font-size, button widths) */
   size: number,
 |};
 type StarPickerProps = {|
   ...SharedProps,
-  /** function called with the selected value and the input name after a new pick */
+  /** function called with the selected value (and the input name) after a new pick */
   onChange: (index: ?number, name?: string) => void,
   /** current value of the input */
   value: ?number,
@@ -55,7 +54,7 @@ type StarPickerProps = {|
   name?: string,
   className?: string,
   numberStars: number,
-  /** When true, picking the existing rating clears it */
+  /** When true, selecting the existing rating clears the input */
   doubleTapResets: boolean,
 |};
 

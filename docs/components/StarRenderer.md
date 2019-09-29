@@ -20,8 +20,6 @@ type StarRendererProps = {|
 - `hoverIndex`: index of the star currently hovered on
 - `starRendererProps`: optional formatting props (explained separately below)
 
-The `starRendererProps` prop contains optional styling props that are explained below.
-
 ## Optional Props in starRendererProps
 
 ```js

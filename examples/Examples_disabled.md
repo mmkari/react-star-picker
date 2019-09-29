@@ -28,7 +28,10 @@ const ParentComponent = () => {
           charCodeUnselected: 10023,
         }}
       />
-      <button onClick={toggleDisabling} style={{ height: '100%' }}>
+      <button
+        onClick={toggleDisabling}
+        style={{ height: '100%', marginLeft: '2em' }}
+      >
         {disabled ? 'Disabled' : 'Enabled'}
       </button>
     </div>
