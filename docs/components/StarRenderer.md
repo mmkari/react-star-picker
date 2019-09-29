@@ -15,7 +15,7 @@ type StarRendererProps = {|
 |};
 ```
 
-- `index`: the zero based index of this star
+- `index`: the zero based index of the star being rendered
 - `selectedIndex`: index of the star matching the current rating
 - `hoverIndex`: index of the star currently hovered on
 - `starRendererProps`: optional formatting props (explained separately below)

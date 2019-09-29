@@ -5,8 +5,6 @@ A **highly customizable** star-rating component
 
 </div>
 
-## ...
-
 ### Default features include
 
 - [supports half-star precision](https://mmkari.github.io/react-star-picker/#/Examples/Half%20stars)

@@ -49,11 +49,11 @@ type StarPickerProps = {|
 ### Optional Props
 
 - `starRendererProps`: [props passed on to starRenderer](https://github.com/mmkari/react-star-picker/blob/master/docs/components/StarRenderer.md#optional-props-in-starrendererprops)
-- `starRenderer`: if provided, replaces the default star-renderer
+- `starRenderer`: [if provided, replaces the default star-renderer](https://github.com/mmkari/react-star-picker/blob/master/docs/components/StarRenderer.md#starrenderer)
 - `halfStars`: whether to use half-star precision
 - `disabled`: whether the input is disabled
-- `size`: the size of the "stars"
+- `size`: the size of the stars in px (used for font-size, button widths)
 - `name`: input's name, supplied to the onChange function if provided
 - `className`
-- `numberStars`
+- `numberStars`: number of stars in the input
 - `doubleTapResets`: When true, picking the existing rating clears it

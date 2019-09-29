@@ -53,6 +53,7 @@ type StarPickerProps = {|
   /** input's name, supplied to the onChange function if provided */
   name?: string,
   className?: string,
+  /** number of stars in the input */
   numberStars: number,
   /** When true, selecting the existing rating clears the input */
   doubleTapResets: boolean,
