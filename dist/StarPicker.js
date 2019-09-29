@@ -123,7 +123,7 @@ function (_React$Component) {
           disabled = _this$props2.disabled,
           halfStars = _this$props2.halfStars,
           starRenderer = _this$props2.starRenderer,
-          defaultStarRendererProps = _this$props2.defaultStarRendererProps;
+          starRendererProps = _this$props2.starRendererProps;
       var hoverIndex = this.state.hoverIndex;
       var selectedIndex = valueToIndex(value, halfStars);
       var numberButtons = halfStars ? 2 * numberStars : numberStars;
@@ -138,7 +138,7 @@ function (_React$Component) {
           onClick: _this2.updateValue,
           onHoverChange: _this2.onHoverChange,
           starRenderer: starRenderer,
-          defaultStarRendererProps: defaultStarRendererProps,
+          starRendererProps: starRendererProps,
           halfStars: halfStars,
           disabled: disabled,
           size: size
@@ -158,9 +158,10 @@ _defineProperty(StarPicker, "defaultProps", {
   // in px, used for font-size and width stylings
   disabled: false,
   halfStars: false,
-  starRenderer: _defaultStarRenderer["default"],
   doubleTapResets: false,
-  defaultStarRendererProps: {}
+  starRenderer: _defaultStarRenderer["default"],
+  starRendererProps: Object.freeze({}) // frozen object for correct type checking
+
 });
 
 var _default = StarPicker;

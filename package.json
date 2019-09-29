@@ -9,6 +9,7 @@
   "scripts": {
     "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf dist/*",
     "build": "./node_modules/.bin/babel src --out-dir dist",
     "start:dev": "node config/webpack-dev-server.js",
     "clean-examples": "rm -rf dist-examples/*",

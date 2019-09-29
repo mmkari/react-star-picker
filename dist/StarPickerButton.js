@@ -30,25 +30,24 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var StarPickerButton = function StarPickerButton(_ref) {
-  var index = _ref.index,
-      onClick = _ref.onClick,
+  var className = _ref.className,
+      index = _ref.index,
       selectedIndex = _ref.selectedIndex,
       hoverIndex = _ref.hoverIndex,
+      onClick = _ref.onClick,
       onHoverChange = _ref.onHoverChange,
-      disabled = _ref.disabled,
-      className = _ref.className,
       starRenderer = _ref.starRenderer,
+      starRendererProps = _ref.starRendererProps,
       halfStars = _ref.halfStars,
-      size = _ref.size,
-      defaultStarRendererProps = _ref.defaultStarRendererProps;
+      disabled = _ref.disabled;
 
-  var handleMouseEnter = function handleMouseEnter() {
+  var onMouseEnter = function onMouseEnter() {
     if (!disabled) {
       onHoverChange(index);
     }
   };
 
-  var handleMouseLeave = function handleMouseLeave() {
+  var onMouseLeave = function onMouseLeave() {
     if (!disabled) {
       onHoverChange(null);
     }
@@ -65,8 +64,8 @@ var StarPickerButton = function StarPickerButton(_ref) {
     }),
     type: "button",
     onClick: handleClick,
-    onMouseEnter: handleMouseEnter,
-    onMouseLeave: handleMouseLeave,
+    onMouseEnter: onMouseEnter,
+    onMouseLeave: onMouseLeave,
     disabled: disabled
   }, React.createElement("div", {
     className: "StarPickerButton-buttonContent"
@@ -74,8 +73,7 @@ var StarPickerButton = function StarPickerButton(_ref) {
     index: index,
     selectedIndex: selectedIndex,
     hoverIndex: hoverIndex,
-    size: size,
-    defaultStarRendererProps: defaultStarRendererProps
+    starRendererProps: starRendererProps
   })));
 };
 
