@@ -24,8 +24,7 @@ module.exports = {
       sections: [
         {
           name: 'Installation',
-          //   content: 'docs/installation.md',
-          description: 'The description for the installation section',
+          content: 'examples/installation.md',
         },
         {
           name: 'Configuration',
