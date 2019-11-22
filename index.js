@@ -1,5 +1,5 @@
 export {
-  StarPicker as default,
+  default,
   defaultStarRenderer,
   DefaultStarRendererStarComponent,
 } from './src';
