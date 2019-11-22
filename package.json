@@ -1,6 +1,6 @@
 {
   "name": "react-star-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A star-rating component made with React",
   "main": "dist/index.js",
   "files": [
