@@ -3,6 +3,9 @@
   
 A **highly customizable** star-rating component
 
+[![npm version](https://img.shields.io/npm/v/react-star-picker.svg)](https://www.npmjs.com/package/react-star-picker)
+[![npm license](https://img.shields.io/npm/l/react-star-picker.svg)](https://github.com/mmkari/react-star-picker/blob/master/LICENSE)
+
 </div>
 
 ### Default features include
