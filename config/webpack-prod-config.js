@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+// const TerserPlugin = require("terser-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const paths = require("./paths");
 const common = require("./webpack-common-config.js");
@@ -20,8 +20,6 @@ module.exports = merge(common, {
     publicPath: "/react-star-picker/"
   },
   plugins: [
-    // minify JS
-    new UglifyJSPlugin(),
     // Set process.env.NODE_ENV to production
     new webpack.DefinePlugin({
       "process.env": {
@@ -57,9 +55,19 @@ module.exports = merge(common, {
   },
   // customize optimization if necessary:
   // optimization: {
-  //   splitChunks: {
-  //      ...    
-  //   },
-  //   runtimeChunk: true
+  //   // splitChunks: {
+  //   //    ...    
+  //   // },
+  //   // runtimeChunk: true,
+  //   minimize : true,
+  //   minimizer: [
+  //     new TerserPlugin({
+  //       terserOptions: {
+  //         mangle: {
+  //           properties: true
+  //         }
+  //       }
+  //     })
+  //   ]
   // }
 });

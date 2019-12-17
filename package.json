@@ -76,7 +76,6 @@
     "serve": "^11.1.0",
     "style-loader": "^1.0.0",
     "styled-components": "^4.4.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.40.2",
     "webpack-command": "^0.5.0",
     "webpack-dev-server": "^3.8.1",
