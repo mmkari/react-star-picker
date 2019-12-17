@@ -1,6 +1,6 @@
 {
   "name": "react-star-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A star-rating component made with React",
   "main": "dist/index.js",
   "files": [
@@ -67,26 +67,27 @@
     "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
+    "polished": "^3.4.1",
     "prettier-eslint": "^9.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13",
-    "react-styleguidist": "^9.1.16",
+    "react-styleguidist": "^10.3.2",
     "serve": "^11.1.0",
     "style-loader": "^1.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "styled-components": "^4.4.0",
     "webpack": "^4.40.2",
     "webpack-command": "^0.5.0",
     "webpack-dev-server": "^3.8.1",
     "webpack-merge": "^4.2.2"
   },
   "peerDependencies": {
+    "polished": ">= 3.4.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "styled-components": ">= 4.4.0"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "polished": "^3.4.1",
-    "styled-components": "^4.3.2"
+    "classnames": "^2.2.6"
   }
 }
