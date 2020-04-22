@@ -4,7 +4,8 @@
   "description": "A star-rating component made with React",
   "main": "dist/index.js",
   "files": [
-    "/dist"
+    "/dist",
+    "/dist-ts/*.d.ts"
   ],
   "scripts": {
     "check-types": "tsc",
