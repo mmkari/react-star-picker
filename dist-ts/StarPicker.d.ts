@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { StarPickerProps } from './types';
+import type { StarRendererProps, StarPickerProps } from './types';
 declare type State = {
     hoverIndex: number | null;
 };
@@ -15,7 +15,7 @@ declare class StarPicker extends React.Component<StarPickerProps, State> {
         disabled: boolean;
         halfStars: boolean;
         doubleTapResets: boolean;
-        starRenderer: ({ index, selectedIndex, hoverIndex, starRendererProps, }: any) => React.ReactNode;
+        starRenderer: ({ index, selectedIndex, hoverIndex, starRendererProps, }: StarRendererProps) => React.ReactNode;
         starRendererProps: Readonly<{}>;
     };
     updateValue: (index: number) => void;

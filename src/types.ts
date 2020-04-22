@@ -9,14 +9,14 @@ type DefaultRendererProps = {
   colorRemove?: string | null,
 };
 
-type DefaultRendererPropsWithDefaults = {|
+type DefaultRendererPropsWithDefaults = {
   colorActive: string,
   colorInactive: string,
   charCodeSelected: number,
   charCodeUnselected: number,
-  colorAdd: ?string,
-  colorRemove: ?string,
-|};
+  colorAdd: string | null,
+  colorRemove: string | null,
+};
 
 type GenericRendererProps = {
   /** the zero based index of the star being rendered */
@@ -27,11 +27,9 @@ type GenericRendererProps = {
   hoverIndex: number | null,
 };
 
-type DefaultStarComponentProps = {|
+type DefaultStarComponentProps = GenericRendererProps & DefaultRendererPropsWithDefaults & {
   className: string,
-  ...GenericRendererProps,
-  ...DefaultRendererPropsWithDefaults,
-|};
+};
 
 type StarRendererProps = GenericRendererProps & {
   starRendererProps: DefaultRendererProps,
@@ -52,16 +50,15 @@ type SharedProps = {
   size: number,
 };
 
-type StarPickerButtonProps = {|
-  ...SharedProps,
+type StarPickerButtonProps = SharedProps & {
   key: string,
   index: number,
   selectedIndex: number,
-  hoverIndex: ?number,
+  hoverIndex: number | null,
   onClick: (index: number) => void,
-  onHoverChange: (index: ?number) => void,
+  onHoverChange: (index: number | null) => void,
   className: string,
-|};
+};
 
 type StarPickerProps = SharedProps & {
   /** function called with the selected value (and the input name) after a new pick */

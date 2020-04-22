@@ -3,8 +3,6 @@ import { mix } from 'polished';
 import DefaultStarComponent from './defaultStarRendererStarComponent';
 
 import type {
-  // DefaultRendererProps,
-  // GenericRendererProps,
   StarRendererProps,
 } from './types';
 

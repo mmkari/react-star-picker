@@ -1,3 +1,4 @@
 import * as React from 'react';
-declare const defaultStarRenderer: ({ index, selectedIndex, hoverIndex, starRendererProps, }: any) => React.ReactNode;
+import type { StarRendererProps } from './types';
+declare const defaultStarRenderer: ({ index, selectedIndex, hoverIndex, starRendererProps, }: StarRendererProps) => React.ReactNode;
 export default defaultStarRenderer;

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
-import type { DefaultRendererProps,GenericRendererProps, StarRendererProps ,StarRendererFunction, SharedProps, StarPickerProps} from './types';
+import type { DefaultRendererProps, StarRendererProps , StarPickerProps} from './types';
 
 
 const valueToIndex = (value: number | null, halfStars: boolean): number => {

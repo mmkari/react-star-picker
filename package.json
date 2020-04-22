@@ -8,7 +8,7 @@
     "/dist-ts/*.d.ts"
   ],
   "scripts": {
-    "check-types": "tsc",
+    "check-types": "rm -rf dist-ts/* && tsc",
     "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf dist/*",
