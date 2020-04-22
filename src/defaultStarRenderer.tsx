@@ -1,37 +1,19 @@
-// @flow
 import * as React from 'react';
 import { mix } from 'polished';
 import DefaultStarComponent from './defaultStarRendererStarComponent';
 
-// import type { StarRendererProps, DefaultStarComponentProps } from './types';
-
-type DefaultRendererProps = {|
-  colorActive?: string,
-  colorInactive?: string,
-  charCodeSelected?: number,
-  charCodeUnselected?: number,
-  colorAdd?: ?string,
-  colorRemove?: ?string,
-|};
-type GenericRendererProps = {|
-  /** the zero based index of the star being rendered */
-  index: number,
-  /** index of the star matching the current rating  */
-  selectedIndex: number,
-  /** index of the star currently hovered on */
-  hoverIndex: ?number,
-|};
-type StarRendererProps = {|
-  ...GenericRendererProps,
-  starRendererProps: DefaultRendererProps,
-|};
+import type {
+  // DefaultRendererProps,
+  // GenericRendererProps,
+  StarRendererProps,
+} from './types';
 
 const defaultStarRenderer = ({
   index,
   selectedIndex,
   hoverIndex,
   starRendererProps,
-}: StarRendererProps): React.Node => {
+}: StarRendererProps): React.ReactNode => {
   // default renderer props:
   const {
     colorActive = 'gold',
