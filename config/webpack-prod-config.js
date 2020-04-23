@@ -1,4 +1,3 @@
-const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 // const TerserPlugin = require("terser-webpack-plugin");
@@ -11,13 +10,16 @@ module.exports = merge(common, {
     app: paths.appIndexJs
   },
   mode: "production",
+  // Enable sourcemaps for debugging webpack's output.
+  devtool: "source-map",
   // Set the name of our JS bundle using a chunckhash
   // (e.g. '5124f5efa5436b5b5e7d_app.js')
   // Location where built files will go.
   output: {
     filename: "[chunkhash]_[name].js",
     path: paths.appBuild,
-    publicPath: "/react-star-picker/"
+    publicPath: "/react-star-picker/" // use when deploying to github pages: needs project name in url
+    // publicPath: "/" // use to serve prod-build locally
   },
   plugins: [
     // Set process.env.NODE_ENV to production
@@ -29,30 +31,10 @@ module.exports = merge(common, {
     // Extract styles from bundles into separate file
     new ExtractTextPlugin("styles.css")
   ],
-  module: {
-    rules: [
-      {
-        // look for .js or .jsx files
-        test: /\.(js|jsx)$/,
-        include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
-        exclude: /node_modules/,
-        use: {
-          // use babel for transpiling JavaScript files
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/react"]
-          }
-        }
-      },
-      {
-        // look for .css or .scss files.
-        test: /\.(css|scss)$/,
-        include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
-      }
-    ]
-  },
+  resolve: {
+    // Add '.ts' and '.tsx' as resolvable extensions.
+    extensions: [".ts", ".tsx"]
+  },  
   // customize optimization if necessary:
   // optimization: {
   //   // splitChunks: {

@@ -1,4 +1,3 @@
-const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const paths = require("./paths");
@@ -22,28 +21,8 @@ module.exports = merge(common, {
       }
     })
   ],
-  module: {
-    rules: [
-      {
-        // look for .js or .jsx files
-        test: /\.(js|jsx)$/,
-        include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
-        exclude: /(node_modules)/,
-        use: {
-          // use babel for transpiling JavaScript files
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/react"]
-          }
-        }
-      },
-      {
-        // look for .css or .scss files
-        test: /\.(css|scss)$/,
-        include: [path.resolve(paths.appSrc), path.resolve(paths.appExamples)],
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
-      }
-    ]
-  }
+  resolve: {
+      // Add '.ts' and '.tsx' as resolvable extensions.
+      extensions: [".ts", ".tsx"]
+  },
 });
