@@ -5,7 +5,7 @@ The default styles are easily overridden with external CSS.
 
 The example below uses the `enlargeStar` class which has a style defined in the above CSS definitions.
 
-```jsx
+```jsx a
 import React from 'react';
 import StarPicker from 'react-star-picker';
 

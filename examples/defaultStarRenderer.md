@@ -6,7 +6,7 @@ The default star-renderer, `defaultStarRenderer`, styles characters based on the
     }
 </style>
 
-```jsx
+```jsx a
 import { defaultStarRenderer } from 'react-star-picker';
 
 <div>

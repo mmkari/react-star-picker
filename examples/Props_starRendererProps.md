@@ -1,6 +1,6 @@
 The optional `starRendererProps` passed to `starRenderer` functions contain:
 
-```js static
+```js static a
 type DefaultRendererProps = {|
   colorActive?: string,
   colorInactive?: string,

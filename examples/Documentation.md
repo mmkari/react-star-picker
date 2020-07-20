@@ -2,7 +2,7 @@ The `react-star-picker` component is a highly customizable star-rating component
 
 With the default props, the component has the following form:
 
-```jsx
+```jsx a
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

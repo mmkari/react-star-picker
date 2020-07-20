@@ -1,6 +1,6 @@
 The number of stars is controlled with the `numberStars` prop:
 
-```jsx
+```jsx a
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

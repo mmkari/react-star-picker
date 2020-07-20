@@ -2,7 +2,7 @@ The `StarPicker` component renders a number of buttons. By default, each button'
 
 The following editable example covers the use of all available props:
 
-```jsx
+```jsx a
 import React from 'react';
 import { ToggleButton } from './ExamplesHelpers';
 import StarPicker from 'react-star-picker';

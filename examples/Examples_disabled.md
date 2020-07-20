@@ -1,6 +1,6 @@
 Disabling is controlled with the `disabled` prop:
 
-```jsx
+```jsx a
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

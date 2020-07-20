@@ -1,6 +1,6 @@
 Half-star precision is turned on with `halfStars={true}`:
 
-```jsx
+```jsx a
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

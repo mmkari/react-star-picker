@@ -1,6 +1,6 @@
 The default renderer mixes the `colorActive` and `colorInactive` colors to form the addition and removal highlighting. These defaultly mixed colors can be overridden with explicitly passed `colorAdd` and `colorRemove` props as part of the <span style="color:red">`starRendererProps`</span>.
 
-```jsx
+```jsx a
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

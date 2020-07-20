@@ -1,8 +1,7 @@
 The default star-renderer can be replaced with a custom `starRenderer`:
 
-```jsx
+```jsx a
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
 import StarPicker from 'react-star-picker';
 import dollarRenderer from './customRenderer_dollar';
 

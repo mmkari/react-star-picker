@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './Examples.css';
 import './Examples_overrides.css';
-// import StarPicker from '../src/StarPicker';
-import StarPicker from '../src/index.ts';
+import StarPicker from '../dist-ts/StarPicker';
+// import StarPicker from '../src/index.ts';
 
 import StyledInputWithLabel from './ExamplesHelpers';
 import dollarRenderer from './customRenderer_dollar';
