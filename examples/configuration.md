@@ -1,6 +1,6 @@
 The suggested way of using `react-star-picker` is to wrap the `StarPicker` in a component that defines consistent default values:
 
-```jsx static
+```jsx static a
 import React from 'react';
 import StarPicker from 'react-star-picker';
 import classnames from 'classnames';
