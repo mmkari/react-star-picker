@@ -4,8 +4,11 @@ import classnames from 'classnames';
 import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
-import type { DefaultRendererProps, StarRendererProps , StarPickerProps} from './types';
-
+import {
+  DefaultRendererProps,
+  StarRendererProps,
+  StarPickerProps,
+} from './types';
 
 const valueToIndex = (value: number | null, halfStars: boolean): number => {
   if (!value) return -1;
@@ -29,7 +32,7 @@ const formatValue = (
 };
 
 type State = {
-  hoverIndex: number | null,
+  hoverIndex: number | null;
 };
 class StarPicker extends React.Component<StarPickerProps, State> {
   state = {

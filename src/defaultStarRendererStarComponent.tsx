@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import type { DefaultStarComponentProps } from './types';
+import { DefaultStarComponentProps } from './types';
 
 const DefaultStarComponent = ({
   index,

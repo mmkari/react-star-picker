@@ -2,9 +2,7 @@ import * as React from 'react';
 import { mix } from 'polished';
 import DefaultStarComponent from './defaultStarRendererStarComponent';
 
-import type {
-  StarRendererProps,
-} from './types';
+import { StarRendererProps } from './types';
 
 const defaultStarRenderer = ({
   index,

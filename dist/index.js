@@ -28,10 +28,10 @@ Object.defineProperty(exports, "DefaultStarRendererStarComponent", {
   }
 });
 
-var _StarPicker = _interopRequireDefault(require("./StarPicker.tsx"));
+var _StarPicker = _interopRequireDefault(require("./StarPicker"));
 
-var _defaultStarRenderer = _interopRequireDefault(require("./defaultStarRenderer.tsx"));
+var _defaultStarRenderer = _interopRequireDefault(require("./defaultStarRenderer"));
 
-var _defaultStarRendererStarComponent = _interopRequireDefault(require("./defaultStarRendererStarComponent.tsx"));
+var _defaultStarRendererStarComponent = _interopRequireDefault(require("./defaultStarRendererStarComponent"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
