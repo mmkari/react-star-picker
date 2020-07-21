@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-// const wpc = require('./config/styleguidist-webpack-config.js');
 const merge = require('webpack-merge');
 const propsParser = require('react-docgen-typescript');
 const wpc = require('./config/webpack-prod-config.js');
@@ -13,10 +12,6 @@ const extendedWpc = merge(wpc, {
   },
 });
 
-// Supported languages are: markup, xml, html, mathml, svg, css, clike, javascript,
-// js, markdown, md, scss, less, flow, typescript, ts, jsx, tsx, graphql, json, bash, shell, diff.
-
-// const srcFolder = 'dist-ts';
 const srcFolder = 'src';
 
 module.exports = {
@@ -52,20 +47,16 @@ module.exports = {
     },
     {
       name: 'Components',
-      // content: 'examples/Components.md',
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
       components: [`${srcFolder}/StarPicker.tsx`],
       skipComponentsWithoutExample: true,
-      // sectionDepth: 1,
     },
     {
       name: 'Props',
-      // content: 'examples/Components.md',
       exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
       components: [`${srcFolder}/defaultStarRenderer.tsx`],
       skipComponentsWithoutExample: true,
-      // sectionDepth: 1,
       sections: [
         {
           name: 'starRendererProps',
@@ -79,7 +70,6 @@ module.exports = {
     },
     {
       name: 'Examples',
-      // components: 'dist/*.js',
       exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
       sectionDepth: 1,
@@ -96,7 +86,6 @@ module.exports = {
         {
           name: 'Using a Custom Renderer',
           content: 'examples/Examples_customRenderer.md',
-          // description: 'Using a custom star-renderer',
         },
         {
           name: 'Custom characters',
@@ -122,8 +111,6 @@ module.exports = {
     },
   ],
   webpackConfig: extendedWpc,
-  // components: 'dist-ts/*.{js}',
-  // components: 'dist/*.{ts,tsx}',
   components: 'src/*.{ts,tsx}',
   styleguideDir: 'styleguidistHtml',
   pagePerSection: true,
@@ -147,13 +134,6 @@ module.exports = {
     paths: {
       '@components/*': ['src/*'],
       'react-star-picker': [path.resolve(__dirname, 'src/index.ts')],
-      // ...
     },
   }).parse,
-  // moduleAliases: {
-  //   '~/react-star-picker': path.resolve('/users/', '..', '..', 'index.ts'),
-
-  //   'react-star-picker': path.resolve('/users/', '..', '..', 'index.ts'),
-  //   // 'react-star-picker': path.resolve(__dirname, '..', '..', 'index.ts'),
-  // },
 };

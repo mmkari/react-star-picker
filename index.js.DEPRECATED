@@ -1,5 +1,0 @@
-export {
-  default,
-  defaultStarRenderer,
-  DefaultStarRendererStarComponent,
-} from './src/index.ts';
