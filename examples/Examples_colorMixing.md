@@ -1,4 +1,4 @@
-The default renderer uses four colors: `colorActive`, `colorInactive`, `colorAdd`, and `colorRemove`. Their default values are shades of yellow. Also, `colorAdd` and `colorRemove` are mixed from the `colorActive` and `colorRemove` colors unless provided. These values can be set within <span style="color:red">`starRendererProps`</span>.
+The default renderer uses four colors: `colorActive`, `colorInactive`, `colorAdd`, and `colorRemove`. `colorAdd` and `colorRemove` are mixed from the `colorActive` and `colorRemove` colors unless provided. All these values can be set with <span style="color:red">`starRendererProps`</span>.
 
 ```jsx static
 <StarPicker
@@ -16,7 +16,7 @@ The default renderer uses four colors: `colorActive`, `colorInactive`, `colorAdd
 ```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
-import { HuePicker } from 'react-color';
+import { HuePicker, MaterialPicker } from 'react-color';
 import Switch from 'react-switch-input';
 import {
   defaultColors,
@@ -26,6 +26,33 @@ import {
 
 import styled from 'styled-components';
 import classnames from 'classnames';
+
+const MaterialPickerContainer = styled.div`
+  .material-picker {
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+
+    input {
+      width: 80px;
+    }
+
+    .flexbox-fix {
+      padding-top: 0 !important;
+
+      div {
+        flex: 0 0 0 !important;
+
+        div {
+          width: 25px;
+        }
+      }
+    }
+  }
+  div div {
+    box-shadow: none !important;
+  }
+`;
 
 const StyledSwitch = styled(Switch)`
   margin: 0 2em 0 0;
@@ -55,8 +82,6 @@ const ColorSelectorContainer = styled.div`
 `;
 
 const ColorSelector = ({ name, color, onChange, toggle, setToggle }) => {
-  const [selectActive, setSelectActive] = useState(true);
-
   return (
     <ColorSelectorContainer>
       <ColorPaletteColor color={color} />
@@ -65,9 +90,10 @@ const ColorSelector = ({ name, color, onChange, toggle, setToggle }) => {
 
       {toggle && (
         <>
-          {selectActive && (
-            <HuePicker onChange={onChange} color="#333" hex={color} />
-          )}
+          <HuePicker onChange={onChange} color={color} hex={color} />
+          <MaterialPickerContainer>
+            <MaterialPicker onChange={onChange} color={color} hex={color} />
+          </MaterialPickerContainer>
         </>
       )}
     </ColorSelectorContainer>
