@@ -1,6 +1,17 @@
-The character icons used by the default star-renderer can be controlled with the `charCodeSelected` and `charCodeUnselected` as part of the <span style="color:red">`starRendererProps`</span>:
+You can change the character icons used by the default star-renderer with the `charCodeSelected` and `charCodeUnselected` props within <span style="color:red">`starRendererProps`</span>:
 
-```jsx a
+```jsx static
+<StarPicker
+  onChange={onChange}
+  value={value}
+  starRendererProps={{
+    charCodeSelected: 10029,
+    charCodeUnselected: 10029,
+  }}
+/>
+```
+
+```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

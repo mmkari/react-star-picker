@@ -6,6 +6,7 @@ The following editable example covers the use of all available props:
 import React from 'react';
 import { ToggleButton } from './ExamplesHelpers';
 import StarPicker from 'react-star-picker';
+import Switch from 'react-switch-input';
 
 const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
   const selected = selectedIndex != null && index <= selectedIndex;
@@ -57,13 +58,12 @@ class ParentComponent extends React.Component {
           starRenderer={this.state.useDefault ? undefined : customRenderer}
         />
 
-        <ToggleButton
-          label="Uses:"
-          content={
-            this.state.useDefault ? 'Default renderer' : 'Custom renderer'
-          }
-          onClick={this.toggleDefaultRenderer}
+        <label>default</label>
+        <Switch
+          checked={this.state.useDefault}
+          onChange={this.toggleDefaultRenderer}
         />
+        <label>custom</label>
       </div>
     );
   }

@@ -76,8 +76,16 @@ module.exports = {
       content: 'examples/Examples.md',
       sections: [
         {
-          name: 'Color mixing',
+          name: 'Default Renderer: Color mixing',
           content: 'examples/Examples_colorMixing.md',
+        },
+        {
+          name: 'Default Renderer: Custom characters',
+          content: 'examples/Examples_starChars.md',
+        },
+        {
+          name: 'Default Renderer: Styling',
+          content: 'examples/Examples_customStyling.md',
         },
         {
           name: 'Half stars',
@@ -88,16 +96,8 @@ module.exports = {
           content: 'examples/Examples_customRenderer.md',
         },
         {
-          name: 'Custom characters',
-          content: 'examples/Examples_starChars.md',
-        },
-        {
           name: 'Resetting',
           content: 'examples/Examples_doubleTap.md',
-        },
-        {
-          name: 'Styling the Default Renderer',
-          content: 'examples/Examples_customStyling.md',
         },
         {
           name: 'Disabling',
