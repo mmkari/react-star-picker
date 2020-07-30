@@ -62,10 +62,10 @@ module.exports = {
           name: 'starRendererProps',
           content: 'examples/Props_starRendererProps.md',
         },
-        {
-          name: 'starRenderer',
-          content: 'examples/Props_starRenderer.md',
-        },
+        // {
+        //   name: 'starRenderer',
+        //   content: 'examples/Props_starRenderer.md',
+        // },
       ],
     },
     {
