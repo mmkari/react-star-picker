@@ -1,4 +1,19 @@
-The default star-renderer, `defaultStarRenderer`, styles characters based on the values of the `index`, `selectedIndex` and `hoverIndex` values:
+The `starRenderer` function prop is used to render content inside the individual `StarPickerButton`s. It gets the following props when called:
+
+```jsx static
+{
+  /** the zero based index of the star being rendered */
+  index: number;
+  /** index of the star matching the current rating  */
+  selectedIndex: number;
+  /** index of the star currently hovered on */
+  hoverIndex: number | null;
+  /** props used by the default starRenderer (see below) */
+  starRendererProps: DefaultRendererProps;
+}
+```
+
+The default star-renderer component styles stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values:
 
 <style>
     .DefaultStarComponent {

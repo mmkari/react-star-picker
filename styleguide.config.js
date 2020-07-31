@@ -48,6 +48,7 @@ module.exports = {
     {
       name: 'Components',
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       components: [`${srcFolder}/StarPicker.tsx`],
       skipComponentsWithoutExample: true,
     },
@@ -55,9 +56,13 @@ module.exports = {
       name: 'Props',
       exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      components: [`${srcFolder}/defaultStarRenderer.tsx`],
+      // components: [`${srcFolder}/defaultStarRenderer.tsx`],
       skipComponentsWithoutExample: true,
       sections: [
+        {
+          name: 'starRenderer',
+          content: 'examples/defaultStarRenderer.md',
+        },
         {
           name: 'starRendererProps',
           content: 'examples/Props_starRendererProps.md',
