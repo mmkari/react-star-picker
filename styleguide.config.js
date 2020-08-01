@@ -61,7 +61,7 @@ module.exports = {
       sections: [
         {
           name: 'starRenderer',
-          content: 'examples/defaultStarRenderer.md',
+          content: 'examples/Props_starRenderer.md',
         },
         {
           name: 'starRendererProps',

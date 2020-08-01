@@ -10,9 +10,15 @@ import Switch from 'react-switch-input';
 
 const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
   const selected = selectedIndex != null && index <= selectedIndex;
-  const { colorActive, colorInactive } = starRendererProps;
+  // const { colorActive, colorInactive } = starRendererProps;
+  const colors = ['yellow', 'orange', 'red', 'green', 'blue', 'black'];
   return (
-    <div style={{ color: selected ? colorActive : colorInactive }}>
+    <div
+      style={{
+        color: selected ? colors[index] : 'gray',
+        fontSize: 50 + index * 8,
+      }}
+    >
       {String.fromCharCode(9856 + index)}
     </div>
   );
@@ -23,7 +29,7 @@ class ParentComponent extends React.Component {
     super();
     this.state = {
       rating: null,
-      useDefault: false,
+      useCustom: false,
     };
     this.onChange = this.onChange.bind(this);
     this.toggleDefaultRenderer = this.toggleDefaultRenderer.bind(this);
@@ -32,7 +38,7 @@ class ParentComponent extends React.Component {
     this.setState({ [name]: value });
   }
   toggleDefaultRenderer() {
-    this.setState((prevState) => ({ useDefault: !prevState.useDefault }));
+    this.setState((prevState) => ({ useCustom: !prevState.useCustom }));
   }
   render() {
     return (
@@ -55,12 +61,12 @@ class ParentComponent extends React.Component {
             colorAdd: undefined,
             colorRemove: undefined,
           }}
-          starRenderer={this.state.useDefault ? undefined : customRenderer}
+          starRenderer={this.state.useCustom ? customRenderer : undefined}
         />
 
         <label>default</label>
         <Switch
-          checked={this.state.useDefault}
+          checked={this.state.useCustom}
           onChange={this.toggleDefaultRenderer}
         />
         <label>custom</label>

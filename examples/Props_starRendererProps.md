@@ -1,4 +1,4 @@
-The optional `starRendererProps` may contain the following:
+The default star renderer can be controlled with several optional values inside the `starRendererProps` prop. The optional values include the following:
 
 ```jsx static
 {
@@ -11,4 +11,4 @@ The optional `starRendererProps` may contain the following:
 }
 ```
 
-These props are used by the default star-renderer to alter the rendered UTF-16 "star" character or to change the color scheme.
+These props are used by the default star-renderer to alter the rendered UTF-16 "star" character and to change its color scheme.
