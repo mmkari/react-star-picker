@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { StarRendererProps, StarPickerProps } from './types';
+import { StarRendererProps, StarPickerProps } from './types';
 declare type State = {
     hoverIndex: number | null;
 };
