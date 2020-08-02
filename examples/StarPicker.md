@@ -32,12 +32,12 @@ class ParentComponent extends React.Component {
       useCustom: false,
     };
     this.onChange = this.onChange.bind(this);
-    this.toggleDefaultRenderer = this.toggleDefaultRenderer.bind(this);
+    this.toggleCustomRenderer = this.toggleCustomRenderer.bind(this);
   }
   onChange(value, name) {
     this.setState({ [name]: value });
   }
-  toggleDefaultRenderer() {
+  toggleCustomRenderer() {
     this.setState((prevState) => ({ useCustom: !prevState.useCustom }));
   }
   render() {
@@ -67,7 +67,7 @@ class ParentComponent extends React.Component {
         <label>default</label>
         <Switch
           checked={this.state.useCustom}
-          onChange={this.toggleDefaultRenderer}
+          onChange={this.toggleCustomRenderer}
         />
         <label>custom</label>
       </div>

@@ -1,4 +1,4 @@
-The `starRenderer` function renders the content inside individual `StarPickerButton`s. It gets called with the following props:
+The `StarPicker` component renders a button (`StarPickerButton`) for each star, or half star, element. It is the `starRenderer` function that then renders the content inside these individual `StarPickerButton`s. It gets called with the following props:
 
 ```jsx static
 {
@@ -13,7 +13,7 @@ The `starRenderer` function renders the content inside individual `StarPickerBut
 }
 ```
 
-The default star-renderer component styles stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
+You can provide `StarPicker` with your own custom star-renderer. If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
 
 <style>
     .DefaultStarComponent {
@@ -21,7 +21,7 @@ The default star-renderer component styles stars based on the values of the `ind
     }
 </style>
 
-```jsx a
+```jsx noeditor
 import { defaultStarRenderer } from 'react-star-picker';
 
 <div>

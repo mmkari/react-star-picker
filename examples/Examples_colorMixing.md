@@ -1,4 +1,4 @@
-The default renderer uses four colors: `colorActive`, `colorInactive`, `colorAdd`, and `colorRemove`. `colorAdd` and `colorRemove` are mixed from the `colorActive` and `colorRemove` colors unless provided. All these values can be set with <span style="color:red">`starRendererProps`</span>.
+The default renderer uses four colors: `colorActive`, `colorInactive`, `colorAdd`, and `colorRemove`. Out of these, `colorAdd` and `colorRemove` are mixed from the `colorActive` and `colorRemove` colors unless provided. All of these values can be set within the <span style="color:red">`starRendererProps`</span> object.
 
 ```jsx static
 <StarPicker

@@ -12,3 +12,5 @@ The default star renderer can be controlled with several optional values inside 
 ```
 
 These props are used by the default star-renderer to alter the rendered UTF-16 "star" character and to change its color scheme.
+
+<em>These props will be provided to a custom star-renderer as well.</em>
