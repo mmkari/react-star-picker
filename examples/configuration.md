@@ -1,14 +1,14 @@
-The suggested way of using `react-star-picker` is to wrap the `StarPicker` in a component that defines consistent default values:
+It's good to wrap the `StarPicker` component imported from `react-star-picker` in another component that defines consistent default values for it. You may also want to provide a custom `starRenderer` function for the `StarPicker` here (<a href="#/Props?id=section-starrenderer">see this section on how</a>):
 
-```jsx static
+```jsx static a
 import React from 'react';
 import StarPicker from 'react-star-picker';
 import classnames from 'classnames';
 
-// const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
-//   // style the "star" according to the index, selectedIndex, hoverIndex...
-//   return {...};   // return it here
-// };
+const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
+  // style the "star" according to the given index, selectedIndex, hoverIndex...
+  return {...};   // return it here
+};
 
 const MyStarPicker = ({
   onChange,

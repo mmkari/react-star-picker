@@ -1,6 +1,10 @@
-The number of stars is controlled with the `numberStars` prop:
+Set the number of stars with the `numberStars` prop:
 
-```jsx
+```jsx static
+<StarPicker onChange={onChange} value={value} numberStars={7} />
+```
+
+```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 

@@ -2,16 +2,23 @@ The `StarPicker` component renders a number of buttons. By default, each button'
 
 The following editable example covers the use of all available props:
 
-```jsx
+```jsx a
 import React from 'react';
 import { ToggleButton } from './ExamplesHelpers';
 import StarPicker from 'react-star-picker';
+import Switch from 'react-switch-input';
 
 const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
   const selected = selectedIndex != null && index <= selectedIndex;
-  const { colorActive, colorInactive } = starRendererProps;
+  // const { colorActive, colorInactive } = starRendererProps;
+  const colors = ['yellow', 'orange', 'red', 'green', 'blue', 'black'];
   return (
-    <div style={{ color: selected ? colorActive : colorInactive }}>
+    <div
+      style={{
+        color: selected ? colors[index] : 'gray',
+        fontSize: 50 + index * 8,
+      }}
+    >
       {String.fromCharCode(9856 + index)}
     </div>
   );
@@ -22,16 +29,16 @@ class ParentComponent extends React.Component {
     super();
     this.state = {
       rating: null,
-      useDefault: false,
+      useCustom: false,
     };
     this.onChange = this.onChange.bind(this);
-    this.toggleDefaultRenderer = this.toggleDefaultRenderer.bind(this);
+    this.toggleCustomRenderer = this.toggleCustomRenderer.bind(this);
   }
   onChange(value, name) {
     this.setState({ [name]: value });
   }
-  toggleDefaultRenderer() {
-    this.setState((prevState) => ({ useDefault: !prevState.useDefault }));
+  toggleCustomRenderer() {
+    this.setState((prevState) => ({ useCustom: !prevState.useCustom }));
   }
   render() {
     return (
@@ -54,16 +61,15 @@ class ParentComponent extends React.Component {
             colorAdd: undefined,
             colorRemove: undefined,
           }}
-          starRenderer={this.state.useDefault ? undefined : customRenderer}
+          starRenderer={this.state.useCustom ? customRenderer : undefined}
         />
 
-        <ToggleButton
-          label="Uses:"
-          content={
-            this.state.useDefault ? 'Default renderer' : 'Custom renderer'
-          }
-          onClick={this.toggleDefaultRenderer}
+        <label>default</label>
+        <Switch
+          checked={this.state.useCustom}
+          onChange={this.toggleCustomRenderer}
         />
+        <label>custom</label>
       </div>
     );
   }

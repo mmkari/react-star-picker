@@ -17,18 +17,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  transition: color 0.2s;\n  color: ", ";\n\n  &.selected {\n    color: ", ";\n  }\n\n  &.newSelection {\n    color: ", ";\n  }\n\n  &.lostSelection {\n    color: ", ";\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 var DefaultStarComponent = function DefaultStarComponent(_ref) {
   var index = _ref.index,
       selectedIndex = _ref.selectedIndex,
@@ -48,7 +36,10 @@ var DefaultStarComponent = function DefaultStarComponent(_ref) {
   }, selected ? String.fromCharCode(charCodeSelected) : String.fromCharCode(charCodeUnselected));
 };
 
-var StyledDefaultStarComponent = (0, _styledComponents["default"])(DefaultStarComponent)(_templateObject(), function (props) {
+var StyledDefaultStarComponent = (0, _styledComponents["default"])(DefaultStarComponent).withConfig({
+  displayName: "defaultStarRendererStarComponent__StyledDefaultStarComponent",
+  componentId: "sc-1618fog-0"
+})(["transition:color 0.2s;color:", ";&.selected{color:", ";}&.newSelection{color:", ";}&.lostSelection{color:", ";}"], function (props) {
   return props.colorInactive;
 }, function (props) {
   return props.colorActive;

@@ -137,7 +137,7 @@ const StyledInputWithLabel = styled(InputWithLabel)`
     color: lightgray;
 
     a {
-      animation: ${blink} 4s;
+      animation: ${blink} 2s;
       animation-fill-mode: forwards;
 
       color: lightgray;

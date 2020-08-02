@@ -1,9 +1,8 @@
-// @flow
 import * as React from 'react';
 import './Examples.css';
 import './Examples_overrides.css';
-// import StarPicker from '../src/StarPicker';
-import StarPicker from '../src';
+import StarPicker from '../dist-ts/StarPicker';
+// import StarPicker from '../src/index.ts';
 
 import StyledInputWithLabel from './ExamplesHelpers';
 import dollarRenderer from './customRenderer_dollar';
@@ -39,7 +38,7 @@ class Examples extends React.Component<Props, State> {
         <StyledInputWithLabel
           labelLeft={{
             label: 'Color mixing',
-            linkRef: '#/Examples/Color%20mixing',
+            linkRef: '#/Examples/Default%20Renderer%3A%20Color%20mixing',
           }}
         >
           <StarPicker
@@ -92,7 +91,7 @@ class Examples extends React.Component<Props, State> {
         <StyledInputWithLabel
           labelRight={{
             label: 'UTF-16 characters',
-            linkRef: '#/Examples/Custom%20characters',
+            linkRef: '#/Examples/Default%20Renderer%3A%20Custom%20characters',
           }}
         >
           <StarPicker
@@ -115,7 +114,7 @@ class Examples extends React.Component<Props, State> {
           }}
           labelRight={{
             label: 'Custom styling',
-            linkRef: '#/Examples/Styling%20the%20Default%20Renderer',
+            linkRef: '#/Examples/Default%20Renderer%3A%20Styling',
           }}
         >
           <StarPicker

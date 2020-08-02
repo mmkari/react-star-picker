@@ -17,18 +17,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: none;\n  font-size: ", ";\n  cursor: pointer;\n  padding: 0;\n  margin: 0;\n  line-height: 100%;\n\n  &.disabled {\n    cursor: not-allowed;\n  }\n\n  width: ", ";\n  .StarPickerButton-buttonContent {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  &.halfStars {\n    width: ", ";\n    .StarPickerButton-buttonContent {\n      width: ", ";\n    }\n    overflow: hidden;\n    direction: ", ";\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 var StarPickerButton = function StarPickerButton(_ref) {
   var className = _ref.className,
       index = _ref.index,
@@ -77,7 +65,10 @@ var StarPickerButton = function StarPickerButton(_ref) {
   })));
 };
 
-var StyledStarPickerButton = (0, _styledComponents["default"])(StarPickerButton)(_templateObject(), function (props) {
+var StyledStarPickerButton = (0, _styledComponents["default"])(StarPickerButton).withConfig({
+  displayName: "StarPickerButton__StyledStarPickerButton",
+  componentId: "dig9c0-0"
+})(["background:transparent;border:none;font-size:", ";cursor:pointer;padding:0;margin:0;line-height:100%;&.disabled{cursor:not-allowed;}width:", ";.StarPickerButton-buttonContent{display:flex;justify-content:center;align-items:center;}&.halfStars{width:", ";.StarPickerButton-buttonContent{width:", ";}overflow:hidden;direction:", ";}"], function (props) {
   return "".concat(props.size, "px");
 }, function (props) {
   return "".concat(props.size, "px");

@@ -1,6 +1,10 @@
 Half-star precision is turned on with `halfStars={true}`:
 
-```jsx
+```jsx static
+<StarPicker onChange={onChange} value={value} halfStars />
+```
+
+```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 
@@ -13,15 +17,7 @@ const ParentComponent = () => {
 
   return (
     <div>
-      <StarPicker
-        onChange={onChange}
-        value={rating}
-        halfStars
-        size={50}
-        starRendererProps={{
-          colorActive: 'green',
-        }}
-      />
+      <StarPicker onChange={onChange} value={rating} halfStars size={50} />
     </div>
   );
 };

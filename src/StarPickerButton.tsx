@@ -1,9 +1,8 @@
-// @flow
 import * as React from 'react';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import type { StarPickerButtonProps } from './types';
+import { StarPickerButtonProps } from './types';
 
 const StarPickerButton = ({
   className,

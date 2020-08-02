@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import type { StarRendererProps } from '../src/types';
+import type { StarRendererProps } from '../src/types.ts';
 
 const rotate = keyframes`
   0% {

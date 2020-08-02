@@ -1,6 +1,12 @@
 {
-  "presets": ["@babel/preset-flow", "@babel/preset-env", "@babel/preset-react"],
+  "presets": [
+    "@babel/preset-typescript",
+    "@babel/preset-flow",
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
   "plugins": [
+    "babel-plugin-styled-components",
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-class-properties"
