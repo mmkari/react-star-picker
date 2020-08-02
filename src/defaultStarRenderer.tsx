@@ -25,8 +25,10 @@ const defaultStarRenderer = ({
   const {
     colorActive = defaultColors.colorActive,
     colorInactive = defaultColors.colorInactive,
-    colorAdd = defaultColors.colorAdd,
-    colorRemove = defaultColors.colorRemove,
+    colorAdd = mixColorAdd(colorActive, colorInactive) ||
+      defaultColors.colorAdd,
+    colorRemove = mixColorRemove(colorActive, colorInactive) ||
+      defaultColors.colorRemove,
     charCodeSelected = 9733,
     charCodeUnselected = 9733,
   } = starRendererProps;
