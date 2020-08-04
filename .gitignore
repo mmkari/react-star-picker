@@ -1,5 +1,5 @@
 node_modules
-# dist
+dist
 dist-ts/*.js
 dist-examples
 styleguidistHtml
