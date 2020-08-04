@@ -23,3 +23,4 @@ declare class StarPicker extends React.Component<StarPickerProps, State> {
     render(): JSX.Element;
 }
 export default StarPicker;
+//# sourceMappingURL=StarPicker.d.ts.map

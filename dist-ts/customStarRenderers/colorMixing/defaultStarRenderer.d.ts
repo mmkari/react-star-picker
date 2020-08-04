@@ -10,3 +10,4 @@ export declare const defaultColors: {
 };
 declare const defaultStarRenderer: ({ index, selectedIndex, hoverIndex, starRendererProps, }: StarRendererProps) => React.ReactNode;
 export default defaultStarRenderer;
+//# sourceMappingURL=defaultStarRenderer.d.ts.map

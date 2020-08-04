@@ -7,14 +7,6 @@ export declare type DefaultRendererProps = {
     colorAdd?: string | null;
     colorRemove?: string | null;
 };
-export declare type DefaultRendererPropsWithDefaults = {
-    colorActive: string;
-    colorInactive: string;
-    charCodeSelected: number;
-    charCodeUnselected: number;
-    colorAdd: string | null;
-    colorRemove: string | null;
-};
 export declare type GenericRendererProps = {
     /** the zero based index of the star being rendered */
     index: number;
@@ -22,9 +14,6 @@ export declare type GenericRendererProps = {
     selectedIndex: number;
     /** index of the star currently hovered on */
     hoverIndex: number | null;
-};
-export declare type DefaultStarComponentProps = GenericRendererProps & DefaultRendererPropsWithDefaults & {
-    className: string;
 };
 export declare type StarRendererProps = GenericRendererProps & {
     starRendererProps: DefaultRendererProps;
@@ -64,3 +53,4 @@ export declare type StarPickerProps = SharedProps & {
     /** When true, selecting the existing rating clears the input */
     doubleTapResets: boolean;
 };
+//# sourceMappingURL=types.d.ts.map
