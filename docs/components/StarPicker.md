@@ -1,6 +1,6 @@
 # `<StarPicker />`
 
-`StarPicker` is the default export:
+`StarPicker` is the default export of the `react-star-picker` module:
 
 ```jsx
 import React, { useState } from 'react';
@@ -23,11 +23,10 @@ const ParentComponent = () => {
 
 ## StarPicker Props
 
-Props:
+`StarPicker` accepts the following props:
 
 ```js
 type StarPickerProps = {|
-  starRendererProps: DefaultRendererProps,
   starRenderer: StarRendererFunction,
   halfStars: boolean,
   disabled: boolean,
@@ -41,6 +40,8 @@ type StarPickerProps = {|
 |};
 ```
 
+_`starRendererProps` prop has been deprecated since 2.0.0_
+
 ### Required Props
 
 - `onChange`: function called with the selected value and the input name after a new pick
@@ -48,7 +49,6 @@ type StarPickerProps = {|
 
 ### Optional Props
 
-- `starRendererProps`: [props passed on to starRenderer](https://github.com/mmkari/react-star-picker/blob/master/docs/components/StarRenderer.md#optional-props-in-starrendererprops)
 - `starRenderer`: [if provided, replaces the default star-renderer](https://github.com/mmkari/react-star-picker/blob/master/docs/components/StarRenderer.md#starrenderer)
 - `halfStars`: whether to use half-star precision
 - `disabled`: whether the input is disabled
