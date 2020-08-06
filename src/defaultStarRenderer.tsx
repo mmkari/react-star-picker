@@ -9,7 +9,6 @@ const defaultStarRenderer = ({
   index,
   selectedIndex,
   hoverIndex,
-  starRendererProps,
 }: StarRendererProps): React.ReactNode => {
   const selected = index <= selectedIndex;
   const nextSelection = hoverIndex != null && index <= hoverIndex;

@@ -63,14 +63,16 @@ module.exports = {
           name: 'starRenderer',
           content: 'examples/Props_starRenderer.md',
         },
-        {
-          name: 'starRendererProps',
-          content: 'examples/Props_starRendererProps.md',
-        },
         // {
-        //   name: 'starRenderer',
-        //   content: 'examples/Props_starRenderer.md',
+        //   name: 'halfStars',
+        //   content: 'examples/Props_halfStars.md',
         // },
+        // {
+        //   name: 'numberStars',
+        //   content: 'examples/Props_numberStars.md',
+        // },
+        //
+        // ... MOVE PROP pages here
       ],
     },
     {
@@ -80,13 +82,30 @@ module.exports = {
       sectionDepth: 1,
       content: 'examples/Examples.md',
       sections: [
+        // {
+        //   name: 'Default Renderer: Custom characters',
+        //   content: 'examples/Examples_starChars.md',
+        // },
         {
-          name: 'Default Renderer: Color mixing',
-          content: 'examples/Examples_colorMixing.md',
-        },
-        {
-          name: 'Default Renderer: Custom characters',
-          content: 'examples/Examples_starChars.md',
+          name: 'Custom Renderer',
+          exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
+          usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+          content: 'examples/customRenderers.md',
+          skipComponentsWithoutExample: true,
+          sections: [
+            {
+              name: 'Simple custom character renderer',
+              content: 'examples/Examples_starChars.md',
+            },
+            {
+              name: 'Using a Custom Renderer',
+              content: 'examples/Examples_customRenderer.md',
+            },
+            // {
+            //   name: 'starRenderer',
+            //   content: 'examples/Props_starRenderer.md',
+            // },
+          ],
         },
         {
           name: 'Default Renderer: Styling',
@@ -95,10 +114,6 @@ module.exports = {
         {
           name: 'Half stars',
           content: 'examples/Examples_halfStars.md',
-        },
-        {
-          name: 'Using a Custom Renderer',
-          content: 'examples/Examples_customRenderer.md',
         },
         {
           name: 'Resetting',

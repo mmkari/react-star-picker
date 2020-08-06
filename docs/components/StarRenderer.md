@@ -18,11 +18,7 @@ type StarRendererProps = {|
 - `selectedIndex`: index of the star matching the current rating
 - `hoverIndex`: index of the star currently hovered on
 
-## Deprecated `starRendererProps`
-
-Previous versions of `react-star-picker` allowed users of `StarPicker` to pass props through to the used star-renderer function in a `starRendererProps` pass-through object prop. Since _v2.0.0_ that option no longer exists.
-
-To provide additional props to a custom star-renderer, e.g. here a `myCustomRenderer`, use an adapter function like this:
+To provide additional props to a custom star-renderer, e.g. here `myCustomRenderer`, use an adapter function like this:
 
 ```jsx
 <StarPicker

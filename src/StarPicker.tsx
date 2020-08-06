@@ -4,11 +4,7 @@ import classnames from 'classnames';
 import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
 
-import {
-  DefaultRendererProps,
-  StarRendererProps,
-  StarPickerProps,
-} from './types';
+import { StarPickerProps } from './types';
 
 const valueToIndex = (value: number | null, halfStars: boolean): number => {
   if (!value) return -1;
@@ -49,7 +45,6 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     halfStars: false,
     doubleTapResets: false,
     starRenderer: defaultStarRenderer,
-    starRendererProps: Object.freeze({}), // frozen object for correct type checking
   };
 
   componentDidMount() {
@@ -83,7 +78,6 @@ class StarPicker extends React.Component<StarPickerProps, State> {
       disabled,
       halfStars,
       starRenderer,
-      starRendererProps,
     } = this.props;
     const { hoverIndex } = this.state;
 
@@ -101,7 +95,6 @@ class StarPicker extends React.Component<StarPickerProps, State> {
             onClick={this.updateValue}
             onHoverChange={this.onHoverChange}
             starRenderer={starRenderer}
-            starRendererProps={starRendererProps}
             halfStars={halfStars}
             disabled={disabled}
             size={size}

@@ -5,4 +5,4 @@ npm i react-star-picker
 
 ```
 
-<em>Note: currently `react-star-picker` requires `polished` and `styled-components` as peer dependencies.</em>
+<em>Note: currently `react-star-picker` requires `styled-components` as its peer dependency.</em>

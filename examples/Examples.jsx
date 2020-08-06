@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Examples.css';
 import './Examples_overrides.css';
-import StarPicker from '../dist-ts/StarPicker';
+import StarPicker from '../src/StarPicker.tsx';
 // import StarPicker from '../src/index.ts';
 
 import StyledInputWithLabel from './ExamplesHelpers';
@@ -37,25 +37,6 @@ class Examples extends React.Component<Props, State> {
       <div className="Examples">
         <StyledInputWithLabel
           labelLeft={{
-            label: 'Color mixing',
-            linkRef: '#/Examples/Default%20Renderer%3A%20Color%20mixing',
-          }}
-        >
-          <StarPicker
-            name="rating1"
-            value={rating1}
-            onChange={this.setValue}
-            starRendererProps={{
-              colorActive: '#df00ff',
-              colorInactive: '#ccccff',
-              colorRemove: '#a900c1',
-              charCodeUnselected: 9734,
-            }}
-          />
-        </StyledInputWithLabel>
-
-        <StyledInputWithLabel
-          labelLeft={{
             label: 'Half-star support',
             linkRef: '#/Examples/Half%20stars',
           }}
@@ -66,10 +47,6 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             halfStars
             size={50}
-            starRendererProps={{
-              colorActive: 'orange',
-              charCodeUnselected: 9734,
-            }}
           />
         </StyledInputWithLabel>
 
@@ -89,25 +66,6 @@ class Examples extends React.Component<Props, State> {
         </StyledInputWithLabel>
 
         <StyledInputWithLabel
-          labelRight={{
-            label: 'UTF-16 characters',
-            linkRef: '#/Examples/Default%20Renderer%3A%20Custom%20characters',
-          }}
-        >
-          <StarPicker
-            name="rating4"
-            value={rating4}
-            onChange={this.setValue}
-            halfStars
-            size={70}
-            starRendererProps={{
-              colorActive: '#ff3333',
-              charCodeSelected: 10029,
-            }}
-          />
-        </StyledInputWithLabel>
-
-        <StyledInputWithLabel
           labelLeft={{
             label: '(Resets on double tap)',
             linkRef: '#/Examples/Resetting',
@@ -123,10 +81,6 @@ class Examples extends React.Component<Props, State> {
             value={rating5}
             onChange={this.setValue}
             doubleTapResets
-            starRendererProps={{
-              colorAdd: null,
-              colorRemove: null,
-            }}
           />
         </StyledInputWithLabel>
 
@@ -141,13 +95,11 @@ class Examples extends React.Component<Props, State> {
           }}
         >
           <StarPicker
+            size={100}
             value={2}
             onChange={this.setValue}
             numberStars={3}
             disabled
-            starRendererProps={{
-              colorActive: 'blue',
-            }}
           />
         </StyledInputWithLabel>
       </div>

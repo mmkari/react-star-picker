@@ -12,7 +12,6 @@ const StarPickerButton = ({
   onClick,
   onHoverChange,
   starRenderer,
-  starRendererProps,
   halfStars,
   disabled,
 }: StarPickerButtonProps) => {
@@ -48,7 +47,6 @@ const StarPickerButton = ({
           index,
           selectedIndex,
           hoverIndex,
-          starRendererProps,
         })}
       </div>
     </button>

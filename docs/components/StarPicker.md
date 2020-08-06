@@ -40,8 +40,6 @@ type StarPickerProps = {|
 |};
 ```
 
-_`starRendererProps` prop has been deprecated since 2.0.0_
-
 ### Required Props
 
 - `onChange`: function called with the selected value and the input name after a new pick

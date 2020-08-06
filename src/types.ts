@@ -1,15 +1,6 @@
 import * as React from 'react';
 
-export type DefaultRendererProps = {
-  colorActive?: string;
-  colorInactive?: string;
-  charCodeSelected?: number;
-  charCodeUnselected?: number;
-  colorAdd?: string | null;
-  colorRemove?: string | null;
-};
-
-export type GenericRendererProps = {
+export type StarRendererProps = {
   /** the zero based index of the star being rendered */
   index: number;
   /** index of the star matching the current rating  */
@@ -18,15 +9,9 @@ export type GenericRendererProps = {
   hoverIndex: number | null;
 };
 
-export type StarRendererProps = GenericRendererProps & {
-  starRendererProps: DefaultRendererProps;
-};
-
 export type StarRendererFunction = (StarRendererProps) => React.ReactNode;
 
 export type SharedProps = {
-  /** props supported by the default star-renderer. Will be passed to a custom star-renderer as well */
-  starRendererProps: DefaultRendererProps;
   /** if provided, replaces the default star-renderer */
   starRenderer: StarRendererFunction;
   /** whether to use half-star precision */

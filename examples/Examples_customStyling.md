@@ -22,10 +22,6 @@ const ParentComponent = () => {
         className="enlargeStar"
         value={rating}
         onChange={onChange}
-        starRendererProps={{
-          colorAdd: null,
-          colorRemove: null,
-        }}
         size={50}
       />
     </div>
@@ -53,10 +49,6 @@ const ParentComponent = () => {
         className="rotateStar"
         value={rating}
         onChange={onChange}
-        starRendererProps={{
-          colorAdd: null,
-          colorRemove: null,
-        }}
         size={50}
       />
     </div>

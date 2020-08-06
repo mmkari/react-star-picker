@@ -8,8 +8,6 @@ The `StarPicker` component renders a button (`StarPickerButton`) for each star, 
   selectedIndex: number;
   /** index of the star currently hovered on */
   hoverIndex: number | null;
-  /** props used by the default starRenderer (see below) */
-  starRendererProps: DefaultRendererProps;
 }
 ```
 
@@ -31,7 +29,6 @@ import { defaultStarRenderer } from 'react-star-picker';
       selectedIndex: 1,
       hoverIndex: null,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'selected'}</span>
 
@@ -51,7 +48,6 @@ import { defaultStarRenderer } from 'react-star-picker';
       selectedIndex: null,
       hoverIndex: null,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'unselected'}</span>
 
@@ -70,7 +66,6 @@ import { defaultStarRenderer } from 'react-star-picker';
       selectedIndex: 1,
       hoverIndex: 0,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'remove'}</span>
 
@@ -89,7 +84,6 @@ import { defaultStarRenderer } from 'react-star-picker';
       selectedIndex: null,
       hoverIndex: 1,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'add'}</span>
 
