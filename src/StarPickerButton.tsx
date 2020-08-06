@@ -1,11 +1,11 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import styled from 'styled-components';
 
 import { StarPickerButtonProps } from './types';
 
+import './StarPickerButton.css';
+
 const StarPickerButton = ({
-  className,
   index,
   selectedIndex,
   hoverIndex,
@@ -32,9 +32,10 @@ const StarPickerButton = ({
 
   return (
     <button
-      className={classnames(className, 'StarPickerButton', {
+      className={classnames('StarPickerButton', {
         disabled,
         halfStars,
+        directionRtl: halfStars && index % 2 !== 0,
       })}
       type="button"
       onClick={handleClick}
@@ -54,33 +55,4 @@ const StarPickerButton = ({
   );
 };
 
-const StyledStarPickerButton = styled(StarPickerButton)`
-  background: transparent;
-  border: none;
-  font-size: ${(props) => `${props.size}px`};
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  line-height: 100%;
-
-  &.disabled {
-    cursor: not-allowed;
-  }
-
-  width: ${(props) => `${props.size}px`};
-  .StarPickerButton-buttonContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &.halfStars {
-    width: ${(props) => `${props.size / 2.0}px`};
-    .StarPickerButton-buttonContent {
-      width: ${(props) => `${props.size}px`};
-    }
-    overflow: hidden;
-    direction: ${(props) => (props.index % 2 !== 0 ? 'rtl' : 'ltr')};
-  }
-`;
-
-export default StyledStarPickerButton;
+export default StarPickerButton;

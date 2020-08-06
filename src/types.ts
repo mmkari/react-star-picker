@@ -9,15 +9,6 @@ export type DefaultRendererProps = {
   colorRemove?: string | null;
 };
 
-export type DefaultRendererPropsWithDefaults = {
-  colorActive: string;
-  colorInactive: string;
-  charCodeSelected: number;
-  charCodeUnselected: number;
-  colorAdd: string | null;
-  colorRemove: string | null;
-};
-
 export type GenericRendererProps = {
   /** the zero based index of the star being rendered */
   index: number;
@@ -26,11 +17,6 @@ export type GenericRendererProps = {
   /** index of the star currently hovered on */
   hoverIndex: number | null;
 };
-
-export type DefaultStarComponentProps = GenericRendererProps &
-  DefaultRendererPropsWithDefaults & {
-    className: string;
-  };
 
 export type StarRendererProps = GenericRendererProps & {
   starRendererProps: DefaultRendererProps;
@@ -58,7 +44,6 @@ export type StarPickerButtonProps = SharedProps & {
   hoverIndex: number | null;
   onClick: (index: number) => void;
   onHoverChange: (index: number | null) => void;
-  className: string;
 };
 
 export type StarPickerProps = SharedProps & {
@@ -74,12 +59,3 @@ export type StarPickerProps = SharedProps & {
   /** When true, selecting the existing rating clears the input */
   doubleTapResets: boolean;
 };
-
-// export type {
-//   StarRendererProps,
-//   DefaultRendererProps,
-//   DefaultRendererPropsWithDefaults,
-//   DefaultStarComponentProps,
-//   StarPickerButtonProps,
-//   StarPickerProps,
-// };

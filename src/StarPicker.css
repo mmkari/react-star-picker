@@ -1,0 +1,4 @@
+.StarPicker {
+  --star-size: 34px; /* 34, custom property value, set from StarPicker component */
+  font-size: var(--star-size);
+}

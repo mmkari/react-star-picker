@@ -1,0 +1,16 @@
+.DefaultStarComponent {
+  transition: color 0.2s;
+  color: #e4e4e4;
+}
+
+.DefaultStarComponent.selected {
+  color: gold;
+}
+
+.DefaultStarComponent.newSelection {
+  color: #e9e1b6;
+}
+
+.DefaultStarComponent.lostSelection {
+  color: #eede88;
+}

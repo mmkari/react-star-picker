@@ -38,6 +38,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
   state = {
     hoverIndex: null,
   };
+  inputRef = React.createRef<HTMLDivElement>();
 
   static defaultProps = {
     name: undefined,
@@ -50,6 +51,16 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     starRenderer: defaultStarRenderer,
     starRendererProps: Object.freeze({}), // frozen object for correct type checking
   };
+
+  componentDidMount() {
+    // set CSS custom property value for this component
+    if (this.inputRef.current) {
+      this.inputRef.current.style.setProperty(
+        '--star-size',
+        String(this.props.size) + 'px'
+      );
+    }
+  }
 
   updateValue = (index: number): void => {
     const { onChange, value, halfStars, doubleTapResets, name } = this.props;
@@ -80,7 +91,7 @@ class StarPicker extends React.Component<StarPickerProps, State> {
     const numberButtons = halfStars ? 2 * numberStars : numberStars;
 
     return (
-      <div className={classnames('StarPicker', className)}>
+      <div className={classnames('StarPicker', className)} ref={this.inputRef}>
         {[...Array(numberButtons).keys()].map((i) => (
           <StarPickerButton
             key={`star-${i}`}
