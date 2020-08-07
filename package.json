@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf dist/*",
     "build-js": "./node_modules/.bin/babel src --out-dir dist  --extensions .ts,.tsx --source-maps inline",
-    "build-types": "tsc",
+    "build-types": "tsc --emitDeclarationOnly",
     "build": "npm run build-js && npm run build-types",
     "start:dev": "node config/webpack-dev-server.js",
     "build-pages": "rm -rf dist-examples/* && webpack --config config/webpack-prod-config.js",
@@ -69,7 +69,7 @@
     "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
-    "polished": "^3.4.1",
+    "polished": "^3.6.5",
     "prettier-eslint": "^9.0.0",
     "react": "^16.9.0",
     "react-color": "^2.18.1",
@@ -90,10 +90,8 @@
     "webpack-merge": "^4.2.2"
   },
   "peerDependencies": {
-    "polished": ">= 3.4.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": ">= 4.4.0"
+    "react-dom": "^16.9.0"
   },
   "dependencies": {
     "classnames": "^2.2.6"
