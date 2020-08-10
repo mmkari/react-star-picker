@@ -14,7 +14,7 @@ The `StarPicker` component renders a button (`StarPickerButton`) for each star, 
 You can provide `StarPicker` with your own custom star-renderer. If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
 
 <style>
-    .DefaultStarComponent {
+    .DefaultStarRendererExample .DefaultStarComponent {
         font-size: 34px;
     }
 </style>
@@ -22,7 +22,7 @@ You can provide `StarPicker` with your own custom star-renderer. If you don't, t
 ```jsx noeditor
 import { defaultStarRenderer } from 'react-star-picker';
 
-<div>
+<div className="DefaultStarRendererExample">
   <div style={{ display: 'flex', alignItems: 'center' }}>
     {defaultStarRenderer({
       index: 1,

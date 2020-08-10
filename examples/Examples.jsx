@@ -6,6 +6,7 @@ import StarPicker from '../src/StarPicker.tsx';
 
 import StyledInputWithLabel from './ExamplesHelpers';
 import dollarRenderer from './customRenderer_dollar';
+import characterRenderer from './customRenderer_characters';
 
 type Props = {};
 type State = {
@@ -37,8 +38,8 @@ class Examples extends React.Component<Props, State> {
       <div className="Examples">
         <StyledInputWithLabel
           labelLeft={{
-            label: 'Half-star support',
-            linkRef: '#/Examples/Half%20stars',
+            label: 'Half-star precision',
+            linkRef: '#/Props/halfStars',
           }}
         >
           <StarPicker
@@ -52,8 +53,8 @@ class Examples extends React.Component<Props, State> {
 
         <StyledInputWithLabel
           labelRight={{
-            label: 'Custom star renderer support',
-            linkRef: '#/Examples/Using%20a%20Custom%20Renderer',
+            label: 'Custom animated SVGs',
+            linkRef: '#/Examples/Custom%20Renderer/Animated%20SVG%20Icons',
           }}
         >
           <StarPicker
@@ -66,9 +67,26 @@ class Examples extends React.Component<Props, State> {
         </StyledInputWithLabel>
 
         <StyledInputWithLabel
+          labelRight={{
+            label: 'Custom character rendering',
+            linkRef:
+              '#/Examples/Custom%20Renderer/Custom%20Character%20Renderer',
+          }}
+        >
+          <StarPicker
+            name="rating4"
+            value={rating4}
+            onChange={this.setValue}
+            numberStars={5}
+            starRenderer={characterRenderer}
+            size={50}
+          />
+        </StyledInputWithLabel>
+
+        <StyledInputWithLabel
           labelLeft={{
-            label: '(Resets on double tap)',
-            linkRef: '#/Examples/Resetting',
+            label: 'Resets on double tap',
+            linkRef: '#/Props/doubleTapResets',
           }}
           labelRight={{
             label: 'Custom styling',
@@ -86,12 +104,12 @@ class Examples extends React.Component<Props, State> {
 
         <StyledInputWithLabel
           labelLeft={{
-            label: '(disabled)',
-            linkRef: '#/Examples/Disabling',
+            label: 'Disabled',
+            linkRef: '#/Props/disabled',
           }}
           labelRight={{
             label: 'Custom number of stars',
-            linkRef: '#/Examples/Number%20of%20stars',
+            linkRef: '#/Props/numberStars',
           }}
         >
           <StarPicker

@@ -10,7 +10,7 @@ import StarPicker from 'react-star-picker';
 
 const ParentComponent = () => {
   return (
-    <StarPicker onChange={undefined} value={3} disabled={true} size={70} />
+    <StarPicker onChange={undefined} value={3} disabled={true} size={50} />
   );
 };
 

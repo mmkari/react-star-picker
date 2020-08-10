@@ -63,16 +63,22 @@ module.exports = {
           name: 'starRenderer',
           content: 'examples/Props_starRenderer.md',
         },
-        // {
-        //   name: 'halfStars',
-        //   content: 'examples/Props_halfStars.md',
-        // },
-        // {
-        //   name: 'numberStars',
-        //   content: 'examples/Props_numberStars.md',
-        // },
-        //
-        // ... MOVE PROP pages here
+        {
+          name: 'halfStars',
+          content: 'examples/Props_halfStars.md',
+        },
+        {
+          name: 'doubleTapResets',
+          content: 'examples/Props_doubleTapResets.md',
+        },
+        {
+          name: 'disabled',
+          content: 'examples/Props_disabled.md',
+        },
+        {
+          name: 'numberStars',
+          content: 'examples/Props_numberStars.md',
+        },
       ],
     },
     {
@@ -82,10 +88,6 @@ module.exports = {
       sectionDepth: 1,
       content: 'examples/Examples.md',
       sections: [
-        // {
-        //   name: 'Default Renderer: Custom characters',
-        //   content: 'examples/Examples_starChars.md',
-        // },
         {
           name: 'Custom Renderer',
           exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
@@ -94,38 +96,18 @@ module.exports = {
           skipComponentsWithoutExample: true,
           sections: [
             {
-              name: 'Simple custom character renderer',
-              content: 'examples/Examples_starChars.md',
+              name: 'Custom Character Renderer',
+              content: 'examples/Examples_CustomRenderer_CustomCharacters.md',
             },
             {
-              name: 'Using a Custom Renderer',
-              content: 'examples/Examples_customRenderer.md',
+              name: 'Animated SVG Icons',
+              content: 'examples/Examples_CustomRenderer_AnimatedSvgIcons.md',
             },
-            // {
-            //   name: 'starRenderer',
-            //   content: 'examples/Props_starRenderer.md',
-            // },
           ],
         },
         {
           name: 'Default Renderer: Styling',
           content: 'examples/Examples_customStyling.md',
-        },
-        {
-          name: 'Half stars',
-          content: 'examples/Examples_halfStars.md',
-        },
-        {
-          name: 'Resetting',
-          content: 'examples/Examples_doubleTap.md',
-        },
-        {
-          name: 'Disabling',
-          content: 'examples/Examples_disabled.md',
-        },
-        {
-          name: 'Number of stars',
-          content: 'examples/Examples_numberStars.md',
         },
       ],
     },

@@ -1,4 +1,4 @@
-It's good to wrap the `StarPicker` component imported from `react-star-picker` in another component that defines consistent default values for it. You may also want to provide a custom `starRenderer` function for the `StarPicker` here (<a href="#/Props?id=section-starrenderer">see this section on how</a>):
+Configure `StarPicker` by wrapping it in another component that defines its default values. This is a good place to write your custom `starRenderer` function as well (<a href="#/Props?id=section-starrenderer">see this section for details</a>):
 
 ```jsx static a
 import React from 'react';
