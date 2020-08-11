@@ -11,7 +11,7 @@ The `StarPicker` component renders a button (`StarPickerButton`) for each star, 
 }
 ```
 
-You can provide `StarPicker` with your own custom star-renderer. If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
+You can provide `StarPicker` with your own custom star-renderer (<a href="#/Examples/Custom%20Renderer">see examples here</a>). If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
 
 <style>
     .DefaultStarRendererExample .DefaultStarComponent {

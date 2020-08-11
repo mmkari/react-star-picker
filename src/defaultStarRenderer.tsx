@@ -11,15 +11,15 @@ const defaultStarRenderer = ({
   hoverIndex,
 }: StarRendererProps): React.ReactNode => {
   const selected = index <= selectedIndex;
-  const nextSelection = hoverIndex != null && index <= hoverIndex;
-  const hasHover = hoverIndex != null;
+  const inHoverRange = hoverIndex != null && index <= hoverIndex;
+  const hoverActive = hoverIndex != null;
 
   return (
     <div
       className={classnames('DefaultStarComponent', {
         selected,
-        newSelection: hasHover && nextSelection && !selected,
-        lostSelection: hasHover && selected && !nextSelection,
+        addSelection: hoverActive && !selected && inHoverRange,
+        removeSelection: hoverActive && selected && !inHoverRange,
       })}
     >
       {String.fromCharCode(9733)}

@@ -7,10 +7,10 @@
   color: gold;
 }
 
-.DefaultStarComponent.newSelection {
+.DefaultStarComponent.addSelection {
   color: #e9e1b6;
 }
 
-.DefaultStarComponent.lostSelection {
+.DefaultStarComponent.removeSelection {
   color: #eede88;
 }

@@ -1,6 +1,6 @@
 The `StarPicker` component renders a number of buttons. By default, each button's content is rendered using the `defaultStarRenderer`. Alternatively, you can provide a custom `starRenderer` prop to get control over the button contents.
 
-The following editable example covers the use of all available props:
+The following editable example covers the use of all available props. Use the toggle to switch between the default `starRenderer` and a custom one.
 
 ```jsx a
 import React from 'react';

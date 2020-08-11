@@ -1,6 +1,6 @@
 # `starRenderer()`
 
-`<StarPicker />` accepts a `starRenderer` prop which, if given, overrides the default star-renderer ([`defaultStarRenderer.jsx`](/src/defaultStarRenderer.jsx)).
+`<StarPicker />` accepts a `starRenderer` prop which, if given, overrides the default star-renderer ([`defaultStarRenderer.tsx`](/src/defaultStarRenderer.tsx)).
 
 ## starRenderer Props
 

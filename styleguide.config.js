@@ -79,6 +79,18 @@ module.exports = {
           name: 'numberStars',
           content: 'examples/Props_numberStars.md',
         },
+        {
+          name: 'name',
+          content: 'examples/Props_name.md',
+        },
+        {
+          name: 'onChange',
+          content: 'examples/Props_onChange.md',
+        },
+        {
+          name: 'value',
+          content: 'examples/Props_value.md',
+        },
       ],
     },
     {
@@ -107,7 +119,7 @@ module.exports = {
         },
         {
           name: 'Default Renderer: Styling',
-          content: 'examples/Examples_customStyling.md',
+          content: 'examples/Examples_DefaultRenderer_Styling.md',
         },
       ],
     },

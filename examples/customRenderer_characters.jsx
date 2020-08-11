@@ -14,13 +14,6 @@ const CustomCharacterStar = ({
   const hoverActive = hoverIndex != null;
   const isHovered = hoverIndex === index;
 
-  // const colors = {
-  //   active: '#ff3333',
-  //   inactive: '#e4e4e4',
-  //   add: '#e9c0c0',
-  //   remove: '#ee9d9d',
-  // };
-
   return (
     <div
       className={classnames(className, {
@@ -38,11 +31,6 @@ const CustomCharacterStar = ({
 const StyledCustomCharacterStar = styled(CustomCharacterStar)`
   transition: color 0.2s, transform 0.2s;
   color: #e4e4e4;
-
-  // display: flex;
-  // padding: 0;
-  // margin: 0;
-  // font-size: 1.2rem;
 
   &.selected {
     color: #ff3333;

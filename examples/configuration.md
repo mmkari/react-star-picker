@@ -1,4 +1,4 @@
-Configure `StarPicker` by wrapping it in another component that defines its default values. This is a good place to write your custom `starRenderer` function as well (<a href="#/Props?id=section-starrenderer">see this section for details</a>):
+Configure `StarPicker` by wrapping it in another component that defines its default values. This is a good place to write your custom `starRenderer` function as well (<a href="#/Props/starRenderer">see this section for details</a>):
 
 ```jsx static a
 import React from 'react';
@@ -11,28 +11,28 @@ const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
 };
 
 const MyStarPicker = ({
-  onChange,
   value,
-  className,
-  disabled,
-  doubleTapResets = true,
-  halfStars = true,
+  onChange,
   name,
-  numberStars = 5,
+  className,
   size = 42,
+  numberStars = 5,
+  disabled = false,
+  halfStars = true,
+  doubleTapResets = true,
 }) => {
   //
   return (
     <StarPicker
-      onChange={onChange}
       value={value}
-      className={classnames('MyStarPicker', className)}
-      disabled={disabled}
-      doubleTapResets={doubleTapResets}
-      halfStars={halfStars}
+      onChange={onChange}
       name={name}
-      numberStars={numberStars}
+      className={classnames('MyStarPicker', className)}
       size={size}
+      numberStars={numberStars}
+      disabled={disabled}
+      halfStars={halfStars}
+      doubleTapResets={doubleTapResets}
       starRenderer={MyCustomStarRenderer}
     />
   );

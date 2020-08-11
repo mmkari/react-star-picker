@@ -1,4 +1,4 @@
-`react-star-picker` supports resetting with `doubleTapResets={true}` prop:
+`react-star-picker` supports resetting with `doubleTapResets={true}`. With this prop enabled, `StarPicker` returns a _null_ value to the `onChange` callback whenever a new selected value equals the current value of the input, i.e. when the same existing value is selected again:
 
 ```jsx static
 <StarPicker onChange={onChange} value={value} doubleTapResets />

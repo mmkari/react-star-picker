@@ -31,10 +31,10 @@ const dollarRenderer = ({
   selectedIndex,
 }: StarRendererProps): React.Node => {
   const selected = index <= selectedIndex;
-  const nextSelection = hoverIndex != null && index <= hoverIndex;
-  const hasHover = hoverIndex != null;
+  const inHoverRange = hoverIndex != null && index <= hoverIndex;
+  const hoverActive = hoverIndex != null;
 
-  const colored = (selected && !hasHover) || (nextSelection && hasHover);
+  const colored = (selected && !hoverActive) || (inHoverRange && hoverActive);
   const color = colored ? '#1ca363' : 'grey';
   const colorOutline = colored ? 'green' : 'grey';
   return (
