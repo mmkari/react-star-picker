@@ -11,6 +11,7 @@
     "build-js": "./node_modules/.bin/babel src --out-dir dist  --extensions .ts,.tsx --source-maps inline",
     "build-types": "tsc --emitDeclarationOnly",
     "build": "npm run build-js && npm run build-types",
+    "prepare": "npm run build",
     "start:dev": "node config/webpack-dev-server.js",
     "build-pages": "rm -rf dist-examples/* && webpack --config config/webpack-prod-config.js",
     "start:prod": "npm run build-pages && serve   -examples",
