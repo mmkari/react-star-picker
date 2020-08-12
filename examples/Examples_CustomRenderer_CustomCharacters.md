@@ -13,8 +13,6 @@ import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
 import customCharacterRenderer from './customRenderer_characters';
 
-console.log('GOT RENDERER:', customCharacterRenderer);
-
 const ParentComponent = () => {
   const [rating, setRating] = useState(null);
 
