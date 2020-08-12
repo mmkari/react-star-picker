@@ -1,5 +1,9 @@
 node_modules
 # dist
-dist-ts/*.js
 dist-examples
 styleguidistHtml
+config
+src
+examples
+styleguide.config.js
+tsconfig.json
