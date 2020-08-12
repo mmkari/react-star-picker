@@ -34,7 +34,6 @@ const StarPickerButton = ({
       className={classnames('StarPickerButton', {
         disabled,
         halfStars,
-        directionRtl: halfStars && index % 2 !== 0,
       })}
       type="button"
       onClick={handleClick}

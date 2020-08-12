@@ -26,7 +26,7 @@
 
   width: calc(var(--star-size) / 2);
 }
-.StarPickerButton.halfStars.directionRtl {
+.StarPickerButton.halfStars:nth-child(even) {
   direction: rtl;
 }
 
