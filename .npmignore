@@ -3,6 +3,7 @@ node_modules
 dist-examples
 styleguidistHtml
 config
+docs
 src
 examples
 styleguide.config.js
