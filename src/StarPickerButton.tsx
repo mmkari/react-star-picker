@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { StarPickerButtonProps } from './types';
 
-import '../src/StarPickerButton.css';
+import './StarPickerButton.css';
 
 const StarPickerButton = ({
   index,

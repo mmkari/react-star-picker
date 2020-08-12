@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import '../src/defaultStarRenderer.css';
+import './defaultStarRenderer.css';
 
 import { StarRendererProps } from './types';
 
