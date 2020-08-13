@@ -99,7 +99,7 @@ const InputWithLabel = ({
 //   }
 // `;
 
-const colorTransitionTime = 0.2;
+const colorTransitionTime = 0.4;
 const colorTransitionTimeExtended = 0.8;
 const colorFaded = '#FFFFFF';
 const colorActive = '#BBBBBB';
