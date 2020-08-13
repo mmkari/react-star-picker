@@ -37,11 +37,15 @@ module.exports = {
       sections: [
         {
           name: 'Installation',
-          content: 'examples/installation.md',
+          content: 'examples/Documentation_Installation.md',
         },
         {
           name: 'Configuration',
-          content: 'examples/configuration.md',
+          content: 'examples/Documentation_Configuration.md',
+        },
+        {
+          name: 'Styles',
+          content: 'examples/Documentation_Styles.md',
         },
       ],
     },
@@ -132,7 +136,7 @@ module.exports = {
   require: [path.join(__dirname, 'examples/Examples_overrides.css')],
   updateExample(props, exampleFilePath) {
     const { settings, lang } = props;
-    if (typeof settings.file === 'string') {
+    if (settings && typeof settings.file === 'string') {
       const filepath = path.resolve(exampleFilePath, settings.file);
       delete settings.file;
       return {
