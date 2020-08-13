@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import type { StarRendererProps } from '../src/types.ts';
 
+// 1. define the "star" component that returns the wanted character icon and attaches classNames to it based on the state of selection
 const CustomCharacterStar = ({
   index,
   hoverIndex,
@@ -28,6 +29,7 @@ const CustomCharacterStar = ({
   );
 };
 
+// 2. here we turn the star component into a styled star component and define styles for the attached classes
 const StyledCustomCharacterStar = styled(CustomCharacterStar)`
   transition: color 0.2s, transform 0.2s;
   color: #e4e4e4;
@@ -46,7 +48,7 @@ const StyledCustomCharacterStar = styled(CustomCharacterStar)`
   }
 `;
 
-// export the actual render function
+// 3. export an actual render function that simply returns the styled star component
 export default ({
   index,
   hoverIndex,
