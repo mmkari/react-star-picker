@@ -14,22 +14,13 @@
   cursor: not-allowed;
 }
 
-.StarPickerButton .StarPickerButton-buttonContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .StarPickerButton.halfStars {
   overflow: hidden;
   direction: ltr;
 
   width: calc(var(--star-size) / 2);
 }
+
 .StarPickerButton.halfStars:nth-child(even) {
   direction: rtl;
-}
-
-.StarPickerButton.halfStars .StarPickerButton-buttonContent {
-  width: var(--star-size);
 }

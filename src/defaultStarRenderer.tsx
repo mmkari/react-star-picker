@@ -11,8 +11,8 @@ const defaultStarRenderer = ({
   hoverIndex,
 }: StarRendererProps): React.ReactNode => {
   const selected = index <= selectedIndex;
-  const inHoverRange = hoverIndex != null && index <= hoverIndex;
   const hoverActive = hoverIndex != null;
+  const inHoverRange = hoverIndex != null && index <= hoverIndex;
 
   return (
     <div

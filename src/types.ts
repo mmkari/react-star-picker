@@ -22,14 +22,17 @@ export type SharedProps = {
   size: number;
 };
 
-export type StarPickerButtonProps = SharedProps & {
-  key: string;
-  index: number;
-  selectedIndex: number;
-  hoverIndex: number | null;
-  onClick: (index: number) => void;
-  onHoverChange: (index: number | null) => void;
+export type StarPickerButtonContentProps = StarRendererProps & {
+  halfStars: boolean;
+  starRenderer: StarRendererFunction;
 };
+
+export type StarPickerButtonProps = SharedProps &
+  StarRendererProps & {
+    key: string;
+    onClick: (index: number) => void;
+    onHoverChange: (index: number | null) => void;
+  };
 
 export type StarPickerProps = SharedProps & {
   /** function called with the selected value (and the input name) after a new pick */
