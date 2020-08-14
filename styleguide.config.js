@@ -25,11 +25,11 @@ module.exports = {
   },
 
   sections: [
-    // {
-    //   name: 'Demo',
-    //   content: 'examples/Examples.md',
-    //   exampleMode: 'hide',
-    // },
+    {
+      name: 'Demo',
+      content: 'examples/Examples.md',
+      exampleMode: 'hide',
+    },
     {
       name: 'Documentation',
       content: 'examples/Documentation.md',
@@ -101,8 +101,8 @@ module.exports = {
       name: 'Examples',
       exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      sectionDepth: 1,
-      content: 'examples/Examples.md',
+      // sectionDepth: 1,
+      // content: 'examples/Examples.md',
       sections: [
         {
           name: 'Custom Renderer',
@@ -112,8 +112,14 @@ module.exports = {
           skipComponentsWithoutExample: true,
           sections: [
             {
-              name: 'Custom Character Renderer',
-              content: 'examples/Examples_CustomRenderer_CustomCharacters.md',
+              name: 'Simple Character Renderer',
+              content:
+                'examples/Examples_CustomRenderer_SimpleCustomCharacters.md',
+            },
+            {
+              name: 'Advanced Character Renderer',
+              content:
+                'examples/Examples_CustomRenderer_AdvancedCustomCharacters.md',
             },
             {
               name: 'Animated SVG Icons',
@@ -133,7 +139,10 @@ module.exports = {
   styleguideDir: 'styleguidistHtml',
   pagePerSection: true,
 
-  require: [path.join(__dirname, 'examples/Examples_overrides.css')],
+  require: [
+    path.join(__dirname, 'examples/Examples_overrides.css'),
+    path.join(__dirname, 'examples/Examples_stylingWithButtons.css'),
+  ],
   updateExample(props, exampleFilePath) {
     const { settings, lang } = props;
     if (settings && typeof settings.file === 'string') {

@@ -1,13 +1,3 @@
-You can change the rendered star character easily by providing a simple custom `starRenderer` to `StarPicker`:
-
-```jsx static
-<StarPicker
-  onChange={onChange}
-  value={value}
-  starRenderer={characterRenderer}
-/>
-```
-
 ```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
@@ -35,7 +25,7 @@ const ParentComponent = () => {
 <ParentComponent />;
 ```
 
-The above example uses the following `characterRenderer`:
+The above example uses the following custom star renderer:
 
 ```js { "file": "../customRenderer_characters.jsx", "static": "true" }
 ```

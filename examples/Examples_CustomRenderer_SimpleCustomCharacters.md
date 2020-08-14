@@ -1,7 +1,7 @@
 ```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
-import dollarRenderer from './customRenderer_dollar';
+import customCharacterRenderer from './customRenderer_simpleCharacter';
 
 const ParentComponent = () => {
   const [rating, setRating] = useState(null);
@@ -13,19 +13,24 @@ const ParentComponent = () => {
   return (
     <div>
       <StarPicker
-        onChange={onChange}
+        className="blueTheme"
         value={rating}
-        numberStars={4}
-        starRenderer={dollarRenderer}
+        onChange={onChange}
+        size={50}
+        starRenderer={customCharacterRenderer}
       />
     </div>
   );
 };
-
 <ParentComponent />;
 ```
 
 The above example uses the following custom star renderer:
 
-```js { "file": "../customRenderer_dollar.jsx", "static": "true" }
+```js { "file": "../customRenderer_simpleCharacter.jsx", "static": "true" }
+```
+
+...and the following styles:
+
+```css { "file": "../Examples_stylingWithButtons.css", "static": "true" }
 ```

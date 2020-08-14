@@ -70,7 +70,7 @@ class Examples extends React.Component<Props, State> {
           labelRight={{
             label: 'Custom character rendering',
             linkRef:
-              '#/Examples/Custom%20Renderer/Custom%20Character%20Renderer',
+              '#/Examples/Custom%20Renderer/Advanced%20Character%20Renderer',
           }}
         >
           <StarPicker

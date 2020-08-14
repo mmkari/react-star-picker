@@ -26,6 +26,24 @@ import { defaultStarRenderer } from 'react-star-picker';
   <div style={{ display: 'flex', alignItems: 'center' }}>
     {defaultStarRenderer({
       index: 1,
+      selectedIndex: null,
+      hoverIndex: null,
+      size: 34,
+    })}
+    <span style={{ padding: '0 2em', color: 'red' }}>{'unselected'}</span>
+
+    {/*<span
+      style={{
+        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
+        fontSize: '14px',
+      }}
+    >
+      {'(!selectedIndex || selectedIndex < index)'}
+    </span>*/}
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    {defaultStarRenderer({
+      index: 1,
       selectedIndex: 1,
       hoverIndex: null,
       size: 34,
@@ -46,10 +64,10 @@ import { defaultStarRenderer } from 'react-star-picker';
     {defaultStarRenderer({
       index: 1,
       selectedIndex: null,
-      hoverIndex: null,
+      hoverIndex: 1,
       size: 34,
     })}
-    <span style={{ padding: '0 2em', color: 'red' }}>{'unselected'}</span>
+    <span style={{ padding: '0 2em', color: 'red' }}>{'add'}</span>
 
     <span
       style={{
@@ -57,7 +75,7 @@ import { defaultStarRenderer } from 'react-star-picker';
         fontSize: '14px',
       }}
     >
-      {'(!selectedIndex || selectedIndex < index)'}
+      {'(selectedIndex < index ≤ hoverIndex)'}
     </span>
   </div>
   <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -76,24 +94,6 @@ import { defaultStarRenderer } from 'react-star-picker';
       }}
     >
       {'(hoverIndex < index ≤ selectedIndex)'}
-    </span>
-  </div>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    {defaultStarRenderer({
-      index: 1,
-      selectedIndex: null,
-      hoverIndex: 1,
-      size: 34,
-    })}
-    <span style={{ padding: '0 2em', color: 'red' }}>{'add'}</span>
-
-    <span
-      style={{
-        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
-        fontSize: '14px',
-      }}
-    >
-      {'(selectedIndex < index ≤ hoverIndex)'}
     </span>
   </div>
 </div>;
