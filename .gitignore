@@ -1,5 +1,6 @@
 node_modules
-# dist
-dist-ts/*.js
+dist
 dist-examples
 styleguidistHtml
+src/*.d.ts
+src/*.d.ts.map

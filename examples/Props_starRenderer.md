@@ -8,15 +8,13 @@ The `StarPicker` component renders a button (`StarPickerButton`) for each star, 
   selectedIndex: number;
   /** index of the star currently hovered on */
   hoverIndex: number | null;
-  /** props used by the default starRenderer (see below) */
-  starRendererProps: DefaultRendererProps;
 }
 ```
 
-You can provide `StarPicker` with your own custom star-renderer. If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
+You can provide `StarPicker` with your own custom star-renderer (<a href="#/Examples/Custom%20Renderer">see examples here</a>). If you don't, the default star-renderer component styles the stars based on the values of the `index`, `selectedIndex` and `hoverIndex` values accordingly:
 
 <style>
-    .DefaultStarComponent {
+    .DefaultStarRendererExample .DefaultStarComponent {
         font-size: 34px;
     }
 </style>
@@ -24,14 +22,31 @@ You can provide `StarPicker` with your own custom star-renderer. If you don't, t
 ```jsx noeditor
 import { defaultStarRenderer } from 'react-star-picker';
 
-<div>
+<div className="DefaultStarRendererExample">
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    {defaultStarRenderer({
+      index: 1,
+      selectedIndex: null,
+      hoverIndex: null,
+      size: 34,
+    })}
+    <span style={{ padding: '0 2em', color: 'red' }}>{'unselected'}</span>
+
+    {/*<span
+      style={{
+        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
+        fontSize: '14px',
+      }}
+    >
+      {'(!selectedIndex || selectedIndex < index)'}
+    </span>*/}
+  </div>
   <div style={{ display: 'flex', alignItems: 'center' }}>
     {defaultStarRenderer({
       index: 1,
       selectedIndex: 1,
       hoverIndex: null,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'selected'}</span>
 
@@ -49,47 +64,8 @@ import { defaultStarRenderer } from 'react-star-picker';
     {defaultStarRenderer({
       index: 1,
       selectedIndex: null,
-      hoverIndex: null,
-      size: 34,
-      starRendererProps: {},
-    })}
-    <span style={{ padding: '0 2em', color: 'red' }}>{'unselected'}</span>
-
-    <span
-      style={{
-        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
-        fontSize: '14px',
-      }}
-    >
-      {'(!selectedIndex || selectedIndex < index)'}
-    </span>
-  </div>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    {defaultStarRenderer({
-      index: 1,
-      selectedIndex: 1,
-      hoverIndex: 0,
-      size: 34,
-      starRendererProps: {},
-    })}
-    <span style={{ padding: '0 2em', color: 'red' }}>{'remove'}</span>
-
-    <span
-      style={{
-        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
-        fontSize: '14px',
-      }}
-    >
-      {'(hoverIndex < index ≤ selectedIndex)'}
-    </span>
-  </div>
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    {defaultStarRenderer({
-      index: 1,
-      selectedIndex: null,
       hoverIndex: 1,
       size: 34,
-      starRendererProps: {},
     })}
     <span style={{ padding: '0 2em', color: 'red' }}>{'add'}</span>
 
@@ -100,6 +76,24 @@ import { defaultStarRenderer } from 'react-star-picker';
       }}
     >
       {'(selectedIndex < index ≤ hoverIndex)'}
+    </span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    {defaultStarRenderer({
+      index: 1,
+      selectedIndex: 1,
+      hoverIndex: 0,
+      size: 34,
+    })}
+    <span style={{ padding: '0 2em', color: 'red' }}>{'remove'}</span>
+
+    <span
+      style={{
+        fontFamily: 'Consolas,"Liberation Mono",Menlo,monospace',
+        fontSize: '14px',
+      }}
+    >
+      {'(hoverIndex < index ≤ selectedIndex)'}
     </span>
   </div>
 </div>;

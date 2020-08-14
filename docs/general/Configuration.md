@@ -1,14 +1,14 @@
-The suggested way of using `react-star-picker` is to wrap the `StarPicker` in a component that defines consistent default values:
+The suggested way of using `react-star-picker` is to wrap `StarPicker` in a component that defines consistent default values:
 
 ```jsx
 import React from 'react';
 import StarPicker from 'react-star-picker';
 import classnames from 'classnames';
 
-// const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
-//   // style the "star" according to the index, selectedIndex, hoverIndex...
-//   return {...};   // return it here
-// };
+const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
+  // style the "star" according to the index, selectedIndex, hoverIndex...
+  return {...};   // return it here
+};
 
 const MyStarPicker = ({
   onChange,
@@ -24,9 +24,9 @@ const MyStarPicker = ({
   //
   return (
     <StarPicker
+      className={classnames('MyStarPicker', className)}
       onChange={onChange}
       value={value}
-      className={classnames('MyStarPicker', className)}
       disabled={disabled}
       doubleTapResets={doubleTapResets}
       halfStars={halfStars}

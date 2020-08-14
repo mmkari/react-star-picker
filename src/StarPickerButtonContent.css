@@ -1,0 +1,9 @@
+.StarPickerButtonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.StarPickerButtonContent.halfStars {
+  width: var(--star-size);
+}

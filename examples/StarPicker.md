@@ -1,6 +1,6 @@
 The `StarPicker` component renders a number of buttons. By default, each button's content is rendered using the `defaultStarRenderer`. Alternatively, you can provide a custom `starRenderer` prop to get control over the button contents.
 
-The following editable example covers the use of all available props:
+The following editable example covers the use of all available props. Use the toggle to switch between the default `starRenderer` and a custom one.
 
 ```jsx a
 import React from 'react';
@@ -8,9 +8,8 @@ import { ToggleButton } from './ExamplesHelpers';
 import StarPicker from 'react-star-picker';
 import Switch from 'react-switch-input';
 
-const customRenderer = ({ index, selectedIndex, starRendererProps }) => {
+const customRenderer = ({ index, selectedIndex }) => {
   const selected = selectedIndex != null && index <= selectedIndex;
-  // const { colorActive, colorInactive } = starRendererProps;
   const colors = ['yellow', 'orange', 'red', 'green', 'blue', 'black'];
   return (
     <div
@@ -53,14 +52,6 @@ class ParentComponent extends React.Component {
           halfStars={false}
           numberStars={6}
           size={70}
-          starRendererProps={{
-            colorActive: '#fc0606',
-            colorInactive: '#812020',
-            charCodeSelected: 9820,
-            charCodeUnselected: 9814,
-            colorAdd: undefined,
-            colorRemove: undefined,
-          }}
           starRenderer={this.state.useCustom ? customRenderer : undefined}
         />
 

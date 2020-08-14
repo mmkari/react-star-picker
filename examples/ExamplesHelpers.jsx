@@ -81,33 +81,40 @@ const InputWithLabel = ({
   );
 };
 
-const blink = keyframes`
-  0% {
-    color: transparent;
-  }
+// const blink = keyframes`
+//   0% {
+//     color: transparent;
+//   }
 
-  25% {
-    color: lightgray;
-  }
+//   25% {
+//     color: lightgray;
+//   }
 
-  50% {
-    color: lightgray;
-  }
+//   50% {
+//     color: lightgray;
+//   }
 
-  100% {
-    color: #888fec;
-  }
-`;
+//   100% {
+//     color: #888fec;
+//   }
+// `;
 
+const colorTransitionTime = 0.4;
+const colorTransitionTimeExtended = 0.8;
+const colorFaded = '#FFFFFF';
+const colorActive = '#BBBBBB';
 const StyledInputWithLabel = styled(InputWithLabel)`
+  height: 150%;
   display: flex;
   align-items: center;
   color: transparent;
-  transition: color 1s;
+  transition: color ${colorTransitionTimeExtended}s;
+  transition-delay: 0.2s;
 
   a {
-    color: transparent;
-    transition: color 1s;
+    color: ${colorFaded};
+    transition: color ${colorTransitionTimeExtended}s;
+    transition-delay: 0.2s;
   }
 
   .InputWithLabel-label {
@@ -127,26 +134,28 @@ const StyledInputWithLabel = styled(InputWithLabel)`
       flex-grow: 1;
       height: 1px;
       border: 0;
-      background-color: transparent;
-      transition: background-color 1s;
+      background-color: ${colorFaded};
+      transition: background-color ${colorTransitionTimeExtended}s;
+      transition-delay: 0.2s;
 
       margin: 0 5px;
     }
   }
   :hover {
-    color: lightgray;
+    color: ${colorActive};
+    transition: color ${colorTransitionTime}s;
 
     a {
-      animation: ${blink} 2s;
-      animation-fill-mode: forwards;
+      color: ${colorActive};
+      transition: color ${colorTransitionTime}s;
 
-      color: lightgray;
       :hover {
         color: green;
       }
     }
     hr {
-      background-color: lightgray;
+      transition: background-color ${colorTransitionTime}s;
+      background-color: ${colorActive};
     }
   }
 `;

@@ -1,12 +1,7 @@
-`react-star-picker` supports resetting with `doubleTapResets={true}` prop:
-
-```jsx static
-<StarPicker onChange={onChange} value={value} doubleTapResets />
-```
-
 ```jsx noeditor
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
+import dollarRenderer from './customRenderer_dollar';
 
 const ParentComponent = () => {
   const [rating, setRating] = useState(null);
@@ -20,12 +15,17 @@ const ParentComponent = () => {
       <StarPicker
         onChange={onChange}
         value={rating}
-        size={50}
-        doubleTapResets
+        numberStars={4}
+        starRenderer={dollarRenderer}
       />
     </div>
   );
 };
 
 <ParentComponent />;
+```
+
+The above example uses the following custom star renderer:
+
+```js { "file": "../customRenderer_dollar.jsx", "static": "true" }
 ```

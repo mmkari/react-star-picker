@@ -25,11 +25,11 @@ module.exports = {
   },
 
   sections: [
-    // {
-    //   name: 'Demo',
-    //   content: 'examples/Examples.md',
-    //   exampleMode: 'hide',
-    // },
+    {
+      name: 'Demo',
+      content: 'examples/Examples.md',
+      exampleMode: 'hide',
+    },
     {
       name: 'Documentation',
       content: 'examples/Documentation.md',
@@ -37,11 +37,15 @@ module.exports = {
       sections: [
         {
           name: 'Installation',
-          content: 'examples/installation.md',
+          content: 'examples/Documentation_Installation.md',
         },
         {
           name: 'Configuration',
-          content: 'examples/configuration.md',
+          content: 'examples/Documentation_Configuration.md',
+        },
+        {
+          name: 'Styles',
+          content: 'examples/Documentation_Styles.md',
         },
       ],
     },
@@ -64,53 +68,68 @@ module.exports = {
           content: 'examples/Props_starRenderer.md',
         },
         {
-          name: 'starRendererProps',
-          content: 'examples/Props_starRendererProps.md',
+          name: 'halfStars',
+          content: 'examples/Props_halfStars.md',
         },
-        // {
-        //   name: 'starRenderer',
-        //   content: 'examples/Props_starRenderer.md',
-        // },
+        {
+          name: 'doubleTapResets',
+          content: 'examples/Props_doubleTapResets.md',
+        },
+        {
+          name: 'disabled',
+          content: 'examples/Props_disabled.md',
+        },
+        {
+          name: 'numberStars',
+          content: 'examples/Props_numberStars.md',
+        },
+        {
+          name: 'name',
+          content: 'examples/Props_name.md',
+        },
+        {
+          name: 'onChange',
+          content: 'examples/Props_onChange.md',
+        },
+        {
+          name: 'value',
+          content: 'examples/Props_value.md',
+        },
       ],
     },
     {
       name: 'Examples',
       exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      sectionDepth: 1,
-      content: 'examples/Examples.md',
+      // sectionDepth: 1,
+      // content: 'examples/Examples.md',
       sections: [
         {
-          name: 'Default Renderer: Color mixing',
-          content: 'examples/Examples_colorMixing.md',
-        },
-        {
-          name: 'Default Renderer: Custom characters',
-          content: 'examples/Examples_starChars.md',
+          name: 'Custom Renderer',
+          exampleMode: 'hide', // 'hide' | 'collapse' | 'expand'
+          usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+          content: 'examples/customRenderers.md',
+          skipComponentsWithoutExample: true,
+          sections: [
+            {
+              name: 'Simple Character Renderer',
+              content:
+                'examples/Examples_CustomRenderer_SimpleCustomCharacters.md',
+            },
+            {
+              name: 'Advanced Character Renderer',
+              content:
+                'examples/Examples_CustomRenderer_AdvancedCustomCharacters.md',
+            },
+            {
+              name: 'Animated SVG Icons',
+              content: 'examples/Examples_CustomRenderer_AnimatedSvgIcons.md',
+            },
+          ],
         },
         {
           name: 'Default Renderer: Styling',
-          content: 'examples/Examples_customStyling.md',
-        },
-        {
-          name: 'Half stars',
-          content: 'examples/Examples_halfStars.md',
-        },
-        {
-          name: 'Using a Custom Renderer',
-          content: 'examples/Examples_customRenderer.md',
-        },
-        {
-          name: 'Resetting',
-          content: 'examples/Examples_doubleTap.md',
-        },
-        {
-          name: 'Disabling',
-          content: 'examples/Examples_disabled.md',
-        },
-        {
-          name: 'Number of stars',
-          content: 'examples/Examples_numberStars.md',
+          content: 'examples/Examples_DefaultRenderer_Styling.md',
         },
       ],
     },
@@ -120,10 +139,13 @@ module.exports = {
   styleguideDir: 'styleguidistHtml',
   pagePerSection: true,
 
-  require: [path.join(__dirname, 'examples/Examples_overrides.css')],
+  require: [
+    path.join(__dirname, 'examples/Examples_overrides.css'),
+    path.join(__dirname, 'examples/Examples_stylingWithButtons.css'),
+  ],
   updateExample(props, exampleFilePath) {
     const { settings, lang } = props;
-    if (typeof settings.file === 'string') {
+    if (settings && typeof settings.file === 'string') {
       const filepath = path.resolve(exampleFilePath, settings.file);
       delete settings.file;
       return {

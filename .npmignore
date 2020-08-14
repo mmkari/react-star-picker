@@ -1,0 +1,11 @@
+node_modules
+# dist
+dist-examples
+styleguidistHtml
+config
+docs
+src
+examples
+styleguide.config.js
+tsconfig.json
+.*

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import './Examples.css';
 import './Examples_overrides.css';
-import StarPicker from '../dist-ts/StarPicker';
+import StarPicker from '../src/StarPicker.tsx';
 // import StarPicker from '../src/index.ts';
 
 import StyledInputWithLabel from './ExamplesHelpers';
 import dollarRenderer from './customRenderer_dollar';
+import characterRenderer from './customRenderer_characters';
 
 type Props = {};
 type State = {
@@ -37,27 +38,8 @@ class Examples extends React.Component<Props, State> {
       <div className="Examples">
         <StyledInputWithLabel
           labelLeft={{
-            label: 'Color mixing',
-            linkRef: '#/Examples/Default%20Renderer%3A%20Color%20mixing',
-          }}
-        >
-          <StarPicker
-            name="rating1"
-            value={rating1}
-            onChange={this.setValue}
-            starRendererProps={{
-              colorActive: '#df00ff',
-              colorInactive: '#ccccff',
-              colorRemove: '#a900c1',
-              charCodeUnselected: 9734,
-            }}
-          />
-        </StyledInputWithLabel>
-
-        <StyledInputWithLabel
-          labelLeft={{
-            label: 'Half-star support',
-            linkRef: '#/Examples/Half%20stars',
+            label: 'Half-star precision',
+            linkRef: '#/Props/halfStars',
           }}
         >
           <StarPicker
@@ -66,17 +48,13 @@ class Examples extends React.Component<Props, State> {
             onChange={this.setValue}
             halfStars
             size={50}
-            starRendererProps={{
-              colorActive: 'orange',
-              charCodeUnselected: 9734,
-            }}
           />
         </StyledInputWithLabel>
 
         <StyledInputWithLabel
           labelRight={{
-            label: 'Custom star renderer support',
-            linkRef: '#/Examples/Using%20a%20Custom%20Renderer',
+            label: 'Custom animated SVGs',
+            linkRef: '#/Examples/Custom%20Renderer/Animated%20SVG%20Icons',
           }}
         >
           <StarPicker
@@ -90,27 +68,25 @@ class Examples extends React.Component<Props, State> {
 
         <StyledInputWithLabel
           labelRight={{
-            label: 'UTF-16 characters',
-            linkRef: '#/Examples/Default%20Renderer%3A%20Custom%20characters',
+            label: 'Custom character rendering',
+            linkRef:
+              '#/Examples/Custom%20Renderer/Advanced%20Character%20Renderer',
           }}
         >
           <StarPicker
             name="rating4"
             value={rating4}
             onChange={this.setValue}
-            halfStars
-            size={70}
-            starRendererProps={{
-              colorActive: '#ff3333',
-              charCodeSelected: 10029,
-            }}
+            numberStars={5}
+            starRenderer={characterRenderer}
+            size={50}
           />
         </StyledInputWithLabel>
 
         <StyledInputWithLabel
           labelLeft={{
-            label: '(Resets on double tap)',
-            linkRef: '#/Examples/Resetting',
+            label: 'Resets on double tap',
+            linkRef: '#/Props/doubleTapResets',
           }}
           labelRight={{
             label: 'Custom styling',
@@ -123,31 +99,25 @@ class Examples extends React.Component<Props, State> {
             value={rating5}
             onChange={this.setValue}
             doubleTapResets
-            starRendererProps={{
-              colorAdd: null,
-              colorRemove: null,
-            }}
           />
         </StyledInputWithLabel>
 
         <StyledInputWithLabel
           labelLeft={{
-            label: '(disabled)',
-            linkRef: '#/Examples/Disabling',
+            label: 'Disabled',
+            linkRef: '#/Props/disabled',
           }}
           labelRight={{
             label: 'Custom number of stars',
-            linkRef: '#/Examples/Number%20of%20stars',
+            linkRef: '#/Props/numberStars',
           }}
         >
           <StarPicker
+            size={100}
             value={2}
             onChange={this.setValue}
             numberStars={3}
             disabled
-            starRendererProps={{
-              colorActive: 'blue',
-            }}
           />
         </StyledInputWithLabel>
       </div>

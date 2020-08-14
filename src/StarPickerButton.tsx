@@ -1,18 +1,19 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import styled from 'styled-components';
+
+import StarPickerButtonContent from './StarPickerButtonContent';
 
 import { StarPickerButtonProps } from './types';
 
+import './StarPickerButton.css';
+
 const StarPickerButton = ({
-  className,
   index,
   selectedIndex,
   hoverIndex,
   onClick,
   onHoverChange,
   starRenderer,
-  starRendererProps,
   halfStars,
   disabled,
 }: StarPickerButtonProps) => {
@@ -30,11 +31,19 @@ const StarPickerButton = ({
     onClick(index);
   };
 
+  // to make styling easier, we add several classes to the returned button
+  const selected = index <= selectedIndex; // this button is part of the current selection
+  const inHoverRange = hoverIndex != null && index <= hoverIndex; // this button is part of the active hover selection
+  const hoverActive = hoverIndex != null; // cursor is currently hovered over the buttons
+
   return (
     <button
-      className={classnames(className, 'StarPickerButton', {
+      className={classnames('StarPickerButton', {
         disabled,
         halfStars,
+        selected, // button currently selected
+        addSelection: hoverActive && !selected && inHoverRange, // hover active and button part of next suggested selection
+        removeSelection: hoverActive && selected && !inHoverRange, // hover active but button not part of next suggested selection
       })}
       type="button"
       onClick={handleClick}
@@ -42,45 +51,15 @@ const StarPickerButton = ({
       onMouseLeave={onMouseLeave}
       disabled={disabled}
     >
-      <div className="StarPickerButton-buttonContent">
-        {starRenderer({
-          index,
-          selectedIndex,
-          hoverIndex,
-          starRendererProps,
-        })}
-      </div>
+      <StarPickerButtonContent
+        halfStars={halfStars}
+        starRenderer={starRenderer}
+        index={index}
+        selectedIndex={selectedIndex}
+        hoverIndex={hoverIndex}
+      />
     </button>
   );
 };
 
-const StyledStarPickerButton = styled(StarPickerButton)`
-  background: transparent;
-  border: none;
-  font-size: ${(props) => `${props.size}px`};
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  line-height: 100%;
-
-  &.disabled {
-    cursor: not-allowed;
-  }
-
-  width: ${(props) => `${props.size}px`};
-  .StarPickerButton-buttonContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &.halfStars {
-    width: ${(props) => `${props.size / 2.0}px`};
-    .StarPickerButton-buttonContent {
-      width: ${(props) => `${props.size}px`};
-    }
-    overflow: hidden;
-    direction: ${(props) => (props.index % 2 !== 0 ? 'rtl' : 'ltr')};
-  }
-`;
-
-export default StyledStarPickerButton;
+export default StarPickerButton;

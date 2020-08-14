@@ -1,24 +1,6 @@
 import * as React from 'react';
 
-export type DefaultRendererProps = {
-  colorActive?: string;
-  colorInactive?: string;
-  charCodeSelected?: number;
-  charCodeUnselected?: number;
-  colorAdd?: string | null;
-  colorRemove?: string | null;
-};
-
-export type DefaultRendererPropsWithDefaults = {
-  colorActive: string;
-  colorInactive: string;
-  charCodeSelected: number;
-  charCodeUnselected: number;
-  colorAdd: string | null;
-  colorRemove: string | null;
-};
-
-export type GenericRendererProps = {
+export type StarRendererProps = {
   /** the zero based index of the star being rendered */
   index: number;
   /** index of the star matching the current rating  */
@@ -27,20 +9,9 @@ export type GenericRendererProps = {
   hoverIndex: number | null;
 };
 
-export type DefaultStarComponentProps = GenericRendererProps &
-  DefaultRendererPropsWithDefaults & {
-    className: string;
-  };
-
-export type StarRendererProps = GenericRendererProps & {
-  starRendererProps: DefaultRendererProps;
-};
-
 export type StarRendererFunction = (StarRendererProps) => React.ReactNode;
 
 export type SharedProps = {
-  /** props supported by the default star-renderer. Will be passed to a custom star-renderer as well */
-  starRendererProps: DefaultRendererProps;
   /** if provided, replaces the default star-renderer */
   starRenderer: StarRendererFunction;
   /** whether to use half-star precision */
@@ -51,15 +22,17 @@ export type SharedProps = {
   size: number;
 };
 
-export type StarPickerButtonProps = SharedProps & {
-  key: string;
-  index: number;
-  selectedIndex: number;
-  hoverIndex: number | null;
-  onClick: (index: number) => void;
-  onHoverChange: (index: number | null) => void;
-  className: string;
+export type StarPickerButtonContentProps = StarRendererProps & {
+  halfStars: boolean;
+  starRenderer: StarRendererFunction;
 };
+
+export type StarPickerButtonProps = SharedProps &
+  StarRendererProps & {
+    key: string;
+    onClick: (index: number) => void;
+    onHoverChange: (index: number | null) => void;
+  };
 
 export type StarPickerProps = SharedProps & {
   /** function called with the selected value (and the input name) after a new pick */
@@ -74,12 +47,3 @@ export type StarPickerProps = SharedProps & {
   /** When true, selecting the existing rating clears the input */
   doubleTapResets: boolean;
 };
-
-// export type {
-//   StarRendererProps,
-//   DefaultRendererProps,
-//   DefaultRendererPropsWithDefaults,
-//   DefaultStarComponentProps,
-//   StarPickerButtonProps,
-//   StarPickerProps,
-// };
