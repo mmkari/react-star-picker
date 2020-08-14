@@ -18,14 +18,4 @@ type StarRendererProps = {|
 - `selectedIndex`: index of the star matching the current rating
 - `hoverIndex`: index of the star currently hovered on
 
-To provide additional props to a custom star-renderer, e.g. here `myCustomRenderer`, use an adapter function like this:
-
-```jsx
-<StarPicker
-  value={value}
-  onChange={onChange}
-  starRenderer={({ index, selectedIndex, hoverIndex }) => {
-    return myCustomRenderer({ index, selectedIndex, hoverIndex, myCustomProp });
-  }}
-/>
-```
+Use these to control the content and styling of the returned "star" icons.

@@ -11,7 +11,7 @@ A **highly customizable** star-rating component
 ### Default features include
 
 - [supports half-star precision](https://mmkari.github.io/react-star-picker/#/Props/halfStars)
-- [responsive hover highlighting](https://mmkari.github.io/react-star-picker/#/Examples/Color%20mixing)
+- [responsive hover highlighting](https://mmkari.github.io/react-star-picker/#/Props/starRenderer)
 - [custom number of stars](https://mmkari.github.io/react-star-picker/#/Props/numberStars)
 - [value clearing option](https://mmkari.github.io/react-star-picker/#/Props/doubleTapResets)
 - [input disabling](https://mmkari.github.io/react-star-picker/#/Props/disabled)
