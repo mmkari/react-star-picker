@@ -13,10 +13,20 @@ module.exports =  {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-  // externals: {
-  //   'react': 'react',  
-  //   'react-dom' : 'reactDOM' 
-  // },
+  externals: {
+    "react": {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    },  
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom'
+    } 
+  },  
   module: {
     rules: [
       {
