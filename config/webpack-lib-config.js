@@ -7,15 +7,16 @@ module.exports =  {
   output: {
     filename: "index.js",
     path: paths.libBuild,
+    libraryTarget: 'umd',
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-  externals: {
-    'react': 'react',  
-    'react-dom' : 'reactDOM' 
-  },
+  // externals: {
+  //   'react': 'react',  
+  //   'react-dom' : 'reactDOM' 
+  // },
   module: {
     rules: [
       {
