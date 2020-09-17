@@ -1,6 +1,6 @@
 {
   "name": "react-star-picker",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A star-rating component made with React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf dist/*",
-    "build-js": "./node_modules/.bin/babel src --out-dir dist  --extensions .ts,.tsx --source-maps inline --copy-files",
+    "build-js-old": "./node_modules/.bin/babel src --out-dir dist  --extensions .ts,.tsx --source-maps inline --copy-files",
+    "build-js": "webpack --config config/webpack-lib-config.js",
     "build-types": "tsc --emitDeclarationOnly",
     "build": "npm run build-js && npm run build-types",
     "prepare": "npm run build",

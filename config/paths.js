@@ -10,5 +10,7 @@ module.exports = {
   appHtml: resolveApp("examples/index.html"),
   appIndexJs: resolveApp("examples/index.jsx"), // Main entry point
   appSrc: resolveApp("src"), // App source
-  appExamples:resolveApp("examples")  // Examples source
+  appExamples:resolveApp("examples"),  // Examples source
+  libIndexJs: resolveApp("src/index.ts"), // Main entry point
+  libBuild: resolveApp("dist") // Library CJS bundle outDir
 };
