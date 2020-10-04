@@ -20,11 +20,44 @@ A **highly customizable** star-rating component
 
 Even more customizability is provided by the ability to use your own star-renderer. [See example in styleguide.](https://mmkari.github.io/react-star-picker/#/Examples/Custom%20Renderer)
 
-## Documentation
+# Documentation
 
-### [Installation](/docs/general/Installation.md)
+## Installation
 
-### [Configuration](/docs/general/Configuration.md)
+```
+npm i react-star-picker
+```
+
+## Usage
+
+```jsx
+import React, { useState } from 'react';
+import StarPicker from 'react-star-picker';
+
+const ParentComponent = () => {
+  const [rating, setRating] = useState(null);
+
+  const onChange = (value) => {
+    setRating(value);
+  };
+
+  return (
+    <div>
+      <StarPicker onChange={onChange} value={rating} />
+    </div>
+  );
+};
+```
+
+## Styleguide
+
+[Props](https://mmkari.github.io/react-star-picker/#/Props)
+
+[Configuration](https://mmkari.github.io/react-star-picker/#/Documentation/Configuration)
+
+[Styles](https://mmkari.github.io/react-star-picker/#/Documentation/Styles)
+
+[Examples](https://mmkari.github.io/react-star-picker/#/Examples)
 
 ## Component APIs
 
