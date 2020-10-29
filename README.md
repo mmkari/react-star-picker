@@ -6,7 +6,7 @@ A **highly customizable** star-rating component
 [![npm version](https://img.shields.io/npm/v/react-star-picker.svg)](https://www.npmjs.com/package/react-star-picker)
 [![npm license](https://img.shields.io/npm/l/react-star-picker.svg)](https://github.com/mmkari/react-star-picker/blob/master/LICENSE)
 
-<img src="https://raw.githubusercontent.com/mmkari/react-star-picker/master/docs/images/star_picker_icon.png" width=300 height=265 />
+<img src="https://raw.githubusercontent.com/mmkari/react-star-picker/master/docs/images/star_picker_icon.svg" width=300 height=265 />
 </div>
 
 ### Default features include
