@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import type { StarRendererProps } from '../src/types.ts';
 
 const rotate = keyframes`
   0% {
@@ -25,11 +24,7 @@ const DollarSvgContainer = styled.div`
   font-size: 1.2rem;
 `;
 
-const dollarRenderer = ({
-  index,
-  hoverIndex,
-  selectedIndex,
-}: StarRendererProps): React.Node => {
+const dollarRenderer = ({ index, hoverIndex, selectedIndex }): React.Node => {
   const selected = index <= selectedIndex;
   const inHoverRange = hoverIndex != null && index <= hoverIndex;
   const hoverActive = hoverIndex != null;

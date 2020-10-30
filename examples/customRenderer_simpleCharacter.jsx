@@ -1,11 +1,6 @@
 import * as React from 'react';
-import type { StarRendererProps } from '../src/types.ts';
 
-export default ({
-  index,
-  hoverIndex,
-  selectedIndex,
-}: StarRendererProps): React.Node => {
+export default ({ index, hoverIndex, selectedIndex }): React.Node => {
   const selected = index <= selectedIndex;
 
   if (selected) {

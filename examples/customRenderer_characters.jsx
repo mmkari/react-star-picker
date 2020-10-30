@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import type { StarRendererProps } from '../src/types.ts';
 
 // 1. define the "star" component that returns the wanted character icon and attaches classNames to it based on the state of selection
 const CustomCharacterStar = ({
@@ -49,11 +48,7 @@ const StyledCustomCharacterStar = styled(CustomCharacterStar)`
 `;
 
 // 3. export an actual render function that simply returns the styled star component
-export default ({
-  index,
-  hoverIndex,
-  selectedIndex,
-}: StarRendererProps): React.Node => {
+export default ({ index, hoverIndex, selectedIndex }): React.Node => {
   return (
     <StyledCustomCharacterStar
       index={index}
