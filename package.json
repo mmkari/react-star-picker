@@ -74,7 +74,6 @@
     "polished": "^3.7.2",
     "prettier-eslint": "^9.0.2",
     "react": "^16.14.0",
-    "react-color": "^2.19.3",
     "react-docgen-typescript": "^1.22.0",
     "react-dom": "^16.14.0",
     "react-hot-loader": "^4.13.0",
