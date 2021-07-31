@@ -24,7 +24,7 @@ const DollarSvgContainer = styled.div`
   font-size: 1.2rem;
 `;
 
-const dollarRenderer = ({ index, hoverIndex, selectedIndex }): React.Node => {
+const dollarRenderer = ({ index, hoverIndex, selectedIndex }) => {
   const selected = index <= selectedIndex;
   const inHoverRange = hoverIndex != null && index <= hoverIndex;
   const hoverActive = hoverIndex != null;

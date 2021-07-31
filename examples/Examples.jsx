@@ -8,15 +8,7 @@ import StyledInputWithLabel from './ExamplesHelpers';
 import dollarRenderer from './customRenderer_dollar';
 import characterRenderer from './customRenderer_characters';
 
-type Props = {};
-type State = {
-  rating1: ?number,
-  rating2: ?number,
-  rating3: ?number,
-  rating4: ?number,
-  rating5: ?number,
-};
-class Examples extends React.Component<Props, State> {
+class Examples extends React.Component {
   state = {
     rating1: 4,
     rating2: 3.5,
@@ -25,7 +17,7 @@ class Examples extends React.Component<Props, State> {
     rating5: 5,
   };
 
-  setValue = (value: ?number, name?: string) => {
+  setValue = (value, name) => {
     if (name) {
       this.setState({ [name]: value });
     }

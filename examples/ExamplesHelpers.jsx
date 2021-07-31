@@ -1,17 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 // example toggle button
-const ToggleButton = ({
-  label,
-  onClick,
-  content,
-}: {
-  label: string,
-  onClick: () => void,
-  content: string,
-}) => {
+const ToggleButton = ({ label, onClick, content }) => {
   return (
     <div
       style={{
@@ -33,17 +25,7 @@ const ToggleButton = ({
   );
 };
 
-type LabelObject = {
-  label: string,
-  linkRef?: string,
-};
-const LabelComp = ({
-  type,
-  labelObject = {},
-}: {
-  type: 'right' | 'left',
-  labelObject?: LabelObject,
-}) => {
+const LabelComp = ({ type, labelObject = {} }) => {
   const { label, linkRef } = labelObject;
   return (
     <div className={classnames('InputWithLabel-label', type)}>
@@ -54,17 +36,7 @@ const LabelComp = ({
   );
 };
 
-const InputWithLabel = ({
-  children,
-  className,
-  labelLeft,
-  labelRight,
-}: {
-  children: React.Node,
-  className?: string,
-  labelLeft?: LabelObject,
-  labelRight?: LabelObject,
-}) => {
+const InputWithLabel = ({ children, className, labelLeft, labelRight }) => {
   return (
     <div className={classnames('InputWithLabel', className)}>
       <LabelComp
@@ -79,24 +51,6 @@ const InputWithLabel = ({
     </div>
   );
 };
-
-// const blink = keyframes`
-//   0% {
-//     color: transparent;
-//   }
-
-//   25% {
-//     color: lightgray;
-//   }
-
-//   50% {
-//     color: lightgray;
-//   }
-
-//   100% {
-//     color: #888fec;
-//   }
-// `;
 
 const colorTransitionTime = 0.4;
 const colorTransitionTimeExtended = 0.8;

@@ -8,7 +8,7 @@ const CustomCharacterStar = ({
   hoverIndex,
   selectedIndex,
   className, // provided by styled-component, need to attach to element
-}): React.Node => {
+}) => {
   const selected = index <= selectedIndex;
   const inHoverRange = hoverIndex != null && index <= hoverIndex;
   const hoverActive = hoverIndex != null;
@@ -48,7 +48,7 @@ const StyledCustomCharacterStar = styled(CustomCharacterStar)`
 `;
 
 // 3. export an actual render function that simply returns the styled star component
-export default ({ index, hoverIndex, selectedIndex }): React.Node => {
+export default ({ index, hoverIndex, selectedIndex }) => {
   return (
     <StyledCustomCharacterStar
       index={index}
