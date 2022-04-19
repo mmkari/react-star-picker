@@ -27,82 +27,59 @@ const formatValue = (
   return newValue;
 };
 
-type State = {
-  hoverIndex: number | null;
-};
-class StarPicker extends React.Component<StarPickerProps, State> {
-  state = {
-    hoverIndex: null,
-  };
-  inputRef = React.createRef<HTMLDivElement>();
+const StarPicker = ({
+  value,
+  onChange,
+  name,
+  className,
+  numberStars = 5,
+  size = 34, // in px, used for font-size and width stylings
+  disabled = false,
+  halfStars = false,
+  doubleTapResets = false,
+  starRenderer = defaultStarRenderer,
+}: StarPickerProps) => {
+  const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
+  const inputRef = React.useRef<React.HTMLDivElement | null>(null);
 
-  static defaultProps = {
-    name: undefined,
-    className: undefined,
-    numberStars: 5,
-    size: 34, // in px, used for font-size and width stylings
-    disabled: false,
-    halfStars: false,
-    doubleTapResets: false,
-    starRenderer: defaultStarRenderer,
-  };
-
-  componentDidMount() {
+  React.useEffect(() => {
     // set CSS custom property value for this component
-    if (this.inputRef.current) {
-      this.inputRef.current.style.setProperty(
-        '--star-size',
-        String(this.props.size) + 'px'
-      );
+    if (inputRef.current) {
+      inputRef.current.style.setProperty('--star-size', `${String(size)}px`);
     }
-  }
+  }, [size]);
 
-  updateValue = (index: number): void => {
-    const { onChange, value, halfStars, doubleTapResets, name } = this.props;
-
+  const updateValue = (index: number): void => {
     if (onChange) {
       onChange(formatValue(index, value, halfStars, doubleTapResets), name);
     }
   };
 
-  onHoverChange = (index: number | null): void => {
-    this.setState({ hoverIndex: index });
+  const onHoverChange = (index: number | null): void => {
+    setHoverIndex(index);
   };
 
-  render() {
-    const {
-      value,
-      className,
-      numberStars,
-      size,
-      disabled,
-      halfStars,
-      starRenderer,
-    } = this.props;
-    const { hoverIndex } = this.state;
+  const selectedIndex = valueToIndex(value, halfStars);
+  const numberButtons = halfStars ? 2 * numberStars : numberStars;
 
-    const selectedIndex = valueToIndex(value, halfStars);
-    const numberButtons = halfStars ? 2 * numberStars : numberStars;
-
-    return (
-      <div className={classnames('StarPicker', className)} ref={this.inputRef}>
-        {[...Array(numberButtons).keys()].map((i) => (
-          <StarPickerButton
-            key={`star-${i}`}
-            index={i}
-            selectedIndex={selectedIndex}
-            hoverIndex={hoverIndex}
-            onClick={this.updateValue}
-            onHoverChange={this.onHoverChange}
-            starRenderer={starRenderer}
-            halfStars={halfStars}
-            disabled={disabled}
-            size={size}
-          />
-        ))}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classnames('StarPicker', className)} ref={inputRef}>
+      {[...Array(numberButtons).keys()].map((i) => (
+        <StarPickerButton
+          key={`star-${i}`}
+          index={i}
+          selectedIndex={selectedIndex}
+          hoverIndex={hoverIndex}
+          onClick={updateValue}
+          onHoverChange={onHoverChange}
+          starRenderer={starRenderer}
+          halfStars={halfStars}
+          disabled={disabled}
+          size={size}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default StarPicker;
