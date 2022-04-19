@@ -19,7 +19,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "predeploy": "rm -rf styleguidistHtml/* && npm run styleguide:build",
-    "deploy": "gh-pages -d styleguidistHtml"
+    "deploy": "gh-pages -d styleguidistHtml",
+    "lint": "eslint ."
   },
   "homepage": "https://mmkari.github.io/react-star-picker/",
   "repository": {

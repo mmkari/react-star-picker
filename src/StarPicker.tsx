@@ -40,7 +40,7 @@ const StarPicker = ({
   starRenderer = defaultStarRenderer,
 }: StarPickerProps) => {
   const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
-  const inputRef = React.useRef<React.HTMLDivElement | null>(null);
+  const inputRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
     // set CSS custom property value for this component
