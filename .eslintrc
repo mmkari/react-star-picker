@@ -16,6 +16,10 @@
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
-    "import/extensions": ["never"]
+    "import/extensions": [2, "never"]
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
