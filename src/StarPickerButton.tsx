@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import StarPickerButtonContent from './StarPickerButtonContent.tsx';
+import StarPickerButtonContent from './StarPickerButtonContent';
 
-import { StarPickerButtonProps } from './types.ts';
+import { StarPickerButtonProps } from './types';
 
 import './StarPickerButton.css';
 

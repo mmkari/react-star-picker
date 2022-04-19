@@ -1,10 +1,10 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import defaultStarRenderer from './defaultStarRenderer.tsx';
-import StarPickerButton from './StarPickerButton.tsx';
+import defaultStarRenderer from './defaultStarRenderer';
+import StarPickerButton from './StarPickerButton';
 
-import { StarPickerProps } from './types.ts';
+import { StarPickerProps } from './types';
 
 const valueToIndex = (value: number | null, halfStars: boolean): number => {
   if (!value) return -1;

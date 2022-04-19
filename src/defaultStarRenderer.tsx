@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import './defaultStarRenderer.css';
 
-import { StarRendererProps } from './types.ts';
+import { StarRendererProps } from './types';
 
 const defaultStarRenderer = ({
   index,
