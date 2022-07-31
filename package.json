@@ -5,9 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf dist/*",
-    "build-js-old": "./node_modules/.bin/babel src --out-dir dist  --extensions .ts,.tsx --source-maps inline --copy-files",
     "build-js": "webpack --config config/webpack-lib-config.js",
     "build-types": "tsc --emitDeclarationOnly",
     "build": "npm run build-js && npm run build-types",
