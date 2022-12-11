@@ -30,12 +30,10 @@ Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new
 
 ## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+Install `react-star-picker`:
 
 ```bash
-npm init docusaurus@latest my-website classic
+npm i react-star-picker
 ```
 
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
