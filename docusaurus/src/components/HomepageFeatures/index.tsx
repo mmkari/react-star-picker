@@ -94,3 +94,15 @@ export const Test = () => {
     />
   );
 };
+
+export const GreenPicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="greenStars"
+      value={rating}
+      onChange={setRating}
+    />
+  );
+};

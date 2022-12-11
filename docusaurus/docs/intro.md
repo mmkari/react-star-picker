@@ -2,10 +2,10 @@
 sidebar_position: 1
 ---
 
-import {Test} from '@site/src/components/HomepageFeatures';
+import {Test,GreenPicker} from '@site/src/components/HomepageFeatures';
 
-<!-- docusaurus\src\components\HomepageFeatures\index.tsx -->
 <Test />
+<GreenPicker />
 
 # Tutorial Intro
 
