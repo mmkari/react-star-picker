@@ -174,6 +174,7 @@ export const DollarPicker = () => {
       onChange={setRating}
       starRenderer={dollarRenderer}
       size={50}
+      numberStars={4}
     />
   );
 };
