@@ -95,6 +95,19 @@ export const Test = () => {
   );
 };
 
+export const LargePicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="largeStar"
+      value={rating}
+      onChange={setRating}
+      size={50}
+    />
+  );
+};
+
 export const GreenPicker = () => {
   const [rating, setRating] = React.useState<number | null>(null);
 
