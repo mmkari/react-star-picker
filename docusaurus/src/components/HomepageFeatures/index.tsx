@@ -106,3 +106,27 @@ export const GreenPicker = () => {
     />
   );
 };
+
+export const RotatePicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="rotateStar"
+      value={rating}
+      onChange={setRating}
+    />
+  );
+};
+
+export const EnlargePicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="enlargeStar"
+      value={rating}
+      onChange={setRating}
+    />
+  );
+};

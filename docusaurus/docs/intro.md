@@ -2,10 +2,12 @@
 sidebar_position: 1
 ---
 
-import {Test,GreenPicker} from '@site/src/components/HomepageFeatures';
+import {Test,GreenPicker, RotatePicker, EnlargePicker} from '@site/src/components/HomepageFeatures';
 
 <Test />
 <GreenPicker />
+<RotatePicker />
+<EnlargePicker />
 
 # Tutorial Intro
 
