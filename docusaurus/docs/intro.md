@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CustomPicker} from '@site/src/components/HomepageFeatures';
+import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CustomPicker, BluePicker} from '@site/src/components/HomepageFeatures';
 
 <Test />
 <LargePicker />
@@ -11,6 +11,7 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 <EnlargePicker />
 <DollarPicker />
 <CustomPicker />
+<BluePicker />
 
 # Tutorial Intro
 

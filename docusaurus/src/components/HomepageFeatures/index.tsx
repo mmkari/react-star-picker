@@ -213,3 +213,26 @@ export const CustomPicker = () => {
     />
   );
 };
+
+const simpleRenderer = ({ index, hoverIndex, selectedIndex }) => {
+  const selected = index <= selectedIndex;
+
+  if (selected) {
+    return String.fromCharCode(9733);
+  }
+  return String.fromCharCode(9734);
+};
+export const BluePicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="blueTheme"
+      value={rating}
+      onChange={setRating}
+      starRenderer={simpleRenderer}
+      size={50}
+      // numberStars={4}
+    />
+  );
+};
