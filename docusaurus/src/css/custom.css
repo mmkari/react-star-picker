@@ -60,3 +60,27 @@
 .StarPicker.greenStars .DefaultStarComponent.removeSelection {
   color: #88eebf;
 }
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  70% {
+    transform: rotate(-10deg);
+  }
+}
+.dollarContainer {
+  display: 'flex';
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+.dollarContainer:hover {
+  animation: rotate 0.3s ease-in-out;
+}
