@@ -21,9 +21,9 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="jsx" label="JSX">
 
-```js
+```typescript
 const GreenPicker = () => {
-  const [rating, setRating] = (React.useState < number) | (null > null);
+  const [rating, setRating] = React.useState<number | null>(null);
 
   return (
     <StarPicker //
