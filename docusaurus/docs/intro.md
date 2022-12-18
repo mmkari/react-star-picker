@@ -15,43 +15,9 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 
 # Tutorial Intro
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import GreenExample from './examples/\_green.mdx';
 
-<Tabs>
-<TabItem value="jsx" label="JSX">
-
-```typescript
-const GreenPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="greenStars"
-      value={rating}
-      onChange={setRating}
-    />
-  );
-};
-```
-
-</TabItem>
-<TabItem value="css" label="CSS">
-
-```css
-.StarPicker.greenStars .DefaultStarComponent.selected {
-  color: #00ff88;
-}
-.StarPicker.greenStars .DefaultStarComponent.addSelection {
-  color: #e4e4e4;
-}
-.StarPicker.greenStars .DefaultStarComponent.removeSelection {
-  color: #88eebf;
-}
-```
-
-</TabItem>
-</Tabs>
+<GreenExample />
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
