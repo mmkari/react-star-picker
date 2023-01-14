@@ -1,0 +1,47 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {EnlargePicker} from '@site/src/components/HomepageFeatures';
+
+<EnlargePicker />
+
+<br/>
+
+<details>
+<summary><EnlargePicker />Show code</summary>
+<p>
+
+<Tabs>
+<TabItem value="jsx" label="JSX">
+
+```typescript
+const EnlargePicker = () => {
+  const [rating, setRating] = React.useState<number | null>(null);
+
+  return (
+    <StarPicker //
+      className="enlargeStar"
+      value={rating}
+      onChange={setRating}
+    />
+  );
+};
+```
+</TabItem>
+<TabItem value="css" label="CSS">
+
+```css
+/* definitions for an "enlargeStar" class */
+.StarPicker.enlargeStar .DefaultStarComponent {
+  transition: transform 0.2s ease-in-out, color 0.4s;
+}
+.StarPicker.enlargeStar .DefaultStarComponent.selected {
+  text-shadow: rgb(173, 140, 6) 1px 1px 1px;
+  transform: scale(1.2);
+}
+```
+
+</TabItem>
+</Tabs>
+
+</p>
+</details>
