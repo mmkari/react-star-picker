@@ -13,6 +13,10 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 <CustomPicker />
 <BluePicker />
 
+[Custom foo description](intro#asd)
+
+## Foo {#asd}
+
 # Tutorial Intro
 
 import GreenExample from './examples/\_green.mdx';
