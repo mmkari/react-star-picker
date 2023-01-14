@@ -43,10 +43,10 @@
 }
 
 /* definitions for a "rotateStar" class */
-.StarPicker.rotateStar .DefaultStarComponent {
+.StarPicker.rotateStar .StarPickerButton {
   transition: transform 0.2s ease-in-out, color 0.4s;
 }
-.StarPicker.rotateStar .DefaultStarComponent.selected {
+.StarPicker.rotateStar .StarPickerButton.selected {
   transform: rotate(-60deg);
 }
 
