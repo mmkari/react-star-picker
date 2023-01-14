@@ -1,8 +1,8 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {EnlargePicker} from '@site/src/components/HomepageFeatures';
+import {RotatePicker} from '@site/src/components/HomepageFeatures';
 
-<EnlargePicker />
+<RotatePicker />
 
 <br/>
 
@@ -14,12 +14,12 @@ import {EnlargePicker} from '@site/src/components/HomepageFeatures';
 <TabItem value="jsx" label="JSX">
 
 ```typescript
-const EnlargePicker = () => {
+const RotatePicker = () => {
   const [rating, setRating] = React.useState<number | null>(null);
 
   return (
     <StarPicker //
-      className="enlargeStar"
+      className="rotateStar"
       value={rating}
       onChange={setRating}
     />
@@ -30,13 +30,12 @@ const EnlargePicker = () => {
 <TabItem value="css" label="CSS">
 
 ```css
-/* definitions for an "enlargeStar" class */
-.StarPicker.enlargeStar .DefaultStarComponent {
+/* definitions for a "rotateStar" class */
+.StarPicker.rotateStar .DefaultStarComponent {
   transition: transform 0.2s ease-in-out, color 0.4s;
 }
-.StarPicker.enlargeStar .DefaultStarComponent.selected {
-  text-shadow: rgb(173, 140, 6) 1px 1px 1px;
-  transform: scale(1.2);
+.StarPicker.rotateStar .DefaultStarComponent.selected {
+  transform: rotate(-60deg);
 }
 ```
 

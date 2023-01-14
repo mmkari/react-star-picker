@@ -17,10 +17,13 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 
 import GreenExample from './examples/\_green.mdx';
 import EnlargeExample from './examples/\_enlarge.mdx';
+import RotateExample from './examples/\_rotate.mdx';
 
 <GreenExample />
 
 <EnlargeExample />
+
+<RotateExample />
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
