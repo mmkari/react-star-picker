@@ -27,12 +27,16 @@ content={<LargePicker />}
 # Tutorial Intro
 
 import GreenExample from './examples/\_green.mdx';
-import EnlargeExample from './examples/\_enlarge.mdx';
+
+<!-- import EnlargeExample from './examples/\_enlarge.mdx'; -->
+
+import EnlargeSource from '@site/src/components/examples/EnlargeSource';
 import RotateExample from './examples/\_rotate.mdx';
 
 <GreenExample />
 
-<EnlargeExample />
+<!-- <EnlargeExample /> -->
+<EnlargeSource />
 
 <RotateExample />
 
