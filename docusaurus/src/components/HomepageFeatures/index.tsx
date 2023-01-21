@@ -4,6 +4,8 @@ import clsx from 'clsx';
 
 import StarPicker from 'react-star-picker';
 import classnames from 'classnames';
+import CodeIconSvg from '@site/static/img/codeIcon.svg';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -234,5 +236,30 @@ export const BluePicker = () => {
       size={60}
       halfStars
     />
+  );
+};
+
+export const CodeIcon = () => {
+  return (
+    <div style={{ width: 24, height: 24, color: 'red' }}>
+      <CodeIconSvg />
+    </div>
+  );
+};
+
+export const CodeIconLink = ({ to }) => {
+  return (
+    <Link className="" to={to}>
+      <CodeIcon />
+    </Link>
+  );
+};
+
+export const LinkContainer = ({ to, content }) => {
+  return (
+    <div style={{}}>
+      <div>{content}</div>
+      <CodeIconLink to={to} />
+    </div>
   );
 };

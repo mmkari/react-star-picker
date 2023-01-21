@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CustomPicker, BluePicker} from '@site/src/components/HomepageFeatures';
+import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CustomPicker, BluePicker, CodeIconLink} from '@site/src/components/HomepageFeatures';
 
 <Test />
 <LargePicker />
@@ -12,6 +12,8 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 <DollarPicker />
 <CustomPicker />
 <BluePicker />
+
+<CodeIconLink to="/docs/intro#asd" />
 
 [Custom foo description](intro#asd)
 
