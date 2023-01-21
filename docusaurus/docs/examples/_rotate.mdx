@@ -1,6 +1,10 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {RotatePicker} from '@site/src/components/HomepageFeatures';
+import RotatePicker from '@site/src/components/HomepageFeatures/RotatePicker';
+
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!@site/src/components/HomepageFeatures/RotatePicker';
+import MyComponentStyleSource from '!!raw-loader!@site/src/css/RotatePicker.css';
 
 <RotatePicker />
 
@@ -12,33 +16,11 @@ import {RotatePicker} from '@site/src/components/HomepageFeatures';
 
 <Tabs>
 <TabItem value="jsx" label="JSX">
-
-```typescript
-const RotatePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="rotateStar"
-      value={rating}
-      onChange={setRating}
-    />
-  );
-};
-```
+  <CodeBlock language="typescript">{MyComponentSource}</CodeBlock>
 </TabItem>
+
 <TabItem value="css" label="CSS">
-
-```css
-/* definitions for a "rotateStar" class */
-.StarPicker.rotateStar .StarPickerButton {
-  transition: transform 0.2s ease-in-out, color 0.4s;
-}
-.StarPicker.rotateStar .StarPickerButton.selected {
-  transform: rotate(-60deg);
-}
-```
-
+  <CodeBlock language="css">{MyComponentStyleSource}</CodeBlock>
 </TabItem>
 </Tabs>
 
