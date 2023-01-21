@@ -1,8 +1,12 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {GreenPicker} from '@site/src/components/HomepageFeatures';
+import GreenPicker from '@site/src/components/HomepageFeatures/GreenPicker';
+
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!@site/src/components/HomepageFeatures/GreenPicker';
 
 <GreenPicker />
+
 
 <br/>
 
@@ -12,20 +16,7 @@ import {GreenPicker} from '@site/src/components/HomepageFeatures';
 
 <Tabs>
 <TabItem value="jsx" label="JSX">
-
-```typescript
-const GreenPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="greenStars"
-      value={rating}
-      onChange={setRating}
-    />
-  );
-};
-```
+<CodeBlock language="typescript">{MyComponentSource}</CodeBlock>
 </TabItem>
 <TabItem value="css" label="CSS">
 

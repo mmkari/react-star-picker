@@ -8,6 +8,8 @@ import CodeIconSvg from '@site/static/img/codeIcon.svg';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
+export { default as GreenPicker } from '@site/src/components/HomepageFeatures/GreenPicker';
+
 type FeatureItem = {
   title: string;
 
@@ -107,18 +109,6 @@ export const LargePicker = () => {
       value={rating}
       onChange={setRating}
       size={50}
-    />
-  );
-};
-
-export const GreenPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="greenStars"
-      value={rating}
-      onChange={setRating}
     />
   );
 };
