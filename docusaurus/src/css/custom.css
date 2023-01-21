@@ -44,13 +44,7 @@ a:hover .Icon svg {
 
 @import './EnlargePicker.css';
 
-/* definitions for a "rotateStar" class */
-.StarPicker.rotateStar .StarPickerButton {
-  transition: transform 0.2s ease-in-out, color 0.4s;
-}
-.StarPicker.rotateStar .StarPickerButton.selected {
-  transform: rotate(-60deg);
-}
+@import './RotatePicker.css';
 
 @import './GreenPicker.css';
 

@@ -10,6 +10,7 @@ import styles from './styles.module.css';
 
 export { default as GreenPicker } from '@site/src/components/HomepageFeatures/GreenPicker';
 export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/EnlargePicker';
+export { default as RotatePicker } from '@site/src/components/HomepageFeatures/RotatePicker';
 
 type FeatureItem = {
   title: string;
@@ -110,18 +111,6 @@ export const LargePicker = () => {
       value={rating}
       onChange={setRating}
       size={50}
-    />
-  );
-};
-
-export const RotatePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="rotateStar"
-      value={rating}
-      onChange={setRating}
     />
   );
 };
