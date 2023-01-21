@@ -4,8 +4,11 @@ import GreenPicker from '@site/src/components/HomepageFeatures/GreenPicker';
 
 import CodeBlock from '@theme/CodeBlock';
 import MyComponentSource from '!!raw-loader!@site/src/components/HomepageFeatures/GreenPicker';
+import MyComponentStyleSource from '!!raw-loader!@site/src/css/GreenPicker.css';
+
 
 <GreenPicker />
+
 
 
 <br/>
@@ -16,22 +19,11 @@ import MyComponentSource from '!!raw-loader!@site/src/components/HomepageFeature
 
 <Tabs>
 <TabItem value="jsx" label="JSX">
-<CodeBlock language="typescript">{MyComponentSource}</CodeBlock>
+  <CodeBlock language="typescript">{MyComponentSource}</CodeBlock>
 </TabItem>
+
 <TabItem value="css" label="CSS">
-
-```css
-.StarPicker.greenStars .DefaultStarComponent.selected {
-  color: #00ff88;
-}
-.StarPicker.greenStars .DefaultStarComponent.addSelection {
-  color: #e4e4e4;
-}
-.StarPicker.greenStars .DefaultStarComponent.removeSelection {
-  color: #88eebf;
-}
-```
-
+  <CodeBlock language="css">{MyComponentStyleSource}</CodeBlock>
 </TabItem>
 </Tabs>
 
