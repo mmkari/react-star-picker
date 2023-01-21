@@ -48,6 +48,8 @@ a:hover .Icon svg {
 
 @import './GreenPicker.css';
 
+@import './DollarPicker.css';
+
 /* definitions for a "customCharacter" class */
 .StarPicker.customCharacter .CustomCharacterStar {
   transition: color 0.2s, transform 0.2s;
@@ -79,28 +81,4 @@ a:hover .Icon svg {
 }
 .StarPicker.blueTheme .StarPickerButton.removeSelection {
   color: #da88ee;
-}
-
-/* Animations */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  30% {
-    transform: rotate(10deg);
-  }
-
-  70% {
-    transform: rotate(-10deg);
-  }
-}
-.dollarContainer {
-  display: 'flex';
-  padding: 0;
-  margin: 0;
-  /* font-size: 1.2rem; */
-}
-.dollarContainer:hover {
-  animation: rotate 0.3s ease-in-out;
 }

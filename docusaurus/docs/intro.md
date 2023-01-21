@@ -42,6 +42,8 @@ import EnlargeExample from './examples/\_enlarge.mdx';
 
 import RotateExample from './examples/\_rotate.mdx';
 
+import DollarExample from './examples/\_dollar.mdx';
+
 ## Green example {#green}
 
 <GreenExample />
@@ -53,6 +55,10 @@ import RotateExample from './examples/\_rotate.mdx';
 ## Rotate example {#rotate}
 
 <RotateExample />
+
+## Dollar example {#dollar}
+
+<DollarExample />
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
