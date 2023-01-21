@@ -11,8 +11,14 @@ to="/docs/intro#green"
 content={<GreenPicker />}
 />
 
-<RotatePicker />
-<EnlargePicker />
+<LinkContainer
+to="/docs/intro#rotate"
+content={<RotatePicker />}
+/>
+<LinkContainer
+to="/docs/intro#enlarge"
+content={<EnlargePicker />}
+/>
 <DollarPicker />
 <CustomPicker />
 <BluePicker />
@@ -34,17 +40,17 @@ import GreenExample from './examples/\_green.mdx';
 
 import EnlargeExample from './examples/\_enlarge.mdx';
 
-<!-- import EnlargeSource from '@site/src/components/examples/EnlargeSource'; -->
-
 import RotateExample from './examples/\_rotate.mdx';
 
 ## Green example {#green}
 
 <GreenExample />
 
+## Enlarge example {#enlarge}
+
 <EnlargeExample />
 
-<!-- <EnlargeSource /> -->
+## Rotate example {#rotate}
 
 <RotateExample />
 
