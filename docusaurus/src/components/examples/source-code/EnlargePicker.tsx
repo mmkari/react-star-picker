@@ -3,7 +3,7 @@ import SourceCodeSection from '@site/src/components/SourceCodeSection';
 import MyComponentSource from '!!raw-loader!@site/src/components/HomepageFeatures/EnlargePicker';
 import MyComponentStyleSource from '!!raw-loader!@site/src/css/EnlargePicker.css';
 
-const EnlargeSource = () => {
+const EnlargePicker = () => {
   return (
     <SourceCodeSection
       componentSource={MyComponentSource}
@@ -12,4 +12,4 @@ const EnlargeSource = () => {
   );
 };
 
-export default EnlargeSource;
+export default EnlargePicker;
