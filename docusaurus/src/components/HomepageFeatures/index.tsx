@@ -241,7 +241,7 @@ export const BluePicker = () => {
 
 export const CodeIcon = () => {
   return (
-    <div style={{ width: 24, height: 24, color: 'red' }}>
+    <div className="Icon" style={{ width: 24, height: 24, color: 'red' }}>
       <CodeIconSvg />
     </div>
   );
@@ -257,7 +257,7 @@ export const CodeIconLink = ({ to }) => {
 
 export const LinkContainer = ({ to, content }) => {
   return (
-    <div style={{}}>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
       <div>{content}</div>
       <CodeIconLink to={to} />
     </div>
