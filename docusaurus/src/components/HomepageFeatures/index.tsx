@@ -9,6 +9,7 @@ import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 export { default as GreenPicker } from '@site/src/components/HomepageFeatures/GreenPicker';
+export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/EnlargePicker';
 
 type FeatureItem = {
   title: string;
@@ -119,18 +120,6 @@ export const RotatePicker = () => {
   return (
     <StarPicker //
       className="rotateStar"
-      value={rating}
-      onChange={setRating}
-    />
-  );
-};
-
-export const EnlargePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="enlargeStar"
       value={rating}
       onChange={setRating}
     />
