@@ -19,7 +19,10 @@ content={<RotatePicker />}
 to="/docs/intro#enlarge"
 content={<EnlargePicker />}
 />
-<DollarPicker />
+<LinkContainer
+to="/docs/intro#dollar"
+content={<DollarPicker />}
+/>
 <CustomPicker />
 <BluePicker />
 
