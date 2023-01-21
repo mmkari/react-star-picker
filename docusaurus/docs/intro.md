@@ -6,7 +6,11 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 
 <Test />
 <LargePicker />
-<GreenPicker />
+<LinkContainer
+to="/docs/intro#green"
+content={<GreenPicker />}
+/>
+
 <RotatePicker />
 <EnlargePicker />
 <DollarPicker />
@@ -33,6 +37,8 @@ import EnlargeExample from './examples/\_enlarge.mdx';
 <!-- import EnlargeSource from '@site/src/components/examples/EnlargeSource'; -->
 
 import RotateExample from './examples/\_rotate.mdx';
+
+## Green example {#green}
 
 <GreenExample />
 
