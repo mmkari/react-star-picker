@@ -88,7 +88,7 @@ import LargeExample from './examples/\_large.mdx';
 
 <BlueExample />
 
-## Large example {#large}
+## Large example {#large2}
 
 <LargeExample />
 
