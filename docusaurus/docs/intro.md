@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CustomPicker, BluePicker, CodeIconLink, LinkContainer} from '@site/src/components/HomepageFeatures';
+import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer} from '@site/src/components/HomepageFeatures';
 
 <Test />
 <LargePicker />
@@ -23,7 +23,7 @@ content={<EnlargePicker />}
 to="/docs/intro#dollar"
 content={<DollarPicker />}
 />
-<CustomPicker />
+<CharacterPicker />
 <BluePicker />
 
 <CodeIconLink to="/docs/intro#asd" />
@@ -47,6 +47,8 @@ import RotateExample from './examples/\_rotate.mdx';
 
 import DollarExample from './examples/\_dollar.mdx';
 
+import CharacterExample from './examples/\_character.mdx';
+
 ## Green example {#green}
 
 <GreenExample />
@@ -62,6 +64,10 @@ import DollarExample from './examples/\_dollar.mdx';
 ## Dollar example {#dollar}
 
 <DollarExample />
+
+## Character example {#character}
+
+<CharacterExample />
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

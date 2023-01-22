@@ -50,23 +50,7 @@ a:hover .Icon svg {
 
 @import './DollarPicker.css';
 
-/* definitions for a "customCharacter" class */
-.StarPicker.customCharacter .CustomCharacterStar {
-  transition: color 0.2s, transform 0.2s;
-  color: #e4e4e4;
-}
-.StarPicker.customCharacter .CustomCharacterStar.selected {
-  color: #ff3333;
-}
-.StarPicker.customCharacter .CustomCharacterStar.addSelection {
-  color: #e9c0c0;
-}
-.StarPicker.customCharacter .CustomCharacterStar.removeSelection {
-  color: #ee9d9d;
-}
-.StarPicker.customCharacter .CustomCharacterStar.isHovered {
-  transform: scale(1.2);
-}
+@import './CharacterPicker.css';
 
 /* definitions for a "blueTheme" class and targeting button class names */
 .StarPicker.blueTheme .StarPickerButton {

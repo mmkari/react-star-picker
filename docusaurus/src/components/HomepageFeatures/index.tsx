@@ -3,7 +3,6 @@ import React from 'react';
 import clsx from 'clsx';
 
 import StarPicker from 'react-star-picker';
-import classnames from 'classnames';
 import CodeIconSvg from '@site/static/img/codeIcon.svg';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
@@ -12,6 +11,7 @@ export { default as GreenPicker } from '@site/src/components/HomepageFeatures/Gr
 export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/EnlargePicker';
 export { default as RotatePicker } from '@site/src/components/HomepageFeatures/RotatePicker';
 export { default as DollarPicker } from '@site/src/components/HomepageFeatures/DollarPicker';
+export { default as CharacterPicker } from '@site/src/components/HomepageFeatures/CharacterPicker';
 
 type FeatureItem = {
   title: string;
@@ -112,40 +112,6 @@ export const LargePicker = () => {
       value={rating}
       onChange={setRating}
       size={50}
-    />
-  );
-};
-
-const customCharacterRenderer = ({ index, hoverIndex, selectedIndex }) => {
-  const selected = index <= selectedIndex;
-  const inHoverRange = hoverIndex != null && index <= hoverIndex;
-  const hoverActive = hoverIndex != null;
-  const isHovered = hoverIndex === index;
-
-  return (
-    <div
-      className={classnames('CustomCharacterStar', {
-        isHovered,
-        selected,
-        addSelection: hoverActive && !selected && inHoverRange,
-        removeSelection: hoverActive && selected && !inHoverRange,
-      })}
-    >
-      {selected ? String.fromCharCode(10029) : String.fromCharCode(9733)}
-    </div>
-  );
-};
-export const CustomPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="customCharacter"
-      value={rating}
-      onChange={setRating}
-      starRenderer={customCharacterRenderer}
-      size={50}
-      // numberStars={4}
     />
   );
 };
