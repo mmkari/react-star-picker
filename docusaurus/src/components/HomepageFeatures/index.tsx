@@ -12,6 +12,7 @@ export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/
 export { default as RotatePicker } from '@site/src/components/HomepageFeatures/RotatePicker';
 export { default as DollarPicker } from '@site/src/components/HomepageFeatures/DollarPicker';
 export { default as CharacterPicker } from '@site/src/components/HomepageFeatures/CharacterPicker';
+export { default as BluePicker } from '@site/src/components/HomepageFeatures/BluePicker';
 
 type FeatureItem = {
   title: string;
@@ -112,29 +113,6 @@ export const LargePicker = () => {
       value={rating}
       onChange={setRating}
       size={50}
-    />
-  );
-};
-
-const simpleRenderer = ({ index, hoverIndex, selectedIndex }) => {
-  const selected = index <= selectedIndex;
-
-  if (selected) {
-    return String.fromCharCode(9733);
-  }
-  return String.fromCharCode(9734);
-};
-export const BluePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="blueTheme"
-      value={rating}
-      onChange={setRating}
-      starRenderer={simpleRenderer}
-      size={60}
-      halfStars
     />
   );
 };

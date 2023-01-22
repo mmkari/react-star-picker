@@ -29,7 +29,10 @@ to="/docs/intro#character"
 content={<CharacterPicker />}
 />
 
-<BluePicker />
+<LinkContainer
+to="/docs/intro#blue"
+content={<BluePicker />}
+/>
 
 <CodeIconLink to="/docs/intro#asd" />
 
@@ -54,6 +57,8 @@ import DollarExample from './examples/\_dollar.mdx';
 
 import CharacterExample from './examples/\_character.mdx';
 
+import BlueExample from './examples/\_blue.mdx';
+
 ## Green example {#green}
 
 <GreenExample />
@@ -73,6 +78,10 @@ import CharacterExample from './examples/\_character.mdx';
 ## Character example {#character}
 
 <CharacterExample />
+
+## Blue example {#blue}
+
+<BlueExample />
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

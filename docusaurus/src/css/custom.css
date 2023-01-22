@@ -52,17 +52,4 @@ a:hover .Icon svg {
 
 @import './CharacterPicker.css';
 
-/* definitions for a "blueTheme" class and targeting button class names */
-.StarPicker.blueTheme .StarPickerButton {
-  transition: color 0.2s;
-  color: #e4e4e4;
-}
-.StarPicker.blueTheme .StarPickerButton.selected {
-  color: #cc00ff;
-}
-.StarPicker.blueTheme .StarPickerButton.addSelection {
-  color: #dfb6e9;
-}
-.StarPicker.blueTheme .StarPickerButton.removeSelection {
-  color: #da88ee;
-}
+@import './BluePicker.css';
