@@ -13,6 +13,7 @@ export { default as RotatePicker } from '@site/src/components/HomepageFeatures/R
 export { default as DollarPicker } from '@site/src/components/HomepageFeatures/DollarPicker';
 export { default as CharacterPicker } from '@site/src/components/HomepageFeatures/CharacterPicker';
 export { default as BluePicker } from '@site/src/components/HomepageFeatures/BluePicker';
+export { default as LargePicker } from '@site/src/components/HomepageFeatures/LargePicker';
 
 type FeatureItem = {
   title: string;
@@ -100,19 +101,6 @@ export const Test = () => {
     <StarPicker //
       value={rating}
       onChange={setRating}
-    />
-  );
-};
-
-export const LargePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      className="largeStar"
-      value={rating}
-      onChange={setRating}
-      size={50}
     />
   );
 };

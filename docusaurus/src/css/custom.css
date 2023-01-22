@@ -38,10 +38,6 @@ a:hover .Icon svg {
   fill: var(--ifm-link-hover-color);
 }
 
-/* definitions for an "largeStar" class */
-.StarPicker.largeStar .DefaultStarComponent {
-}
-
 @import './EnlargePicker.css';
 
 @import './RotatePicker.css';
