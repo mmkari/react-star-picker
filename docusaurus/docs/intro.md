@@ -23,7 +23,12 @@ content={<EnlargePicker />}
 to="/docs/intro#dollar"
 content={<DollarPicker />}
 />
-<CharacterPicker />
+
+<LinkContainer
+to="/docs/intro#character"
+content={<CharacterPicker />}
+/>
+
 <BluePicker />
 
 <CodeIconLink to="/docs/intro#asd" />
