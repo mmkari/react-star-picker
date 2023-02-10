@@ -115,6 +115,10 @@ const config = {
               //   to: '/blog',
               // },
               {
+                label: 'NPM',
+                href: 'https://www.npmjs.com/package/react-star-picker',
+              },
+              {
                 label: 'GitHub',
                 href: 'https://github.com/mmkari/react-star-picker',
               },
