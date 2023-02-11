@@ -22,6 +22,13 @@ function HomepageHeader() {
 
         <p className="hero__subtitle">{siteConfig.tagline}</p>
 
+        <a href="https://www.npmjs.com/package/react-star-picker">
+          <img
+            src="https://img.shields.io/npm/dm/react-star-picker"
+            alt="Downloads badge"
+          />
+        </a>
+
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
