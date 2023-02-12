@@ -12,6 +12,14 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
+const Badge = ({ link, source, alt }) => {
+  return (
+    <a href={link} style={{ padding: '5px' }}>
+      <img src={source} alt={alt} />
+    </a>
+  );
+};
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -22,12 +30,23 @@ function HomepageHeader() {
 
         <p className="hero__subtitle">{siteConfig.tagline}</p>
 
-        <a href="https://www.npmjs.com/package/react-star-picker">
-          <img
-            src="https://img.shields.io/npm/dm/react-star-picker"
-            alt="Downloads badge"
-          />
-        </a>
+        <Badge //
+          alt="Downloads badge"
+          source="https://img.shields.io/npm/dm/react-star-picker"
+          link="https://www.npmjs.com/package/react-star-picker"
+        />
+
+        <Badge //
+          alt="License badge"
+          source="https://img.shields.io/npm/l/react-star-picker"
+          link="https://github.com/mmkari/react-star-picker/blob/master/LICENSE"
+        />
+
+        <Badge //
+          alt="Version badge"
+          source="https://img.shields.io/npm/v/react-star-picker"
+          link="https://github.com/mmkari/react-star-picker/releases"
+        />
 
         <div className={styles.buttons}>
           <Link
