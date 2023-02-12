@@ -9,44 +9,44 @@ import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker,
 <Test />
 
 <LinkContainer
-to="/docs/intro#large"
+to="/docs/examples#large"
 content={<LargePicker />}
 />
 
 <LinkContainer
-to="/docs/intro#green"
+to="/docs/examples#green"
 content={<GreenPicker />}
 />
 
 <LinkContainer
-to="/docs/intro#rotate"
+to="/docs/examples#rotate"
 content={<RotatePicker />}
 />
 <LinkContainer
-to="/docs/intro#enlarge"
+to="/docs/examples#enlarge"
 content={<EnlargePicker />}
 />
 <LinkContainer
-to="/docs/intro#dollar"
+to="/docs/examples#dollar"
 content={<DollarPicker />}
 />
 
 <LinkContainer
-to="/docs/intro#character"
+to="/docs/examples#character"
 content={<CharacterPicker />}
 />
 
 <LinkContainer
-to="/docs/intro#blue"
+to="/docs/examples#blue"
 content={<BluePicker />}
 />
 
 <LinkContainer
-to="/docs/intro#asd"
+to="/docs/examples#asd"
 content={<LargePicker />}
 />
 
-[Custom foo description](intro#asd)
+[Custom foo description](examples#asd)
 
 ## Foo {#asd}
 
