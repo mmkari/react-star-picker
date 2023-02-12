@@ -61,12 +61,12 @@ const config = {
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/star_favicon.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'examples',
             position: 'left',
             label: 'Tutorial',
           },
