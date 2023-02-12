@@ -9,3 +9,7 @@ import { PropTable } from '@site/src/components/PropTable';
 ## StarPicker
 
 <PropTable name="StarPicker" />
+
+## StarRenderer
+
+<PropTable name="defaultStarRenderer" />
