@@ -1,6 +1,15 @@
 import * as React from 'react';
 import { useDynamicImport } from 'docusaurus-plugin-react-docgen-typescript/dist/esm/hooks';
 
+const renderDefaultValue = (defaultValue: any) => {
+  switch (typeof defaultValue) {
+    case 'boolean':
+      return defaultValue ? 'TRUE' : 'FALSE';
+    default:
+      return defaultValue;
+  }
+};
+
 export const PropTable = ({ name }) => {
   const props = useDynamicImport(name);
 
@@ -31,7 +40,9 @@ export const PropTable = ({ name }) => {
               </td>
               <td>
                 {props[key].defaultValue && (
-                  <code>{props[key].defaultValue.value}</code>
+                  <code>
+                    {renderDefaultValue(props[key].defaultValue.value)}
+                  </code>
                 )}
               </td>
               <td>{props[key].required ? 'Yes' : 'No'}</td>
