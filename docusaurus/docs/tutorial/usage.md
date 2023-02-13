@@ -6,9 +6,7 @@ import Link from '@docusaurus/Link';
 
 # Usage
 
-Configure `StarPicker` by wrapping it in another component that defines its default values. This is a good place to write your custom `starRenderer` function as well (
-
- <Link to="/docs/tutorial/props#starrenderer">see this section for details</Link>   <a href="#/Props/starRenderer">see this section for details</a>):
+Configure `StarPicker` by wrapping it in another component that defines its default values. This is a good place to write your custom `starRenderer` function as well (<Link to="/docs/tutorial/props#starrenderer">see this section for details</Link>):
 
 ```jsx static a
 import React from 'react';
