@@ -46,10 +46,6 @@ to="/docs/examples#asd"
 content={<LargePicker />}
 />
 
-[Custom foo description](examples#asd)
-
-## Foo {#asd}
-
 # Tutorial Intro
 
 import GreenExample from './examples/\_green.mdx';
