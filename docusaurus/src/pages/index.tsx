@@ -48,6 +48,18 @@ function HomepageHeader() {
           link="https://github.com/mmkari/react-star-picker/releases"
         />
 
+        <Badge //
+          alt="Minified size badge"
+          source="https://img.shields.io/bundlephobia/min/react-star-picker"
+          link="https://bundlephobia.com/package/react-star-picker@2.0.13"
+        />
+
+        <Badge //
+          alt="License badge"
+          source="https://img.shields.io/github/last-commit/mmkari/react-star-picker"
+          link="https://github.com/mmkari/react-star-picker/"
+        />
+
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
