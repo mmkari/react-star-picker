@@ -32,31 +32,31 @@ function HomepageHeader() {
 
         <Badge //
           alt="Downloads badge"
-          source="https://img.shields.io/npm/dm/react-star-picker"
+          source="https://img.shields.io/npm/dm/react-star-picker?style=for-the-badge"
           link="https://www.npmjs.com/package/react-star-picker"
         />
 
         <Badge //
           alt="License badge"
-          source="https://img.shields.io/npm/l/react-star-picker"
+          source="https://img.shields.io/npm/l/react-star-picker?style=for-the-badge"
           link="https://github.com/mmkari/react-star-picker/blob/master/LICENSE"
         />
 
         <Badge //
           alt="Version badge"
-          source="https://img.shields.io/npm/v/react-star-picker"
+          source="https://img.shields.io/npm/v/react-star-picker?style=for-the-badge"
           link="https://github.com/mmkari/react-star-picker/releases"
         />
 
         <Badge //
           alt="Minified size badge"
-          source="https://img.shields.io/bundlephobia/min/react-star-picker"
+          source="https://img.shields.io/bundlephobia/min/react-star-picker?style=for-the-badge"
           link="https://bundlephobia.com/package/react-star-picker@2.0.13"
         />
 
         <Badge //
           alt="License badge"
-          source="https://img.shields.io/github/last-commit/mmkari/react-star-picker"
+          source="https://img.shields.io/github/last-commit/mmkari/react-star-picker?style=for-the-badge"
           link="https://github.com/mmkari/react-star-picker/"
         />
 
