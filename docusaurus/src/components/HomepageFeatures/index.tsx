@@ -25,10 +25,8 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-
+    title: 'Half-Star Precision',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -38,7 +36,7 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
-    title: 'Focus on What Matters',
+    title: 'Hover States',
 
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
 
@@ -51,7 +49,46 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
-    title: 'Powered by React',
+    title: 'Custom Star Renderer',
+
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+
+    description: (
+      <>
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
+      </>
+    ),
+  },
+
+  {
+    title: 'Number of Stars',
+
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+
+  {
+    title: 'Resettable',
+
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+
+  {
+    title: 'Disableable',
 
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
 
