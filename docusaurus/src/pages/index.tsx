@@ -60,12 +60,12 @@ function HomepageHeader() {
           link="https://github.com/mmkari/react-star-picker/"
         />
 
-        <div className={styles.buttons}>
+        <div className={styles.buttons} style={{ padding: '1rem' }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/examples"
           >
-            See Examples 👀 🔍✨ 💡
+            See Examples ✨
           </Link>
         </div>
       </div>
