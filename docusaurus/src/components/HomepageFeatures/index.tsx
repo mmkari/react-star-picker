@@ -90,7 +90,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Disableable',
 
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/forbidden.svg').default,
 
     description: (
       <>
