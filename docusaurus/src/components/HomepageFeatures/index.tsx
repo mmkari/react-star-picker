@@ -26,7 +26,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Half-Star Precision',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/half_star.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
