@@ -64,5 +64,6 @@
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
     // "emitDeclarationOnly": true /* Only emit '.d.ts' declaration files */
-  }
+  },
+  "exclude": ["./docusaurus/*"]
 }
