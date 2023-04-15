@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Hover States',
 
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/hover_states.svg').default,
 
     description: (
       <>
@@ -51,7 +51,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Custom Star Renderer',
 
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/dollar.svg').default,
 
     description: (
       <>
