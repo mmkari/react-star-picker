@@ -14,7 +14,6 @@ module.exports = merge(common, {
   devtool: "eval",
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify("development")
@@ -24,5 +23,8 @@ module.exports = merge(common, {
   resolve: {
       // Add '.ts' and '.tsx' as resolvable extensions.
       extensions: [".ts", ".tsx"]
+  },
+  optimization: {
+    moduleIds: 'named'
   },
 });
