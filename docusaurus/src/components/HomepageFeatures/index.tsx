@@ -27,12 +27,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Half-Star Precision',
     Svg: require('@site/static/img/half_star.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    description: <>Ratings can be selected with a half-star precision.</>,
   },
 
   {
@@ -42,8 +37,9 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        React-star-picker recognizes when there is an active mouse hover action
+        and for each star whether they are included or excluded from the
+        suggested new selection.
       </>
     ),
   },
@@ -55,8 +51,9 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The star picker accepts a render function prop that will be called upon
+        the rendering of each star. The function receives information on the
+        current selection and mouse hover state.
       </>
     ),
   },
@@ -66,38 +63,27 @@ const FeatureList: FeatureItem[] = [
 
     Svg: require('@site/static/img/count.svg').default,
 
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    description: <>The number of stars can be chosen.</>,
   },
 
   {
-    title: 'Resettable',
+    title: 'Resetting',
 
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
 
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The component supports resetting an existing rating by reselecting it.
       </>
     ),
   },
 
   {
-    title: 'Disableable',
+    title: 'Disabling',
 
     Svg: require('@site/static/img/forbidden.svg').default,
 
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    description: <>The input can be disabled, which prevents its use.</>,
   },
 ];
 
