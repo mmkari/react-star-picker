@@ -11,7 +11,7 @@ const simpleRenderer = ({ index, hoverIndex, selectedIndex }) => {
 };
 
 export const BluePicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
+  const [rating, setRating] = React.useState<number | null>(3.5);
 
   return (
     <StarPicker //

@@ -23,7 +23,7 @@ const customCharacterRenderer = ({ index, hoverIndex, selectedIndex }) => {
 };
 
 export const CustomPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
+  const [rating, setRating] = React.useState<number | null>(4);
 
   return (
     <StarPicker //

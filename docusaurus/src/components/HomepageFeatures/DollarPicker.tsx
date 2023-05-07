@@ -29,7 +29,7 @@ const dollarRenderer = ({ index, hoverIndex, selectedIndex }) => {
 };
 
 export const DollarPicker = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
+  const [rating, setRating] = React.useState<number | null>(3);
 
   return (
     <StarPicker //
