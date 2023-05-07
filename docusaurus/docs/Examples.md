@@ -38,10 +38,6 @@ to="/docs/examples#blue"
 content={<BluePicker />}
 />
 
-<LinkContainer
-to="/docs/examples#asd"
-content={<LargePicker />}
-/>
 </CenteredContainer>
 
 # Tutorial Intro
