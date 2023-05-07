@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
@@ -46,19 +46,19 @@ content={<LargePicker />}
 
 # Tutorial Intro
 
-import GreenExample from './\_green.mdx';
+import GreenExample from './examples/\_green.mdx';
 
-import EnlargeExample from './\_enlarge.mdx';
+import EnlargeExample from './examples/\_enlarge.mdx';
 
-import RotateExample from './\_rotate.mdx';
+import RotateExample from './examples/\_rotate.mdx';
 
-import DollarExample from './\_dollar.mdx';
+import DollarExample from './examples/\_dollar.mdx';
 
-import CharacterExample from './\_character.mdx';
+import CharacterExample from './examples/\_character.mdx';
 
-import BlueExample from './\_blue.mdx';
+import BlueExample from './examples/\_blue.mdx';
 
-import LargeExample from './\_large.mdx';
+import LargeExample from './examples/\_large.mdx';
 
 ## Green example {#green}
 

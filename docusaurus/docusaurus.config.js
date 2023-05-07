@@ -89,7 +89,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'examples/examples',
+            docId: 'Examples',
             position: 'left',
             label: 'Tutorial',
           },
