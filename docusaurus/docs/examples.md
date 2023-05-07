@@ -2,11 +2,7 @@
 sidebar_position: 1
 ---
 
-[![Downloads badge](https://img.shields.io/npm/dm/react-star-picker)](https://www.npmjs.com/package/react-star-picker)
-
 import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
-
-<Test />
 
 <CenteredContainer>
 <LinkContainer
