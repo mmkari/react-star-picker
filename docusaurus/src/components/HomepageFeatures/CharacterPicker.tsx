@@ -1,25 +1,10 @@
 import * as React from 'react';
 import StarPicker from 'react-star-picker';
-import classnames from 'classnames';
 
-const customCharacterRenderer = ({ index, hoverIndex, selectedIndex }) => {
+const customCharacterRenderer = ({ index, selectedIndex }) => {
   const selected = index <= selectedIndex;
-  const inHoverRange = hoverIndex != null && index <= hoverIndex;
-  const hoverActive = hoverIndex != null;
-  const isHovered = hoverIndex === index;
 
-  return (
-    <div
-      className={classnames('CustomCharacterStar', {
-        isHovered,
-        selected,
-        addSelection: hoverActive && !selected && inHoverRange,
-        removeSelection: hoverActive && selected && !inHoverRange,
-      })}
-    >
-      {selected ? String.fromCharCode(10029) : String.fromCharCode(9733)}
-    </div>
-  );
+  return selected ? String.fromCharCode(10029) : String.fromCharCode(9733);
 };
 
 export const CustomPicker = () => {
@@ -32,7 +17,6 @@ export const CustomPicker = () => {
       onChange={setRating}
       starRenderer={customCharacterRenderer}
       size={50}
-      // numberStars={4}
     />
   );
 };
