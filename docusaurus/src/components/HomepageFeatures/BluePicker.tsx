@@ -1,7 +1,7 @@
 import * as React from 'react';
 import StarPicker from 'react-star-picker';
 
-const simpleRenderer = ({ index, hoverIndex, selectedIndex }) => {
+const simpleRenderer = ({ index, selectedIndex }) => {
   const selected = index <= selectedIndex;
 
   if (selected) {
