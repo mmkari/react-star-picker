@@ -25,4 +25,4 @@ The `StarPicker` component renders a button (`StarPickerButton`) for each star, 
 }
 ```
 
-<PropTable name="defaultStarRenderer" />
+<!-- <PropTable name="defaultStarRenderer" /> -->
