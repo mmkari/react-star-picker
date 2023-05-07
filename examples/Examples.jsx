@@ -72,6 +72,7 @@ class Examples extends React.Component {
             numberStars={5}
             starRenderer={characterRenderer}
             size={50}
+            className="customCharacter"
           />
         </StyledInputWithLabel>
 

@@ -1,3 +1,21 @@
 .Examples {
   text-align: center;
 }
+
+/* definitions for a "customCharacter" class */
+.StarPicker.customCharacter .StarPickerButton {
+  transition: color 0.2s, transform 0.2s;
+  color: #e4e4e4;
+}
+.StarPicker.customCharacter .StarPickerButton.selected {
+  color: #ff3333;
+}
+.StarPicker.customCharacter .StarPickerButton.addSelection {
+  color: #e9c0c0;
+}
+.StarPicker.customCharacter .StarPickerButton.removeSelection {
+  color: #ee9d9d;
+}
+.StarPicker.customCharacter .StarPickerButton.isHovered {
+  transform: scale(1.2);
+}
