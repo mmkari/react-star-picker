@@ -54,8 +54,6 @@ import BlueExample from './examples/\_blue.mdx';
 
 import LargeExample from './examples/\_large.mdx';
 
-# Examples
-
 ## Examples
 
 ### Default Props {#large}
