@@ -37,9 +37,8 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        React-star-picker recognizes when there is an active mouse hover action
-        and for each star whether they are included or excluded from the
-        suggested new selection or being currently hovered over.
+        Stars are given classnames that indicate whether the star is selected,
+        hovered over or included or excluded from an active selection.
       </>
     ),
   },
@@ -52,8 +51,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         A render function can be used to customize the star icons or to define
-        more complex styling and animations. The function receives information
-        on the current selection and any active mouse hover states.
+        more complex styling and animations.
       </>
     ),
   },
