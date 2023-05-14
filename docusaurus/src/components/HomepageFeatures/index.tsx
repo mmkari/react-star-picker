@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Half-Star Precision',
     Svg: require('@site/static/img/half_star.svg').default,
-    description: <>Ratings can be selected with a half-star precision.</>,
+    description: <>Ratings can be selected with half-star precision.</>,
   },
 
   {
@@ -39,7 +39,7 @@ const FeatureList: FeatureItem[] = [
       <>
         React-star-picker recognizes when there is an active mouse hover action
         and for each star whether they are included or excluded from the
-        suggested new selection.
+        suggested new selection or being currently hovered over.
       </>
     ),
   },
@@ -51,9 +51,9 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        The star picker accepts a render function prop that will be called upon
-        the rendering of each star. The function receives information on the
-        current selection and mouse hover state.
+        A render function can be used to customize the star icons or to define
+        more complex styling and animations. The function receives information
+        on the current selection and any active mouse hover states.
       </>
     ),
   },
@@ -73,7 +73,8 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        The component supports resetting an existing rating by reselecting it.
+        An existing rating may be deselected with another click using an
+        optional reset feature.
       </>
     ),
   },
@@ -83,7 +84,12 @@ const FeatureList: FeatureItem[] = [
 
     Svg: require('@site/static/img/forbidden.svg').default,
 
-    description: <>The input can be disabled, which prevents its use.</>,
+    description: (
+      <>
+        The input can be disabled preventing new selections and hover state
+        tracking.
+      </>
+    ),
   },
 ];
 
