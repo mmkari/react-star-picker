@@ -71,12 +71,7 @@ const FeatureList: FeatureItem[] = [
 
     Svg: require('@site/static/img/resets.svg').default,
 
-    description: (
-      <>
-        An existing rating may be deselected with another click using an
-        optional reset feature.
-      </>
-    ),
+    description: <>An existing rating can be reset with another click.</>,
   },
 
   {
