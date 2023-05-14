@@ -69,7 +69,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Resetting',
 
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/resets.svg').default,
 
     description: (
       <>
