@@ -54,30 +54,34 @@ import BlueExample from './examples/\_blue.mdx';
 
 import LargeExample from './examples/\_large.mdx';
 
-## Large example {#large}
+# Examples
+
+## Examples
+
+### Default Props {#large}
 
 <LargeExample />
 
-## Green example {#green}
+### Custom Colors {#green}
 
 <GreenExample />
 
-## Rotate example {#rotate}
+### Rotation {#rotate}
 
 <RotateExample />
 
-## Enlarge example {#enlarge}
+### Shadow {#enlarge}
 
 <EnlargeExample />
 
-## Dollar example {#dollar}
+### Custom Renderer with Animation {#dollar}
 
 <DollarExample />
 
-## Character example {#character}
+### Custom Renderer {#character}
 
 <CharacterExample />
 
-## Blue example {#blue}
+### Custom Renderer with Half-Star Precision {#blue}
 
 <BlueExample />
