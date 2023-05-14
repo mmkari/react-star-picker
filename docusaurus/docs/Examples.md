@@ -40,8 +40,6 @@ content={<BluePicker />}
 
 </CenteredContainer>
 
-# Tutorial Intro
-
 import GreenExample from './examples/\_green.mdx';
 
 import EnlargeExample from './examples/\_enlarge.mdx';
@@ -56,17 +54,21 @@ import BlueExample from './examples/\_blue.mdx';
 
 import LargeExample from './examples/\_large.mdx';
 
+## Large example {#large}
+
+<LargeExample />
+
 ## Green example {#green}
 
 <GreenExample />
 
-## Enlarge example {#enlarge}
-
-<EnlargeExample />
-
 ## Rotate example {#rotate}
 
 <RotateExample />
+
+## Enlarge example {#enlarge}
+
+<EnlargeExample />
 
 ## Dollar example {#dollar}
 
@@ -79,7 +81,3 @@ import LargeExample from './examples/\_large.mdx';
 ## Blue example {#blue}
 
 <BlueExample />
-
-## Large example {#large2}
-
-<LargeExample />
