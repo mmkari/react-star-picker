@@ -73,7 +73,7 @@
     "react-docgen-typescript": "^1.22.0",
     "react-dom": "^16.14.0",
     "react-hot-loader": "^4.13.0",
-    "react-styleguidist": "^11.2.0",
+    "react-styleguidist": "^13.1.1",
     "react-switch-input": "git+https://github.com/mmkari/react-switch-input.git",
     "serve": "^11.3.2",
     "source-map-loader": "^0.2.4",
@@ -83,7 +83,7 @@
     "typescript": "^5.0.4",
     "webpack": "^5.79.0",
     "webpack-command": "^0.5.1",
-    "webpack-dev-server": "^3.11.3",
+    "webpack-dev-server": "^4.13.2",
     "webpack-merge": "^4.2.2"
   },
   "peerDependencies": {
