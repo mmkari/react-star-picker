@@ -40,6 +40,7 @@ class Examples extends React.Component {
             onChange={this.setValue}
             halfStars
             size={50}
+            doubleTapResets
           />
         </StyledInputWithLabel>
 
