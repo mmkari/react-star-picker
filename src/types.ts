@@ -44,7 +44,9 @@ export type StarPickerProps = SharedProps & {
   className?: string;
   /** number of stars in the input */
   numberStars: number;
-  /** When true, selecting the existing rating clears the input @deprecated use `resettable` prop instead. */
+  /**
+   * When true, selecting the existing rating clears the input. [DEPRECATED: use the new `resettable` prop instead]
+   * @deprecated */
   doubleTapResets: boolean;
   /** When true, selecting the existing rating clears the input */
   resettable: boolean;

@@ -18,10 +18,10 @@ const formatValue = (
   index: number,
   previousValue: number | null,
   halfStars: boolean,
-  doubleTapResets: boolean
+  resettable: boolean
 ): number | null => {
   const newValue = indexToValue(index, halfStars);
-  if (doubleTapResets && newValue === previousValue) {
+  if (resettable && newValue === previousValue) {
     return null;
   }
   return newValue;
@@ -37,6 +37,7 @@ const StarPicker = ({
   disabled = false,
   halfStars = false,
   doubleTapResets = false,
+  resettable = false,
   starRenderer = defaultStarRenderer,
 }: StarPickerProps) => {
   const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
@@ -51,7 +52,10 @@ const StarPicker = ({
 
   const updateValue = (index: number): void => {
     if (onChange) {
-      onChange(formatValue(index, value, halfStars, doubleTapResets), name);
+      onChange(
+        formatValue(index, value, halfStars, doubleTapResets || resettable),
+        name
+      );
     }
   };
 
