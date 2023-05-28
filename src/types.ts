@@ -34,7 +34,8 @@ export type StarPickerButtonProps = SharedProps &
     onHoverChange: (index: number | null) => void;
   };
 
-export type StarPickerProps = SharedProps & {
+// eslint-disable-next-line no-undef
+export type StarPickerProps = Partial<SharedProps> & {
   /** function called with the selected value (and the input name) after a new pick */
   onChange: (index: number | null, name?: string) => void;
   /** current value of the input */
@@ -43,11 +44,11 @@ export type StarPickerProps = SharedProps & {
   name?: string;
   className?: string;
   /** number of stars in the input */
-  numberStars: number;
+  numberStars?: number;
   /**
    * When true, selecting the existing rating clears the input. [DEPRECATED: use the new `resettable` prop instead]
    * @deprecated */
-  doubleTapResets: boolean;
+  doubleTapResets?: boolean;
   /** When true, selecting the existing rating clears the input */
-  resettable: boolean;
+  resettable?: boolean;
 };
