@@ -5,15 +5,53 @@ import clsx from 'clsx';
 import StarPicker from 'react-star-picker';
 import CodeIconSvg from '@site/static/img/codeIcon.svg';
 import Link from '@docusaurus/Link';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './styles.module.css';
 
-export { default as GreenPicker } from '@site/src/components/HomepageFeatures/GreenPicker';
+export { default as GreenPickerEx } from '@site/src/components/HomepageFeatures/GreenPicker';
 export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/EnlargePicker';
 export { default as RotatePicker } from '@site/src/components/HomepageFeatures/RotatePicker';
 export { default as DollarPicker } from '@site/src/components/HomepageFeatures/DollarPicker';
 export { default as CharacterPicker } from '@site/src/components/HomepageFeatures/CharacterPicker';
 export { default as BluePicker } from '@site/src/components/HomepageFeatures/BluePicker';
 export { default as LargePicker } from '@site/src/components/HomepageFeatures/LargePicker';
+
+const Wrapper = ({ cb }) => {
+  return (
+    <BrowserOnly fallback={<div>Loading...</div>}>
+      {() => {
+        const LibComponent = cb().default;
+        return <LibComponent />;
+      }}
+    </BrowserOnly>
+  );
+};
+const getWrapped = (cb) => {
+  return () => {
+    return <Wrapper cb={cb} />;
+  };
+};
+
+// const getBrowserOnlyContent = (render) => {
+//   return () => {};
+// };
+
+export const GreenPicker2 = () => {
+  return (
+    <BrowserOnly fallback={<div>Loading...</div>}>
+      {() => {
+        const LibComponent = require('@site/src/components/HomepageFeatures/GreenPicker')
+          .default;
+        // return <LibComponent {...props} />;
+        return <LibComponent />;
+      }}
+    </BrowserOnly>
+  );
+};
+
+export const GreenPicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/GreenPicker')
+);
 
 type FeatureItem = {
   title: string;
