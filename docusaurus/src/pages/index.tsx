@@ -30,11 +30,11 @@ function HomepageHeader() {
 
         <p className="hero__subtitle">{siteConfig.tagline}</p>
 
-        <Badge //
+        {/* <Badge //
           alt="Downloads badge"
           source="https://img.shields.io/npm/dm/react-star-picker?style=for-the-badge"
           link="https://www.npmjs.com/package/react-star-picker"
-        />
+        /> */}
 
         <Badge //
           alt="License badge"
