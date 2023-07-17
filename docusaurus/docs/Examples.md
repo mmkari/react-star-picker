@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-import {Test,LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
+import {LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
 
 <CenteredContainer>
 <LinkContainer

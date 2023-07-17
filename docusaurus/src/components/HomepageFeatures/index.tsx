@@ -8,17 +8,9 @@ import Link from '@docusaurus/Link';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './styles.module.css';
 
-export { default as GreenPickerEx } from '@site/src/components/HomepageFeatures/GreenPicker';
-export { default as EnlargePicker } from '@site/src/components/HomepageFeatures/EnlargePicker';
-export { default as RotatePicker } from '@site/src/components/HomepageFeatures/RotatePicker';
-export { default as DollarPicker } from '@site/src/components/HomepageFeatures/DollarPicker';
-export { default as CharacterPicker } from '@site/src/components/HomepageFeatures/CharacterPicker';
-export { default as BluePicker } from '@site/src/components/HomepageFeatures/BluePicker';
-export { default as LargePicker } from '@site/src/components/HomepageFeatures/LargePicker';
-
 const Wrapper = ({ cb }) => {
   return (
-    <BrowserOnly fallback={<div>Loading...</div>}>
+    <BrowserOnly fallback={null}>
       {() => {
         const LibComponent = cb().default;
         return <LibComponent />;
@@ -32,25 +24,26 @@ const getWrapped = (cb) => {
   };
 };
 
-// const getBrowserOnlyContent = (render) => {
-//   return () => {};
-// };
-
-export const GreenPicker2 = () => {
-  return (
-    <BrowserOnly fallback={<div>Loading...</div>}>
-      {() => {
-        const LibComponent = require('@site/src/components/HomepageFeatures/GreenPicker')
-          .default;
-        // return <LibComponent {...props} />;
-        return <LibComponent />;
-      }}
-    </BrowserOnly>
-  );
-};
-
 export const GreenPicker = getWrapped(() =>
   require('@site/src/components/HomepageFeatures/GreenPicker')
+);
+export const EnlargePicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/EnlargePicker')
+);
+export const RotatePicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/RotatePicker')
+);
+export const DollarPicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/DollarPicker')
+);
+export const CharacterPicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/CharacterPicker')
+);
+export const BluePicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/BluePicker')
+);
+export const LargePicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/LargePicker')
 );
 
 type FeatureItem = {
