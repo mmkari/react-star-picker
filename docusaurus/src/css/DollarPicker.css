@@ -13,7 +13,7 @@
 }
 
 .dollarContainer {
-  display: 'flex';
+  display: flex;
   padding: 0;
   margin: 0;
 }
