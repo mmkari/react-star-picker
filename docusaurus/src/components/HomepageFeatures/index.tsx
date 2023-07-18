@@ -2,7 +2,6 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-import StarPicker from 'react-star-picker';
 import CodeIconSvg from '@site/static/img/codeIcon.svg';
 import Link from '@docusaurus/Link';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -146,17 +145,6 @@ export default function HomepageFeatures(): JSX.Element {
     </section>
   );
 }
-
-export const Test = () => {
-  const [rating, setRating] = React.useState<number | null>(null);
-
-  return (
-    <StarPicker //
-      value={rating}
-      onChange={setRating}
-    />
-  );
-};
 
 export const CodeIcon = () => {
   return (
