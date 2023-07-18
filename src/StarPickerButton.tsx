@@ -33,8 +33,8 @@ const StarPickerButton = ({
 
   // to make styling easier, we add several classes to the returned button
   const selected = index <= selectedIndex; // this button is part of the current selection
-  const inHoverRange = hoverIndex != null && index <= hoverIndex; // this button is part of the active hover selection
   const hoverActive = hoverIndex != null; // cursor is currently hovered over the buttons
+  const inHoverRange = hoverActive && index <= hoverIndex; // this button is part of the active hover selection
 
   return (
     <button
