@@ -6,6 +6,8 @@ import StarPickerButton from './StarPickerButton';
 
 import { StarPickerProps } from './types';
 
+import './StarPicker.css';
+
 const valueToIndex = (value: number | null, halfStars: boolean): number => {
   if (!value) return -1;
   return halfStars ? value * 2 - 1 : value - 1;
