@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -72,6 +73,16 @@ const config = {
 
             return true;
           },
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-module-alias',
+      {
+        alias: {
+          'react-star-picker': path.resolve(__dirname, '../src/index.ts'),
+          react: path.resolve(__dirname, './node_modules/react'),
+          'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
         },
       },
     ],
