@@ -1,7 +1,17 @@
 /* definitions for a "rotateStar" class */
-.StarPicker.rotateStar .StarPickerButton {
+.StarPicker.rotateStar .StarPickerButton .DefaultStarComponent {
+  color: #bbdcb8;
   transition: transform 0.2s ease-in-out, color 0.4s;
 }
-.StarPicker.rotateStar .StarPickerButton.selected {
+.StarPicker.rotateStar .StarPickerButton.selected .DefaultStarComponent {
+  color: coral;
   transform: rotate(-60deg);
+}
+
+.StarPicker.rotateStar .StarPickerButton.removeSelection .DefaultStarComponent {
+  color: #cb5b44;
+}
+
+.StarPicker.rotateStar .StarPickerButton.addSelection .DefaultStarComponent {
+  color: #f5cb69;
 }

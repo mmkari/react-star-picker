@@ -20,7 +20,7 @@ A `StarPicker` component returns the following html structure by default:
 </div>
 ```
 
-In addition to the class names listed above for each element, every "StarPickerButton" **button** and "DefaultStarComponent" **div** is given the class names of:
+In addition to the class names listed above for each element, every "StarPickerButton" **button** is given the class names of:
 
 - `selected` if the button is part of the current selection
 - `addSelection` if not selected but is part of suggested selection during hover

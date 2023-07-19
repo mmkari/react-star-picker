@@ -1,8 +1,8 @@
 /* definitions for an "enlargeStar" class */
-.StarPicker.enlargeStar .StarPickerButton {
+.StarPicker.enlargeStar .StarPickerButton .DefaultStarComponent {
   transition: transform 0.2s ease-in-out, color 0.4s;
 }
-.StarPicker.enlargeStar .StarPickerButton.selected {
+.StarPicker.enlargeStar .StarPickerButton.selected .DefaultStarComponent {
   text-shadow: rgb(173, 140, 6) 1px 1px 1px;
   transform: scale(1.2);
 }

@@ -1,10 +1,10 @@
 /* definitions for a "greenStars" class */
-.StarPicker.greenStars .DefaultStarComponent.selected {
+.StarPicker.greenStars .StarPickerButton.selected .DefaultStarComponent {
   color: #00ff88;
 }
-.StarPicker.greenStars .DefaultStarComponent.addSelection {
+.StarPicker.greenStars .StarPickerButton.addSelection .DefaultStarComponent {
   color: #e4e4e4;
 }
-.StarPicker.greenStars .DefaultStarComponent.removeSelection {
+.StarPicker.greenStars .StarPickerButton.removeSelection .DefaultStarComponent {
   color: #88eebf;
 }
