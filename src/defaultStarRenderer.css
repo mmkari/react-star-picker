@@ -1,16 +1,16 @@
-.DefaultStarComponent {
+.StarPicker .StarPickerButton .DefaultStarComponent {
   transition: color 0.2s;
   color: #e4e4e4;
 }
 
-.DefaultStarComponent.selected {
+.StarPicker .StarPickerButton.selected .DefaultStarComponent {
   color: gold;
 }
 
-.DefaultStarComponent.addSelection {
+.StarPicker .StarPickerButton.addSelection .DefaultStarComponent {
   color: #e9e1b6;
 }
 
-.DefaultStarComponent.removeSelection {
+.StarPicker .StarPickerButton.removeSelection .DefaultStarComponent {
   color: #eede88;
 }

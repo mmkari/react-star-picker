@@ -8,6 +8,7 @@ module.exports =  {
     filename: "index.js",
     path: paths.libBuild,
     libraryTarget: 'umd',
+    globalObject: 'this',
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
