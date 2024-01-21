@@ -46,7 +46,7 @@ const StarPicker = ({
   const inputRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
-    // set CSS custom property value for this component
+    // set CSS custom property value used by elements of this instance
     if (inputRef.current) {
       inputRef.current.style.setProperty('--star-size', `${String(size)}px`);
     }
