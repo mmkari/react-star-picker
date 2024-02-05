@@ -4,3 +4,4 @@ dist-examples
 styleguidistHtml
 src/*.d.ts
 src/*.d.ts.map
+lib
