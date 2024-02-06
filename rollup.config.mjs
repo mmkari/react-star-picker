@@ -10,9 +10,10 @@ export default {
     dir: 'lib',
     format: 'cjs',
     exports: 'named',
-    preserveModules: true,
+    // preserveModules: true,
   },
   plugins: [nodeResolve(), typescript(), css(), commonjs()],
+  external: ['react', 'react-dom'],
 
   // Ignore warnings when using "use client" directive
   onwarn(warning, warn) {
