@@ -78,7 +78,7 @@ module.exports =  {
         terserOptions: {
           compress: true,
           output: {
-            preamble: "'use client'",
+            preamble: "'use client';",
             comments: false
           }
         }
@@ -87,7 +87,7 @@ module.exports =  {
   },
   plugins: [
 		new webpack.BannerPlugin({
-			banner: '"use client"\n',
+			banner: "'use client';\n",
       raw: true,
       entryOnly: true,
 		})
