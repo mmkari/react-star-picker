@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const TerserPlugin = require("terser-webpack-plugin");
 const paths = require("./paths");
 
 module.exports =  {
@@ -65,6 +67,29 @@ module.exports =  {
         use: ['style-loader', 'css-loader'],
       }
     ]
-  }
-  
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+        minify: TerserPlugin.uglifyJsMinify,
+        parallel: true,
+        terserOptions: {
+          compress: true,
+          output: {
+            preamble: "'use client'",
+            comments: false
+          }
+        }
+      })
+    ]
+  },
+  plugins: [
+		new webpack.BannerPlugin({
+			banner: '"use client"\n',
+      raw: true,
+      entryOnly: true,
+		})
+	]
 };
