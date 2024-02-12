@@ -2,8 +2,15 @@
   "name": "react-star-picker",
   "version": "2.1.4",
   "description": "A star-rating component made with React",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/cjs/index.cjs",
+      "import": "./lib/esm/index.mjs"
+    }
+  },
   "scripts": {
     "prebuild": "rm -rf dist/*",
     "build-js": "webpack --config config/webpack-lib-config.js",

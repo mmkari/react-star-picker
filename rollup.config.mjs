@@ -6,12 +6,11 @@ import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 
-const input = ['./src/index.js'];
+const input = ['./src/index.ts'];
 
-const kebabToPascal = (string) => {
-  return string.replace(/(^\w|-\w)/g, (replaceString) =>
-    replaceString.replace(/-/, '').toUpperCase()
-  );
+const globals = {
+  'react': 'React',
+  'react-dom': 'ReactDOM',
 };
 
 export default [
@@ -24,15 +23,23 @@ export default [
         format: 'esm',
         exports: 'named',
         sourcemap: true,
+        globals,
       },
       {
         dir: 'lib/cjs',
         format: 'cjs',
         exports: 'named',
         sourcemap: true,
+        globals,
       },
     ],
-    plugins: [nodeResolve(), typescript(), css(), commonjs(), terser()],
+    plugins: [
+      nodeResolve(),
+      typescript(), 
+      css(),
+      commonjs(),
+      // terser()
+    ],
     external: ['react', 'react-dom'],
 
     // Ignore warnings when using "use client" directive
@@ -49,10 +56,11 @@ export default [
       {
         file: `lib/${pkg.name}.min.js`,
         format: 'umd',
-        name: kebabToPascal(pkg.name),
+        name: 'ReactStarPicker',
         esModule: false,
         exports: 'named',
         sourcemap: true,
+        globals,
       },
     ],
     plugins: [nodeResolve(), typescript(), css(), commonjs(), terser()],
