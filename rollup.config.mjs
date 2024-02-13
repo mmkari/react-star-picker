@@ -5,6 +5,7 @@ import css from 'rollup-plugin-css-only';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
+import { dts } from "rollup-plugin-dts";
 
 const input = ['./src/index.ts'];
 
@@ -25,19 +26,20 @@ export default [
         sourcemap: true,
         globals,
       },
-      {
-        dir: 'lib/cjs',
-        format: 'cjs',
-        exports: 'named',
-        sourcemap: true,
-        globals,
-      },
+      // {
+      //   dir: 'lib/cjs',
+      //   format: 'cjs',
+      //   exports: 'named',
+      //   sourcemap: true,
+      //   globals,
+      // },
     ],
     plugins: [
       nodeResolve(),
       typescript(), 
       css(),
       commonjs(),
+      dts(),
       // terser()
     ],
     external: ['react', 'react-dom'],

@@ -88,6 +88,7 @@
     "react-switch-input": "git+https://github.com/mmkari/react-switch-input.git",
     "rollup": "^4.9.6",
     "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "serve": "^11.3.2",
     "source-map-loader": "^0.2.4",
