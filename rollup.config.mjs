@@ -36,10 +36,9 @@ export default [
     ],
     plugins: [
       nodeResolve(),
-      typescript(), 
+      typescript({ tsconfig: './tsconfig.json' }), 
       css(),
       commonjs(),
-      dts(),
       // terser()
     ],
     external: ['react', 'react-dom'],
@@ -65,7 +64,13 @@ export default [
         globals,
       },
     ],
-    plugins: [nodeResolve(), typescript(), css(), commonjs(), terser()],
+    plugins: [
+      nodeResolve(), 
+      typescript({ tsconfig: './tsconfig.json' }), 
+      css(), 
+      commonjs(), 
+      terser(),
+    ],
     external: ['react', 'react-dom'],
 
     // Ignore warnings when using "use client" directive
@@ -74,5 +79,11 @@ export default [
         warn(warning);
       }
     },
+  },
+  {
+    input: "lib/esm/index.d.ts",
+    output: [{ file: "lib/index.d.ts", format: "esm" }],
+    plugins: [dts()],
+    external: ['react', 'react-dom', /\.css$/]
   },
 ];
