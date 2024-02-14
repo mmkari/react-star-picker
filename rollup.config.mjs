@@ -38,10 +38,10 @@ export default [
     plugins: [
       nodeResolve(),
       typescript({ tsconfig: './tsconfig.json' }), 
-      // css({
-      //   // Optional: filename to write all styles to
-      //   output: 'bundle.css'
-      // }),
+      css({
+        // Optional: filename to write all styles to
+        output: 'bundle.css'
+      }),
       styles(),
       commonjs(),
       // terser()
@@ -72,12 +72,13 @@ export default [
     plugins: [
       nodeResolve(), 
       typescript({ tsconfig: './tsconfig.json' }), 
-      css({
-        // Optional: filename to write all styles to
-        output: 'bundle.css'
-      }), 
+      // css({
+      //   // Optional: filename to write all styles to
+      //   output: 'bundle.css'
+      // }), 
+      styles(),
       commonjs(), 
-      terser(),
+      // terser(),
     ],
     external: ['react', 'react-dom'],
 
