@@ -40,7 +40,7 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }), 
       css({
         // Optional: filename to write all styles to
-        output: 'bundle.css'
+        output: 'index.css'
       }),
       styles(),
       commonjs(),
