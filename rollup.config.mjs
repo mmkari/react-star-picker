@@ -6,6 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
+import styles from "rollup-plugin-styles";
 
 const input = ['./src/index.ts'];
 
@@ -37,7 +38,11 @@ export default [
     plugins: [
       nodeResolve(),
       typescript({ tsconfig: './tsconfig.json' }), 
-      css(),
+      // css({
+      //   // Optional: filename to write all styles to
+      //   output: 'bundle.css'
+      // }),
+      styles(),
       commonjs(),
       // terser()
     ],
@@ -67,7 +72,10 @@ export default [
     plugins: [
       nodeResolve(), 
       typescript({ tsconfig: './tsconfig.json' }), 
-      css(), 
+      css({
+        // Optional: filename to write all styles to
+        output: 'bundle.css'
+      }), 
       commonjs(), 
       terser(),
     ],
