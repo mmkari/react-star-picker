@@ -3,7 +3,7 @@
   "version": "2.1.4",
   "description": "A star-rating component made with React",
   "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "module": "lib/esm/index.mjs",
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
