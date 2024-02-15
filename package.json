@@ -8,6 +8,9 @@
   "exports": {
     ".": {
       "import": "./lib/esm/index.mjs"
+    },
+    "./styles.css": {
+      "import": "./lib/esm/styles.css"
     }
   },
   "scripts": {

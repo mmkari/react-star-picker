@@ -21,7 +21,7 @@ export default [
     input,
     output: [
       {
-        dir: 'lib/esm',
+        file: `lib/esm/${pkg.name}.mjs`,
         format: 'esm',
         exports: 'named',
         sourcemap: true,
@@ -40,7 +40,7 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }), 
       css({
         // Optional: filename to write all styles to
-        output: 'index.css'
+        output: 'styles.css'
       }),
       styles(),
       commonjs(),
