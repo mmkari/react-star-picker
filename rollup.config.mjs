@@ -56,42 +56,42 @@ export default [
     },
   },
   // UMD
-  {
-    input,
-    output: [
-      {
-        file: `lib/${pkg.name}.min.js`,
-        format: 'umd',
-        name: 'ReactStarPicker',
-        esModule: false,
-        exports: 'named',
-        sourcemap: true,
-        globals,
-      },
-    ],
-    plugins: [
-      nodeResolve(), 
-      typescript({ tsconfig: './tsconfig.json' }), 
-      // css({
-      //   // Optional: filename to write all styles to
-      //   output: 'bundle.css'
-      // }), 
-      styles(),
-      commonjs(), 
-      // terser(),
-    ],
-    external: ['react', 'react-dom'],
+  // {
+  //   input,
+  //   output: [
+  //     {
+  //       file: `lib/${pkg.name}.min.js`,
+  //       format: 'umd',
+  //       name: 'ReactStarPicker',
+  //       esModule: false,
+  //       exports: 'named',
+  //       sourcemap: true,
+  //       globals,
+  //     },
+  //   ],
+  //   plugins: [
+  //     nodeResolve(), 
+  //     typescript({ tsconfig: './tsconfig.json' }), 
+  //     // css({
+  //     //   // Optional: filename to write all styles to
+  //     //   output: 'bundle.css'
+  //     // }), 
+  //     styles(),
+  //     commonjs(), 
+  //     // terser(),
+  //   ],
+  //   external: ['react', 'react-dom'],
 
-    // Ignore warnings when using "use client" directive
-    onwarn(warning, warn) {
-      if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
-        warn(warning);
-      }
-    },
-  },
+  //   // Ignore warnings when using "use client" directive
+  //   onwarn(warning, warn) {
+  //     if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
+  //       warn(warning);
+  //     }
+  //   },
+  // },
   {
     input: "lib/esm/index.d.ts",
-    output: [{ file: "lib/index.d.ts", format: "esm" }],
+    output: [{ file: pkg.types, format: "esm" }],
     plugins: [dts()],
     external: ['react', 'react-dom', /\.css$/]
   },

@@ -4,10 +4,9 @@
   "description": "A star-rating component made with React",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "types": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
   "exports": {
     ".": {
-      "require": "./lib/cjs/index.cjs",
       "import": "./lib/esm/index.mjs"
     }
   },
