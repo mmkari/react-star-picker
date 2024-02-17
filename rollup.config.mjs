@@ -21,7 +21,7 @@ export default [
     input,
     output: [
       {
-        file: `lib/esm/${pkg.name}.mjs`,
+        file: `lib/esm/${pkg.name}.js`,
         format: 'esm',
         exports: 'named',
         sourcemap: true,
