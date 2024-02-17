@@ -64,7 +64,7 @@ export default [
         file: `lib/index.min.js`,
         format: 'umd',
         name: 'ReactStarPicker',
-        esModule: false,
+        esModule: "auto",
         exports: 'named',
         sourcemap: true,
         globals,
