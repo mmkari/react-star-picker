@@ -9,10 +9,10 @@
       "import": "./lib/esm/index.js",
       "default": "./lib/index.min.js"
     },
-    "./esm": {
+    "./esm.js": {
       "import": "./lib/esm/index.js"
     },
-    "./umd": {
+    "./umd.js": {
       "import": "./lib/index.js"
     },
     "./styles.css": {
