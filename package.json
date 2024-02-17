@@ -9,11 +9,17 @@
       "import": "./lib/esm/index.js",
       "default": "./lib/index.js"
     },
+    "./esm": {
+      "import": "./lib/esm/index.js"
+    },
+    "./umd": {
+      "import": "./lib/index.js"
+    },
     "./styles.css": {
       "import": "./lib/esm/styles.css"
     }
   },
-  "types": "lib/index.d.ts",
+  "types": "lib/esm/index.d.ts",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "scripts": {
@@ -93,6 +99,7 @@
     "react-switch-input": "git+https://github.com/mmkari/react-switch-input.git",
     "rollup": "^4.9.6",
     "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",

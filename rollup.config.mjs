@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
 import styles from "rollup-plugin-styles";
+import del from "rollup-plugin-delete"
 
 const input = ['./src/index.ts'];
 
@@ -56,43 +57,46 @@ export default [
     },
   },
   // UMD
-  // {
-  //   input,
-  //   output: [
-  //     {
-  //       file: `lib/${pkg.name}.min.js`,
-  //       format: 'umd',
-  //       name: 'ReactStarPicker',
-  //       esModule: false,
-  //       exports: 'named',
-  //       sourcemap: true,
-  //       globals,
-  //     },
-  //   ],
-  //   plugins: [
-  //     nodeResolve(), 
-  //     typescript({ tsconfig: './tsconfig.json' }), 
-  //     // css({
-  //     //   // Optional: filename to write all styles to
-  //     //   output: 'bundle.css'
-  //     // }), 
-  //     styles(),
-  //     commonjs(), 
-  //     // terser(),
-  //   ],
-  //   external: ['react', 'react-dom'],
-
-  //   // Ignore warnings when using "use client" directive
-  //   onwarn(warning, warn) {
-  //     if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
-  //       warn(warning);
-  //     }
-  //   },
-  // },
   {
-    input: "lib/esm/index.d.ts",
+    input,
+    output: [
+      {
+        file: `lib/${pkg.name}.min.js`,
+        format: 'umd',
+        name: 'ReactStarPicker',
+        esModule: false,
+        exports: 'named',
+        sourcemap: true,
+        globals,
+      },
+    ],
+    plugins: [
+      nodeResolve(), 
+      typescript({ tsconfig: './tsconfig.json' }), 
+      // css({
+      //   // Optional: filename to write all styles to
+      //   output: 'bundle.css'
+      // }), 
+      styles(),
+      commonjs(), 
+      // terser(),
+    ],
+    external: ['react', 'react-dom'],
+
+    // Ignore warnings when using "use client" directive
+    onwarn(warning, warn) {
+      if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
+        warn(warning);
+      }
+    },
+  },
+  {
+    input: "lib/esm/dts/index.d.ts",
     output: [{ file: pkg.types, format: "esm" }],
-    plugins: [dts()],
+    plugins: [
+      dts(),
+      del({ hook: "buildEnd", targets: "./lib/esm/dts" }),
+    ],
     external: ['react', 'react-dom', /\.css$/]
   },
 ];
