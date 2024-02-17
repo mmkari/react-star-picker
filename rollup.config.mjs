@@ -22,7 +22,7 @@ export default [
     input,
     output: [
       {
-        file: `lib/esm/${pkg.name}.js`,
+        file: `lib/esm/index.js`,
         format: 'esm',
         exports: 'named',
         sourcemap: true,
@@ -61,7 +61,7 @@ export default [
     input,
     output: [
       {
-        file: `lib/${pkg.name}.min.js`,
+        file: `lib/index.min.js`,
         format: 'umd',
         name: 'ReactStarPicker',
         esModule: false,

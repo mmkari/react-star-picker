@@ -5,9 +5,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
+      "types": "./lib/esm/index.d.ts",
       "import": "./lib/esm/index.js",
-      "default": "./lib/index.js"
+      "default": "./lib/index.min.js"
     },
     "./esm": {
       "import": "./lib/esm/index.js"
@@ -20,7 +20,7 @@
     }
   },
   "types": "lib/esm/index.d.ts",
-  "main": "lib/cjs/index.js",
+  "main": "lib/index.min.js",
   "module": "lib/esm/index.js",
   "scripts": {
     "prebuild-webpack": "rm -rf dist/*",
