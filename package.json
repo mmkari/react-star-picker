@@ -5,14 +5,15 @@
   "type": "module",
   "exports": {
     ".": {
+      "module": "./lib/esm/index.js",
       "types": "./lib/esm/index.d.ts",
       "import": "./lib/esm/index.js",
       "default": "./lib/index.min.js"
     },
-    "./esm.js": {
+    "./esm": {
       "import": "./lib/esm/index.js"
     },
-    "./umd.js": {
+    "./umd": {
       "import": "./lib/index.js"
     },
     "./styles.css": {
