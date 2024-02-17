@@ -10,9 +10,11 @@
       "default": "./lib/index.min.js"
     },
     "./esm": {
+      "types": "./lib/esm/index.d.ts",
       "import": "./lib/esm/index.js"
     },
     "./umd": {
+      "types": "./lib/esm/index.d.ts",
       "import": "./lib/index.min.js"
     },
     "./styles.css": {
