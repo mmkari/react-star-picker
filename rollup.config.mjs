@@ -8,6 +8,7 @@ import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
 import styles from "rollup-plugin-styles";
 import del from "rollup-plugin-delete"
+import preserveDirectives from "rollup-plugin-preserve-directives";
 
 const input = ['./src/index.ts'];
 
@@ -22,11 +23,13 @@ export default [
     input,
     output: [
       {
-        file: `lib/esm/index.js`,
+        // file: `lib/esm/index.js`,
+        dir: "lib/esm",
         format: 'esm',
         exports: 'named',
         sourcemap: true,
         globals,
+        preserveModules: true,
       },
       // {
       //   dir: 'lib/cjs',
@@ -45,7 +48,12 @@ export default [
       }),
       styles(),
       commonjs(),
-      // terser()
+      preserveDirectives(),
+      // terser({
+      //   compress: {
+      //     directives: false,
+      //   }
+      // })
     ],
     external: ['react', 'react-dom'],
 
@@ -79,7 +87,11 @@ export default [
       // }), 
       styles(),
       commonjs(), 
-      // terser(),
+      // terser({
+      //   compress: {
+      //     directives: false,
+      //   }
+      // }),
     ],
     external: ['react', 'react-dom'],
 
