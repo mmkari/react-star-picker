@@ -38,6 +38,7 @@ const StarPickerButton = ({
 
   return (
     <button
+      aria-label={`button ${index + 1}`}
       className={classnames('StarPickerButton', {
         disabled,
         halfStars,
