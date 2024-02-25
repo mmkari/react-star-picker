@@ -6,12 +6,12 @@
   "exports": {
     ".": {
       "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/index.js",
+      "import": "./lib/esm/src/index.js",
       "default": "./lib/index.min.js"
     },
     "./esm": {
       "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/index.js"
+      "import": "./lib/esm/src/index.js"
     },
     "./umd": {
       "types": "./lib/esm/index.d.ts",
@@ -23,7 +23,7 @@
   },
   "types": "lib/esm/index.d.ts",
   "main": "lib/index.min.js",
-  "module": "lib/esm/index.js",
+  "module": "lib/esm/src/index.js",
   "scripts": {
     "prebuild-webpack": "rm -rf dist/*",
     "build-js": "webpack --config config/webpack-lib-config.js",
