@@ -6,7 +6,6 @@
     "declaration": true,
     "outDir": "./lib/esm/dts",
     "rootDir": "./src",
-    "isolatedModules": true,
     "skipLibCheck": true,
 
     /* Strict Type-Checking Options */
@@ -16,11 +15,7 @@
 
     /* Module Resolution Options */
     "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-
-    /* Advanced Options */
-    "forceConsistentCasingInFileNames": true,
-    "emitDeclarationOnly": true /* Only emit '.d.ts' declaration files */
+    "esModuleInterop": true
   },
   "exclude": ["./docusaurus/**/*", "./dist/**/*"]
 }

@@ -7,8 +7,10 @@
     "declarationDir": "./lib/esm/dts",
     "outDir": "./lib/esm/dts",
 
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+
     "moduleResolution": "Bundler",
-    "esModuleInterop": true,
 
     "emitDeclarationOnly": true
   },

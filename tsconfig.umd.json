@@ -4,9 +4,7 @@
     "target": "ES5",
     "module": "ES2015",
     "downlevelIteration": true,
-    "declaration": false,
-
-    "esModuleInterop": true
+    "declaration": false
   },
   "exclude": ["./docusaurus/**/*", "./dist/**/*"]
 }
