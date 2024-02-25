@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ES5",
     "module": "NodeNext",
     "declaration": true,
     "declarationDir": "./lib/umd/dts",
