@@ -15,7 +15,7 @@
     },
     "./umd": {
       "types": "./lib/esm/index.d.ts",
-      "import": "./lib/index.min.js"
+      "default": "./lib/index.min.js"
     },
     "./styles.css": {
       "import": "./lib/esm/styles.css"
