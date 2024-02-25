@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "NodeNext",
+    "declaration": true,
+    "declarationDir": "./lib/umd/dts",
+    "outDir": "./lib/umd/dts",
+
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+
+    "emitDeclarationOnly": true
+  },
+  "exclude": ["./docusaurus/**/*", "./dist/**/*"]
+}

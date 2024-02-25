@@ -18,7 +18,7 @@ const globals = {
 };
 
 export default [
-  // ESM & CJS
+  // ESM
   {
     input,
     output: [
@@ -41,7 +41,7 @@ export default [
     ],
     plugins: [
       nodeResolve(),
-      typescript({ tsconfig: './tsconfig.json' }), 
+      typescript({ tsconfig: './tsconfig.esm.json' }), 
       css({
         // Optional: filename to write all styles to
         output: 'styles.css'
@@ -79,7 +79,7 @@ export default [
     ],
     plugins: [
       nodeResolve(), 
-      typescript({ tsconfig: './tsconfig.json' }), 
+      typescript({ tsconfig: './tsconfig.umd.json' }), 
       // css({
       //   // Optional: filename to write all styles to
       //   output: 'bundle.css'
