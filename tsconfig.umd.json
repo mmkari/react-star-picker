@@ -2,15 +2,16 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "ES5",
-    "module": "NodeNext",
-    "declaration": true,
-    "declarationDir": "./lib/umd/dts",
-    "outDir": "./lib/umd/dts",
+    "module": "ES2015",
+    "downlevelIteration": true,
+    "declaration": false,
+    // "declarationDir": "./lib/umd/dts",
+    // "outDir": "./lib/umd/dts",
 
-    "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
+    // "moduleResolution": "NodeNext",
+    "esModuleInterop": true
 
-    "emitDeclarationOnly": true
+    // "emitDeclarationOnly": true
   },
   "exclude": ["./docusaurus/**/*", "./dist/**/*"]
 }
