@@ -2,9 +2,11 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "ES5",
-    "module": "ES2015",
+    "module": "NodeNext",
     "downlevelIteration": true,
-    "declaration": false
+    "declaration": false,
+
+    "moduleResolution": "NodeNext"
   },
   "exclude": ["./docusaurus/**/*", "./dist/**/*"]
 }
