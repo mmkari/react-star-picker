@@ -30,6 +30,13 @@ export default [
         sourcemap: true,
         globals,
         preserveModules: true,
+        // entryFileNames: (chunkInfo) => {
+        //   if (chunkInfo.name.includes('node_modules')) {
+        //     return chunkInfo.name.replace('node_modules', 'external') + '.js';
+        //   }
+  
+        //   return '[name].js';
+        // }
       },
     ],
     plugins: [
