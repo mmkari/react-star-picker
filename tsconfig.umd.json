@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES6",
     "module": "NodeNext",
     "downlevelIteration": true,
     "declaration": false,
