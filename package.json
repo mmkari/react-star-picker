@@ -7,22 +7,14 @@
     ".": {
       "types": "./lib/esm/index.d.ts",
       "import": "./lib/esm/src/index.js",
-      "default": "./lib/index.min.js"
-    },
-    "./esm": {
-      "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/src/index.js"
-    },
-    "./umd": {
-      "types": "./lib/esm/index.d.ts",
-      "default": "./lib/index.min.js"
+      "default": "./lib/esm/src/index.js"
     },
     "./styles.css": {
       "import": "./lib/esm/styles.css"
     }
   },
   "types": "lib/esm/index.d.ts",
-  "main": "lib/index.min.js",
+  "main": "lib/esm/src/index.js",
   "module": "lib/esm/src/index.js",
   "scripts": {
     "prebuild-webpack": "rm -rf dist/*",
