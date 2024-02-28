@@ -3,7 +3,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
+// import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
 import styles from "rollup-plugin-styles";
@@ -64,43 +64,6 @@ export default [
       }
     },
   },
-  // UMD
-  // {
-  //   input,
-  //   output: [
-  //     {
-  //       file: `lib/index.min.js`,
-  //       format: 'umd',
-  //       name: 'ReactStarPicker',
-  //       exports: 'named',
-  //       sourcemap: true,
-  //       globals,
-  //     },
-  //   ],
-  //   plugins: [
-  //     nodeResolve(), 
-  //     typescript({ tsconfig: './tsconfig.umd.json' }), 
-  //     // css({
-  //     //   // Optional: filename to write all styles to
-  //     //   output: 'bundle.css'
-  //     // }), 
-  //     styles(),
-  //     commonjs(), 
-  //     // terser({
-  //     //   compress: {
-  //     //     directives: false,
-  //     //   }
-  //     // }),
-  //   ],
-  //   external: ['react', 'react-dom'],
-
-  //   // Ignore warnings when using "use client" directive
-  //   onwarn(warning, warn) {
-  //     if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
-  //       warn(warning);
-  //     }
-  //   },
-  // },
   {
     input: "lib/esm/dts/index.d.ts",
     output: [{ file: pkg.types, format: "esm" }],
