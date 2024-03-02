@@ -6,7 +6,8 @@
   "exports": {
     ".": {
       "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/src/index.js"
+      "import": "./lib/esm/src/index.js",
+      "default": "./lib/esm/src/index.js"
     },
     "./styles.css": {
       "import": "./lib/esm/styles.css"
