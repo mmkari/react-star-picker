@@ -8,7 +8,7 @@ import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
 import styles from "rollup-plugin-styles";
 import del from "rollup-plugin-delete"
-import preserveDirectives from "rollup-plugin-preserve-directives";
+// import preserveDirectives from "rollup-plugin-preserve-directives";
 
 const input = ['./src/index.ts'];
 
@@ -49,7 +49,7 @@ export default [
       }),
       styles(),
       commonjs(),
-      preserveDirectives(),
+      // preserveDirectives(),
       terser({
         compress: {
           directives: false,
@@ -59,11 +59,11 @@ export default [
     external: ['react', 'react-dom'],
 
     // Ignore warnings when using "use client" directive
-    onwarn(warning, warn) {
-      if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
-        warn(warning);
-      }
-    },
+    // onwarn(warning, warn) {
+    //   if (warning.code !== 'MODULE_LEVEL_DIRECTIVE') {
+    //     warn(warning);
+    //   }
+    // },
   },
   {
     input: "lib/esm/dts/index.d.ts",
