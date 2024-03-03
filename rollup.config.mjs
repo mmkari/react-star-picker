@@ -3,7 +3,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import commonjs from '@rollup/plugin-commonjs';
-// import { terser } from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
 import styles from "rollup-plugin-styles";
@@ -50,11 +50,11 @@ export default [
       styles(),
       commonjs(),
       preserveDirectives(),
-      // terser({
-      //   compress: {
-      //     directives: false,
-      //   }
-      // })
+      terser({
+        compress: {
+          directives: false,
+        }
+      })
     ],
     external: ['react', 'react-dom'],
 
