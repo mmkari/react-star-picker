@@ -6,14 +6,14 @@
   "exports": {
     ".": {
       "types": "./lib/esm/index.d.ts",
-      "import": "./lib/esm/src/index.js"
+      "import": "./lib/esm/index.js"
     },
     "./styles.css": {
       "import": "./lib/esm/styles.css"
     }
   },
   "types": "lib/esm/index.d.ts",
-  "main": "lib/esm/src/index.js",
+  "main": "lib/esm/index.js",
   "scripts": {
     "prebuild-webpack": "rm -rf dist/*",
     "build-js": "webpack --config config/webpack-lib-config.js",
