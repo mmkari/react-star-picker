@@ -29,6 +29,7 @@ export default [
         exports: 'named',
         sourcemap: true,
         globals,
+        banner: `'use client';`,
         // preserveModules: true,
         // entryFileNames: (chunkInfo) => {
         //   if (chunkInfo.name.includes('node_modules')) {
