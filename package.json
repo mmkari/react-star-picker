@@ -1,6 +1,6 @@
 {
   "name": "react-star-picker",
-  "version": "2.1.5",
+  "version": "3.0.0",
   "description": "A star-rating component made with React",
   "type": "module",
   "exports": {
