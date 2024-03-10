@@ -10,3 +10,4 @@ styleguide.config.js
 tsconfig.json
 .*
 docusaurus
+rollup.config.mjs

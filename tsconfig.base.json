@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "declaration": true,
+    "rootDir": "./src",
+    "skipLibCheck": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+
+    /* Module Resolution Options */
+    "esModuleInterop": true
+  },
+  "exclude": ["./docusaurus/**/*", "./dist/**/*"]
+}

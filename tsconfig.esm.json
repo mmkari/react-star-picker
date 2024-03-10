@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "./lib/esm/dts",
+    "outDir": "./lib/esm/dts",
+
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "moduleResolution": "Bundler",
+
+    "emitDeclarationOnly": true
+  },
+  "exclude": ["./docusaurus/**/*", "./dist/**/*"]
+}
