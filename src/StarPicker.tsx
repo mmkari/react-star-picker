@@ -40,7 +40,6 @@ const StarPicker = ({
   size = 34, // in px, used for font-size and width stylings
   disabled = false,
   halfStars = false,
-  doubleTapResets = false,
   resettable = false,
   starRenderer = defaultStarRenderer,
 }: StarPickerProps) => {
@@ -56,10 +55,7 @@ const StarPicker = ({
 
   const updateValue = (index: number): void => {
     if (onChange) {
-      onChange(
-        formatValue(index, value, halfStars, doubleTapResets || resettable),
-        name
-      );
+      onChange(formatValue(index, value, halfStars, resettable), name);
     }
   };
 
