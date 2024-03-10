@@ -31,9 +31,15 @@ npm i react-star-picker
 
 ## Usage
 
+> **Note**
+> To make this library SSR compatible, versions starting from 3.0.0 export an ES module instead of the previously exported UMD bundle. The major difference is that styles are no longer bundled with the component code and need to be imported separately from `react-star-picker/styles.css`.
+
 ```jsx
 import React, { useState } from 'react';
 import StarPicker from 'react-star-picker';
+// vvv Starting from v3.0.0 we need to import the styles separately. This is best done in a wrapper component.
+import 'react-star-picker/styles.css';
+// ^^^
 
 const ParentComponent = () => {
   const [rating, setRating] = useState(null);
