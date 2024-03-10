@@ -36,11 +36,11 @@ const StarPicker = ({
   onChange,
   name,
   className,
-  numberStars = 5,
+  numberStars,
+  starCount,
   size = 34, // in px, used for font-size and width stylings
   disabled = false,
   halfStars = false,
-  doubleTapResets = false,
   resettable = false,
   starRenderer = defaultStarRenderer,
 }: StarPickerProps) => {
@@ -56,10 +56,7 @@ const StarPicker = ({
 
   const updateValue = (index: number): void => {
     if (onChange) {
-      onChange(
-        formatValue(index, value, halfStars, doubleTapResets || resettable),
-        name
-      );
+      onChange(formatValue(index, value, halfStars, resettable), name);
     }
   };
 
@@ -67,8 +64,9 @@ const StarPicker = ({
     setHoverIndex(index);
   };
 
+  const count = starCount ?? numberStars ?? 5;
   const selectedIndex = valueToIndex(value, halfStars);
-  const numberButtons = halfStars ? 2 * numberStars : numberStars;
+  const numberButtons = halfStars ? 2 * count : count;
 
   return (
     <div className={classnames('StarPicker', className)} ref={inputRef}>
