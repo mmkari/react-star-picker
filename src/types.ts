@@ -43,8 +43,11 @@ export type StarPickerProps = Partial<SharedProps> & {
   /** input's name, supplied to the onChange function if provided */
   name?: string;
   className?: string;
-  /** number of stars in the input */
+  /** number of stars in the input [DEPRECATED: use the new `starCount` prop instead]
+   * @deprecated */
   numberStars?: number;
+  /** number of stars in the input */
+  starCount?: number;
   /** When true, selecting the existing rating clears the input */
   resettable?: boolean;
 };
