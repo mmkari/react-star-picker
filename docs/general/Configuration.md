@@ -15,10 +15,10 @@ const MyStarPicker = ({
   value,
   className,
   disabled,
-  doubleTapResets = true,
+  resettable = true,
   halfStars = true,
   name,
-  numberStars = 5,
+  starCount = 5,
   size = 42,
 }) => {
   //

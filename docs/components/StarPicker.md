@@ -35,8 +35,8 @@ type StarPickerProps = {|
   value: ?number,
   name?: string,
   className?: string,
-  numberStars: number,
-  doubleTapResets: boolean,
+  starCount: number,
+  resettable: boolean,
 |};
 ```
 
@@ -53,5 +53,5 @@ type StarPickerProps = {|
 - `size`: the size of the stars in px (used for font-size, button widths)
 - `name`: input's name, supplied to the onChange function if provided
 - `className`
-- `numberStars`: number of stars in the input
-- `doubleTapResets`: When true, picking the existing rating clears it
+- `starCount`: number of stars in the input
+- `resettable`: When true, picking the existing rating clears it
