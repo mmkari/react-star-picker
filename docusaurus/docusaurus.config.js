@@ -11,7 +11,7 @@ const config = {
   tagline: 'A highly customizable star rating component',
   url: 'https://mmkari.github.io',
   baseUrl: '/react-star-picker/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/star_favicon.svg',
 
