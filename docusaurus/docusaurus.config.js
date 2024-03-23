@@ -126,17 +126,12 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Getting Started',
+                to: '/docs/category/getting-started',
+              },
+              {
                 label: 'Examples',
                 to: '/docs/examples',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
           },
