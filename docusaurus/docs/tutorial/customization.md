@@ -11,6 +11,11 @@ Configure `StarPicker` by wrapping it in another component that defines its defa
 ```jsx static a
 import React from 'react';
 import StarPicker from 'react-star-picker';
+
+// vvv Starting from v3.0.0 we need to import the styles separately.
+import 'react-star-picker/styles.css';
+// ^^^
+
 import classnames from 'classnames';
 
 const MyCustomStarRenderer = ({ index, selectedIndex, hoverIndex }) => {
@@ -24,10 +29,10 @@ const MyStarPicker = ({
   name,
   className,
   size = 42,
-  numberStars = 5,
+  starCount = 5,
   disabled = false,
   halfStars = true,
-  doubleTapResets = true,
+  resettable = true,
 }) => {
   //
   return (
@@ -37,10 +42,10 @@ const MyStarPicker = ({
       name={name}
       className={classnames('MyStarPicker', className)}
       size={size}
-      numberStars={numberStars}
+      starCount={starCount}
       disabled={disabled}
       halfStars={halfStars}
-      doubleTapResets={doubleTapResets}
+      resettable={resettable}
       starRenderer={MyCustomStarRenderer}
     />
   );
