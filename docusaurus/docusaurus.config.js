@@ -101,9 +101,15 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: '/category/getting-started',
+            position: 'left',
+            label: 'Getting Started',
+          },
+          {
+            type: 'doc',
             docId: 'Examples',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Examples',
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
