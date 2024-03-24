@@ -51,7 +51,7 @@ function HomepageHeader() {
         <Badge //
           alt="Minified size badge"
           source="https://img.shields.io/bundlephobia/min/react-star-picker?style=for-the-badge"
-          link="https://bundlephobia.com/package/react-star-picker@2.0.13"
+          link="https://bundlephobia.com/package/react-star-picker"
         />
 
         <Badge //

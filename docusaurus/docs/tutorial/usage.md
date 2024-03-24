@@ -6,11 +6,13 @@ import Link from '@docusaurus/Link';
 
 # Usage
 
-The following sample shows a basic use case for `react-star-picker` with default values for optional props:
-
 ```jsx static a
 import React from 'react';
 import StarPicker from 'react-star-picker';
+
+// vvv Necessary starting from v.3.0.0
+import 'react-star-picker/styles.css';
+// ^^^
 
 const ParentComponent = () => {
   const [value, setValue] = React.useState(null);
@@ -24,3 +26,9 @@ const ParentComponent = () => {
   );
 };
 ```
+
+:::note
+
+Starting from v3.0.0 we need to import the styles separately. This change was necessary to make the library SSR compatible.
+
+:::

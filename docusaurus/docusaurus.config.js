@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
@@ -11,14 +11,15 @@ const config = {
   tagline: 'A highly customizable star rating component',
   url: 'https://mmkari.github.io',
   baseUrl: '/react-star-picker/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/star_favicon.svg',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'https://github.com/mmkari', // Usually your GitHub org/user name.
+  organizationName: 'mmkari', // Usually your GitHub org/user name.
   projectName: 'react-star-picker', // Usually your repo name.
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -81,6 +82,10 @@ const config = {
       {
         alias: {
           'react-star-picker': path.resolve(__dirname, '../src/index.ts'),
+          // 'react-star-picker/styles.css': path.resolve(
+          //   __dirname,
+          //   '../src/index.ts'
+          // ),
           react: path.resolve(__dirname, './node_modules/react'),
           'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
         },
@@ -92,17 +97,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'React Star Picker Logo',
           src: 'img/star_favicon.svg',
         },
         items: [
           {
             type: 'doc',
+            docId: '/category/getting-started',
+            position: 'left',
+            label: 'Getting Started',
+          },
+          {
+            type: 'doc',
             docId: 'Examples',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Examples',
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -119,17 +130,12 @@ const config = {
             title: 'Docs',
             items: [
               {
+                label: 'Getting Started',
+                to: '/docs/category/getting-started',
+              },
+              {
                 label: 'Examples',
                 to: '/docs/examples',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
           },
