@@ -28,10 +28,10 @@ const MyStarPicker = ({
       onChange={onChange}
       value={value}
       disabled={disabled}
-      doubleTapResets={doubleTapResets}
+      resettable={resettable}
       halfStars={halfStars}
       name={name}
-      numberStars={numberStars}
+      starCount={starCount}
       size={size}
       starRenderer={MyCustomStarRenderer}
     />

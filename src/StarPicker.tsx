@@ -36,7 +36,6 @@ const StarPicker = ({
   onChange,
   name,
   className,
-  numberStars,
   starCount,
   size = 34, // in px, used for font-size and width stylings
   disabled = false,
@@ -56,7 +55,7 @@ const StarPicker = ({
     setHoverIndex(index);
   };
 
-  const count = starCount ?? numberStars ?? 5;
+  const count = starCount ?? 5;
   const selectedIndex = valueToIndex(value, halfStars);
   const numberButtons = halfStars ? 2 * count : count;
 

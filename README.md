@@ -11,15 +11,17 @@ A **highly customizable** star-rating component
 
 ### Default features include
 
-- [supports half-star precision](https://mmkari.github.io/react-star-picker/#/Props/halfStars)
-- [responsive hover highlighting](https://mmkari.github.io/react-star-picker/#/Props/starRenderer)
-- [custom number of stars](https://mmkari.github.io/react-star-picker/#/Props/numberStars)
-- [value clearing option](https://mmkari.github.io/react-star-picker/#/Props/doubleTapResets)
-- [input disabling](https://mmkari.github.io/react-star-picker/#/Props/disabled)
+- supports half-star precision
+- responsive hover highlighting
+- custom number of stars
+- value clearing option
+- input disabling
+
+[Read more in the docs.](https://mmkari.github.io/react-star-picker/)
 
 ### Support for custom star-renderer
 
-Even more customizability is provided by the ability to use your own star-renderer. [See example in styleguide.](https://mmkari.github.io/react-star-picker/#/Examples/Custom%20Renderer)
+Even more customizability is provided by the ability to use your own star-renderer. [Read more here.](https://mmkari.github.io/react-star-picker/docs/tutorial/props#starrenderer)
 
 # Documentation
 
@@ -56,15 +58,15 @@ const ParentComponent = () => {
 };
 ```
 
-## Styleguide
+## Links to Docs
 
-[Props](https://mmkari.github.io/react-star-picker/#/Props)
+[Props](https://mmkari.github.io/react-star-picker/docs/tutorial/props)
 
-[Configuration](https://mmkari.github.io/react-star-picker/#/Documentation/Configuration)
+[Configuration](https://mmkari.github.io/react-star-picker/docs/tutorial/customization)
 
-[Styles](https://mmkari.github.io/react-star-picker/#/Documentation/Styles)
+[Styles](https://mmkari.github.io/react-star-picker/docs/tutorial/styling)
 
-[Examples](https://mmkari.github.io/react-star-picker/#/Examples)
+[Examples](https://mmkari.github.io/react-star-picker/docs/examples)
 
 ## Component APIs
 
