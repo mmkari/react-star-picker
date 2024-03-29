@@ -6,7 +6,8 @@
   background: transparent;
   line-height: 100%;
 
-  width: 1em; /* Relative to component root element's font-size */
+  font-size: inherit; /* button tags don't inherit parent font-size by default */
+  width: 1em; /* Set width relative to element's inherited font-size */
 }
 
 .StarPickerButton.disabled {
@@ -17,7 +18,7 @@
   overflow: hidden;
   direction: ltr;
 
-  width: 0.5em; /* Relative to component root font-size */
+  width: 0.5em; /* Set width relative to element's inherited font-size */
 }
 
 .StarPickerButton.halfStars:nth-child(even) {
