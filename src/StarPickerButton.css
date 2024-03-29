@@ -6,8 +6,8 @@
   background: transparent;
   line-height: 100%;
 
-  width: var(--star-size);
-  font-size: var(--star-size);
+  font-size: inherit; /* button tags don't inherit parent font-size by default */
+  width: 1em; /* Set width relative to element's inherited font-size */
 }
 
 .StarPickerButton.disabled {
@@ -18,7 +18,7 @@
   overflow: hidden;
   direction: ltr;
 
-  width: calc(var(--star-size) / 2);
+  width: 0.5em; /* Set width relative to element's inherited font-size */
 }
 
 .StarPickerButton.halfStars:nth-child(even) {
