@@ -45,14 +45,6 @@ const StarPicker = ({
   starRenderer = defaultStarRenderer,
 }: StarPickerProps) => {
   const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
-  const inputRef = React.useRef<HTMLDivElement | null>(null);
-
-  React.useEffect(() => {
-    // set CSS custom property value used by elements of this instance
-    if (inputRef.current) {
-      inputRef.current.style.setProperty('--star-size', `${String(size)}px`);
-    }
-  }, [size]);
 
   const updateValue = (index: number): void => {
     if (onChange) {
@@ -69,7 +61,10 @@ const StarPicker = ({
   const numberButtons = halfStars ? 2 * count : count;
 
   return (
-    <div className={classnames('StarPicker', className)} ref={inputRef}>
+    <div
+      className={classnames('StarPicker', className)}
+      style={{ fontSize: `${size}px` }}
+    >
       {[...Array(numberButtons).keys()].map((i) => (
         <StarPickerButton
           key={`star-${i}`}

@@ -6,8 +6,7 @@
   background: transparent;
   line-height: 100%;
 
-  width: var(--star-size);
-  font-size: var(--star-size);
+  width: 1em; /* Relative to component root element's font-size */
 }
 
 .StarPickerButton.disabled {
@@ -18,7 +17,7 @@
   overflow: hidden;
   direction: ltr;
 
-  width: calc(var(--star-size) / 2);
+  width: 0.5em; /* Relative to component root font-size */
 }
 
 .StarPickerButton.halfStars:nth-child(even) {

@@ -1,5 +1,3 @@
 .StarPicker {
-  --star-size: 34px; /* custom property value, set from StarPicker component */
-  font-size: var(--star-size);
   user-select: none;
 }

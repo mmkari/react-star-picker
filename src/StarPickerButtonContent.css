@@ -5,5 +5,5 @@
 }
 
 .StarPickerButtonContent.halfStars {
-  width: var(--star-size);
+  width: 1em; /* Relative to component root font-size */
 }
