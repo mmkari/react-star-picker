@@ -64,6 +64,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/examples"
+            style={{ borderRadius: 0 }}
           >
             See Examples ✨
           </Link>
