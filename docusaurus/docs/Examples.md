@@ -2,9 +2,14 @@
 sidebar_position: 2
 ---
 
-import {LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
+import {FacePicker, LargePicker,GreenPicker, RotatePicker, EnlargePicker, DollarPicker, CharacterPicker, BluePicker, CodeIconLink, LinkContainer, CenteredContainer} from '@site/src/components/HomepageFeatures';
 
 <CenteredContainer>
+<LinkContainer
+to="/docs/examples#faces"
+content={<FacePicker />}
+/>
+
 <LinkContainer
 to="/docs/examples#large"
 content={<LargePicker />}
@@ -40,6 +45,8 @@ content={<BluePicker />}
 
 </CenteredContainer>
 
+import FaceExample from './examples/\_face.mdx';
+
 import GreenExample from './examples/\_green.mdx';
 
 import EnlargeExample from './examples/\_enlarge.mdx';
@@ -55,6 +62,10 @@ import BlueExample from './examples/\_blue.mdx';
 import LargeExample from './examples/\_large.mdx';
 
 ## Examples
+
+### Default Props {#face}
+
+<FaceExample />
 
 ### Default Props {#large}
 

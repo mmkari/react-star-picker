@@ -23,6 +23,9 @@ const getWrapped = (cb) => {
   };
 };
 
+export const FacePicker = getWrapped(() =>
+  require('@site/src/components/HomepageFeatures/FacePicker')
+);
 export const GreenPicker = getWrapped(() =>
   require('@site/src/components/HomepageFeatures/GreenPicker')
 );

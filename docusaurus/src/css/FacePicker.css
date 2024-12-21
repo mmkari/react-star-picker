@@ -1,0 +1,19 @@
+/* definitions for a "faceTheme" class and targeting button class names */
+.StarPicker.faceTheme {
+  display: flex;
+}
+.StarPicker.faceTheme .StarPickerButton span {
+  transition: font-size 0.2s;
+  filter: grayscale();
+  font-size: medium;
+  width: 40px;
+  height: 40px;
+}
+.StarPicker.faceTheme .StarPickerButton.isHovered span {
+  font-size: x-large;
+  filter: unset;
+}
+.StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection {
+  font-size: x-large;
+  filter: unset;
+}
