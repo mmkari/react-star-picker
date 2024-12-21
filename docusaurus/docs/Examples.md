@@ -63,7 +63,7 @@ import LargeExample from './examples/\_large.mdx';
 
 ## Examples
 
-### Default Props {#face}
+### Default Props {#faces}
 
 <FaceExample />
 

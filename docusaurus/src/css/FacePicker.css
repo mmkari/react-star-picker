@@ -6,7 +6,7 @@
   transition: font-size 0.2s;
   filter: grayscale();
   font-size: medium;
-  width: 40px;
+  width: 45px;
   height: 40px;
 }
 .StarPicker.faceTheme .StarPickerButton.isHovered span {
@@ -14,6 +14,6 @@
   filter: unset;
 }
 .StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection {
-  font-size: x-large;
+  font-size: xx-large;
   filter: unset;
 }
