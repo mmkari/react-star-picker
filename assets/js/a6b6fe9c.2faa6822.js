@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[9],{1788:t=>{t.exports=JSON.parse('{"title":"Getting Started","slug":"/category/getting-started","permalink":"/react-star-picker/docs/category/getting-started","navigation":{"next":{"title":"Installation","permalink":"/react-star-picker/docs/tutorial/installation"}}}')}}]);
