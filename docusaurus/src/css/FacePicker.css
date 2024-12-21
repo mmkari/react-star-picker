@@ -16,4 +16,32 @@
 .StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection {
   font-size: xx-large;
   filter: unset;
+  position: relative; /* Relative positioning for the ripple */
+}
+
+/* Create a ring ripple on click */
+.StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection::before {
+  content: '';
+  position: absolute;
+  width: 30px; /* Initial width of the ripple ring */
+  height: 30px; /* Initial height of the ripple ring */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%) scale(0); /* Center and scale from center */
+  border-radius: 50%; /* Make it a circle */
+  border: 3px solid rgba(211, 13, 13, 0.6); /* Red ring with opacity */
+  animation: ripple-animation 0.6s linear forwards; /* Animation for the ripple */
+  pointer-events: none; /* Make sure clicks pass through */
+}
+
+/* Keyframes to animate the ripple and make it grow in size */
+@keyframes ripple-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0); /* Start with no size */
+    opacity: 1; /* Fully opaque */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4); /* Grow to 4 times the size */
+    opacity: 0; /* Fade out the ripple */
+  }
 }
