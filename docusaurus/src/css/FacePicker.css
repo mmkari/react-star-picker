@@ -17,6 +17,10 @@
   font-size: xx-large;
   filter: unset;
   position: relative; /* Relative positioning for the ripple */
+  /* Apply rotation */
+  transform: rotate(
+    var(--rotation)
+  ); /* Use the rotation from custom property */
 }
 
 /* Create a ring ripple on click */
