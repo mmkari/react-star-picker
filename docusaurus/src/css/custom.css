@@ -38,6 +38,8 @@ a:hover .Icon svg {
   fill: var(--ifm-link-hover-color);
 }
 
+@import './FacePicker.css';
+
 @import './EnlargePicker.css';
 
 @import './RotatePicker.css';

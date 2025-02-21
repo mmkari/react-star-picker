@@ -1,10 +1,56 @@
 /* definitions for a "greenStars" class */
-.StarPicker.greenStars .StarPickerButton.selected .DefaultStarComponent {
-  color: #00ff88;
-}
-.StarPicker.greenStars .StarPickerButton.addSelection .DefaultStarComponent {
+.StarPicker.greenStars .StarPickerButton {
+  transition: color 0.2s;
   color: #e4e4e4;
+  font-size: 65px;
+
+  background: radial-gradient(
+    var(--greenPickerColor1) var(--greenPickerColorPercentage1),
+    var(--greenPickerColor2) var(--greenPickerColorPercentage2)
+  );
+  transition: --greenPickerColor1 0.4s, --greenPickerColor2 0.4s,
+    --greenPickerColorPercentage1 0.4s, --greenPickerColorPercentage2 0.4s;
 }
-.StarPicker.greenStars .StarPickerButton.removeSelection .DefaultStarComponent {
-  color: #88eebf;
+.StarPicker.greenStars .StarPickerButton.selected {
+  color: #05e80c;
+}
+.StarPicker.greenStars .StarPickerButton.addSelection {
+  color: #afff72;
+
+  --greenPickerColor1: #f00;
+  --greenPickerColor2: transparent;
+  --greenPickerColorPercentage1: 0%;
+  --greenPickerColorPercentage2: 20%;
+}
+.StarPicker.greenStars .StarPickerButton.removeSelection {
+  color: #00a605;
+}
+
+.StarPicker.greenStars .StarPickerButton.isHovered {
+  --greenPickerColorPercentage1: 0%;
+  --greenPickerColorPercentage2: 40%;
+}
+
+@property --greenPickerColor1 {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --greenPickerColor2 {
+  syntax: '<color>';
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --greenPickerColorPercentage1 {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: false;
+}
+
+@property --greenPickerColorPercentage2 {
+  syntax: '<percentage>';
+  initial-value: 20%;
+  inherits: false;
 }
