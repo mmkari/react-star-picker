@@ -1,9 +1,9 @@
 import * as React from 'react';
-import classnames from 'classnames';
 
 import { StarPickerButtonContentProps } from './types';
 
 import './StarPickerButtonContent.css';
+import { getClassName } from './helpers';
 
 const StarPickerButtonContent = ({
   halfStars,
@@ -13,7 +13,7 @@ const StarPickerButtonContent = ({
   hoverIndex,
 }: StarPickerButtonContentProps) => {
   return (
-    <div className={classnames('StarPickerButtonContent', { halfStars })}>
+    <div className={getClassName('StarPickerButtonContent', { halfStars })}>
       {starRenderer({
         index,
         selectedIndex,

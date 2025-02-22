@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import classnames from 'classnames';
 
 import defaultStarRenderer from './defaultStarRenderer';
 import StarPickerButton from './StarPickerButton';
@@ -61,7 +60,7 @@ const StarPicker = ({
 
   return (
     <div
-      className={classnames('StarPicker', className)}
+      className={`StarPicker${className ? ` ${className}` : ''}`}
       style={{ fontSize: `${size}px` }}
     >
       {[...Array(numberButtons).keys()].map((i) => (

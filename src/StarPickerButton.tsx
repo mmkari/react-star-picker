@@ -1,11 +1,11 @@
 import * as React from 'react';
-import classnames from 'classnames';
 
 import StarPickerButtonContent from './StarPickerButtonContent';
 
 import { StarPickerButtonProps } from './types';
 
 import './StarPickerButton.css';
+import { getClassName } from './helpers';
 
 const StarPickerButton = ({
   index,
@@ -39,7 +39,7 @@ const StarPickerButton = ({
   return (
     <button
       aria-label={`button ${index + 1}`}
-      className={classnames('StarPickerButton', {
+      className={getClassName('StarPickerButton', {
         disabled,
         halfStars,
         selected, // button currently selected
