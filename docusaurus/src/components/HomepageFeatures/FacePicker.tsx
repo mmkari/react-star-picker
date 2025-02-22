@@ -2,29 +2,25 @@ import * as React from 'react';
 import StarPicker from 'react-star-picker';
 
 // Function to generate a random color in rgba format
-function getRandomColor() {
+const getRandomColor = () => {
   const r = Math.floor(Math.random() * 256); // Red (0-255)
   const g = Math.floor(Math.random() * 256); // Green (0-255)
   const b = Math.floor(Math.random() * 256); // Blue (0-255)
   const a = (Math.random() * 0.6 + 0.4).toFixed(2); // Opacity between 0.4 and 1
 
   return `rgba(${r}, ${g}, ${b}, ${a})`;
-}
+};
 
 // Function to generate a random rotation between -10deg and +10deg
-function getRandomRotation() {
+const getRandomRotation = () => {
   const rotation = Math.floor(Math.random() * 21) - 10; // Random value between -10 and +10
   return `${rotation}deg`;
-}
+};
 
 const faces = ['🤬', '😖', '😠', '🙄', '😐', '🤨', '😁', '🥳', '🤩', '🦄'];
 
-const faceRenderer = ({ index, selectedIndex }) => {
-  return (
-    <span className={index === selectedIndex ? 'lastOfSelection' : ''}>
-      {faces[index % faces.length]}
-    </span>
-  );
+const faceRenderer = ({ index }) => {
+  return faces[index % faces.length];
 };
 
 export const BluePicker = () => {
