@@ -46,6 +46,7 @@ const StarPickerButton = ({
         addSelection: hoverActive && !selected && inHoverRange, // hover active and button part of next suggested selection
         removeSelection: hoverActive && selected && !inHoverRange, // hover active but button not part of next suggested selection
         isHovered: hoverIndex === index, // button currently being hovered over
+        isClicked: index === selectedIndex, // button previously clicked to get the current selection
       })}
       type="button"
       onClick={handleClick}

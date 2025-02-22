@@ -2,18 +2,18 @@
 .StarPicker.faceTheme {
   display: flex;
 }
-.StarPicker.faceTheme .StarPickerButton span {
+.StarPicker.faceTheme .StarPickerButton {
   transition: font-size 0.2s;
   filter: grayscale();
   font-size: medium;
   width: 45px;
   height: 40px;
 }
-.StarPicker.faceTheme .StarPickerButton.isHovered span {
+.StarPicker.faceTheme .StarPickerButton.isHovered {
   font-size: x-large;
   filter: unset;
 }
-.StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection {
+.StarPicker.faceTheme .StarPickerButton.isClicked {
   font-size: xx-large;
   filter: unset;
   position: relative; /* Relative positioning for the ripple */
@@ -24,7 +24,7 @@
 }
 
 /* Create a ring ripple on click */
-.StarPicker.faceTheme .StarPickerButton.selected span.lastOfSelection::before {
+.StarPicker.faceTheme .StarPickerButton.isClicked::before {
   content: '';
   position: absolute;
   width: 30px; /* Initial width of the ripple ring */
