@@ -36,7 +36,6 @@ const StarPicker = ({
   name,
   className,
   starCount,
-  size = 34, // in px, used for font-size and width stylings
   disabled = false,
   halfStars = false,
   resettable = false,
@@ -59,10 +58,7 @@ const StarPicker = ({
   const numberButtons = halfStars ? 2 * count : count;
 
   return (
-    <div
-      className={`StarPicker${className ? ` ${className}` : ''}`}
-      style={{ fontSize: `${size}px` }}
-    >
+    <div className={`StarPicker${className ? ` ${className}` : ''}`}>
       {[...Array(numberButtons).keys()].map((i) => (
         <StarPickerButton
           key={`star-${i}`}
@@ -74,7 +70,6 @@ const StarPicker = ({
           starRenderer={starRenderer}
           halfStars={halfStars}
           disabled={disabled}
-          size={size}
         />
       ))}
     </div>

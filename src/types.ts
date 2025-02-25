@@ -18,8 +18,6 @@ export type SharedProps = {
   halfStars: boolean;
   /** whether the input is disabled */
   disabled: boolean;
-  /** the size of the stars in px (used for font-size, button widths). @deprecated To control the size of the stars, set the font-size property on the element with the StarPicker class via CSS instead. */
-  size: number;
 };
 
 export type StarPickerButtonContentProps = StarRendererProps & {

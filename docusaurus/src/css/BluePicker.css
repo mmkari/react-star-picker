@@ -1,4 +1,7 @@
 /* definitions for a "blueTheme" class and targeting button class names */
+.StarPicker.blueTheme {
+  font-size: 60px;
+}
 .StarPicker.blueTheme .StarPickerButton {
   transition: color 0.2s;
   color: #e4e4e4;
