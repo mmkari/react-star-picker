@@ -18,8 +18,6 @@ export type SharedProps = {
   halfStars: boolean;
   /** whether the input is disabled */
   disabled: boolean;
-  /** the size of the stars in px (used for font-size, button widths) */
-  size: number;
 };
 
 export type StarPickerButtonContentProps = StarRendererProps & {
