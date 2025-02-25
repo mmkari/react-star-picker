@@ -16,7 +16,6 @@ export const CustomPicker = () => {
       value={rating}
       onChange={setRating}
       starRenderer={customCharacterRenderer}
-      size={50}
     />
   );
 };

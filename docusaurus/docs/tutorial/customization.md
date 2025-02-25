@@ -41,7 +41,6 @@ const MyStarPicker = ({
       onChange={onChange}
       name={name}
       className={classnames('MyStarPicker', className)}
-      size={size}
       starCount={starCount}
       disabled={disabled}
       halfStars={halfStars}

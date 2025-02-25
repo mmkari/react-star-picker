@@ -9,7 +9,6 @@ export const RotatePicker = () => {
       className="rotateStar"
       value={rating}
       onChange={setRating}
-      size={45}
     />
   );
 };

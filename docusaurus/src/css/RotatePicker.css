@@ -1,4 +1,7 @@
 /* definitions for a "rotateStar" class */
+.StarPicker.rotateStar {
+  font-size: 45px;
+}
 .StarPicker.rotateStar .StarPickerButton .DefaultStarComponent {
   color: #bbdcb8;
   transition: transform 0.2s ease-in-out, color 0.4s;

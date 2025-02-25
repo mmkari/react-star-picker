@@ -1,4 +1,7 @@
 /* definitions for a "customCharacter" class */
+.StarPicker.customCharacter {
+  font-size: 50px;
+}
 .StarPicker.customCharacter .StarPickerButton {
   transition: color 0.2s, transform 0.2s;
   color: #e4e4e4;

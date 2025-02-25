@@ -19,7 +19,6 @@ export const BluePicker = () => {
       value={rating}
       onChange={setRating}
       starRenderer={simpleRenderer}
-      size={60}
       halfStars
     />
   );

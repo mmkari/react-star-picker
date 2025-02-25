@@ -8,7 +8,6 @@ export const LargePicker = () => {
     <StarPicker //
       value={rating}
       onChange={setRating}
-      size={50}
     />
   );
 };
