@@ -26,7 +26,7 @@ export default [
         dir: "lib/esm",
         format: 'esm',
         exports: 'named',
-        sourcemap: true,
+        sourcemap: false,
         globals,
         banner: `'use client';`,
         // preserveModules: true,
