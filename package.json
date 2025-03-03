@@ -1,6 +1,6 @@
 {
   "name": "react-star-picker",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "A star-rating component made with React",
   "type": "module",
   "exports": {
@@ -68,6 +68,7 @@
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",

@@ -1,14 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import css from 'rollup-plugin-css-only';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' with { type: "json" };
 import { dts } from "rollup-plugin-dts";
-import styles from "rollup-plugin-styles";
 import del from "rollup-plugin-delete"
 // import preserveDirectives from "rollup-plugin-preserve-directives";
+import postcss from 'rollup-plugin-postcss';
 
 const input = ['./src/index.ts'];
 
@@ -27,7 +26,7 @@ export default [
         dir: "lib/esm",
         format: 'esm',
         exports: 'named',
-        sourcemap: true,
+        sourcemap: false,
         globals,
         banner: `'use client';`,
         // preserveModules: true,
@@ -43,11 +42,10 @@ export default [
     plugins: [
       nodeResolve(),
       typescript({ tsconfig: './tsconfig.esm.json' }), 
-      css({
-        // Optional: filename to write all styles to
-        output: 'styles.css'
+      postcss({
+        minimize: { preset: 'default' },
+        extract: 'styles.css', // Extracts CSS into a separate file
       }),
-      styles(),
       commonjs(),
       // preserveDirectives(),
       terser({

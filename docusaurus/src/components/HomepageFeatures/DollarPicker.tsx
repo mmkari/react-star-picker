@@ -37,10 +37,10 @@ export const DollarPicker = () => {
 
   return (
     <StarPicker //
+      className="dollarPicker"
       value={rating}
       onChange={setRating}
       starRenderer={dollarRenderer}
-      size={50}
       starCount={4}
     />
   );

@@ -67,8 +67,3 @@ const ParentComponent = () => {
 [Styles](https://mmkari.github.io/react-star-picker/docs/tutorial/styling)
 
 [Examples](https://mmkari.github.io/react-star-picker/docs/examples)
-
-## Component APIs
-
-- [`<StarPicker />`](/docs/components/StarPicker.md)
-- [`starRenderer()`](/docs/components/StarRenderer.md)
