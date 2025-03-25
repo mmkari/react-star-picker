@@ -28,7 +28,6 @@ const MyStarPicker = ({
   onChange,
   name,
   className,
-  size = 42,
   starCount = 5,
   disabled = false,
   halfStars = true,
