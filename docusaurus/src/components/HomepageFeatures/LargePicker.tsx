@@ -6,6 +6,7 @@ export const LargePicker = () => {
 
   return (
     <StarPicker //
+      className="defaultPicker"
       value={rating}
       onChange={setRating}
     />
