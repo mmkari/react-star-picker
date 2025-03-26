@@ -4,6 +4,7 @@
 }
 
 .StarPicker.enlargeStar .StarPickerButton .DefaultStarComponent {
+  color: #e4e4e4;
   transition: transform 0.2s ease-in-out, color 0.4s;
 }
 .StarPicker.enlargeStar .StarPickerButton.selected .DefaultStarComponent {
