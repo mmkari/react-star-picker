@@ -8,7 +8,7 @@ import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
-    ignores: ['babel.config.js', 'dist-examples/**', 'dist/**', 'lib/**'],
+    ignores: ['babel.config.js', 'docusaurus/**', 'lib/**'],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: tsParser,
