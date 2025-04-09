@@ -5,3 +5,4 @@ styleguidistHtml
 src/*.d.ts
 src/*.d.ts.map
 lib
+package-lock.json
