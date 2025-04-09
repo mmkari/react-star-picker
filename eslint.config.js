@@ -1,16 +1,17 @@
-const airbnbBase = require('eslint-config-airbnb');
-const tsEslint = require('@typescript-eslint/eslint-plugin');
-const prettier = require('eslint-plugin-prettier');
-const react = require('eslint-plugin-react');
-const jsxA11y = require('eslint-plugin-jsx-a11y');
-const imports = require('eslint-plugin-import');
+import airbnbBase from 'eslint-config-airbnb';
+import tsEslint from '@typescript-eslint/eslint-plugin';
+import prettier from 'eslint-plugin-prettier';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import imports from 'eslint-plugin-import';
+import tsParser from '@typescript-eslint/parser';
 
-module.exports = [
+export default [
   {
-    ignores: ['babel.config.js', 'lib/**'],
+    ignores: ['babel.config.js', 'dist-examples/**', 'dist/**', 'lib/**'],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: require('@typescript-eslint/parser'),
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
