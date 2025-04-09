@@ -92,9 +92,6 @@ importers:
       rollup-plugin-postcss:
         specifier: ^4.0.2
         version: 4.0.2(postcss@8.5.3)
-      rollup-plugin-preserve-directives:
-        specifier: ^0.4.0
-        version: 0.4.0(rollup@4.39.0)
       rollup-plugin-styles:
         specifier: ^4.0.0
         version: 4.0.0(rollup@4.39.0)
@@ -2435,11 +2432,6 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       postcss: 8.x
-
-  rollup-plugin-preserve-directives@0.4.0:
-    resolution: {integrity: sha512-gx4nBxYm5BysmEQS+e2tAMrtFxrGvk+Pe5ppafRibQi0zlW7VYAbEGk6IKDw9sJGPdFWgVTE0o4BU4cdG0Fylg==}
-    peerDependencies:
-      rollup: 2.x || 3.x || 4.x
 
   rollup-plugin-styles@4.0.0:
     resolution: {integrity: sha512-A2K2sao84OsTmDxXG83JTCdXWrmgvQkkI38XDat46rdtpGMRm9tSYqeCdlwwGDJF4kKIafhV1mUidqu8MxUGig==}
@@ -5489,12 +5481,6 @@ snapshots:
       style-inject: 0.3.0
     transitivePeerDependencies:
       - ts-node
-
-  rollup-plugin-preserve-directives@0.4.0(rollup@4.39.0):
-    dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.39.0)
-      magic-string: 0.30.17
-      rollup: 4.39.0
 
   rollup-plugin-styles@4.0.0(rollup@4.39.0):
     dependencies:
