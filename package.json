@@ -15,7 +15,7 @@
   "types": "lib/esm/index.d.ts",
   "main": "lib/esm/index.js",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "pnpm build",
     "lint": "eslint .",
     "build": "rm -rf lib/* && rollup --config"
   },
