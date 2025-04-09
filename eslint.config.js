@@ -7,6 +7,7 @@ const imports = require('eslint-plugin-import');
 
 module.exports = [
   {
+    ignores: ['babel.config.js', 'lib/**'],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: require('@typescript-eslint/parser'),
