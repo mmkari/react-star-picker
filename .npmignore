@@ -5,3 +5,4 @@ src
 docusaurus
 rollup.config.mjs
 tsconfig*.json
+eslint.config.js
