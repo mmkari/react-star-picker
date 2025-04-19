@@ -1,13 +1,7 @@
 node_modules
-# dist
-dist-examples
-styleguidistHtml
-config
 docs
 src
-examples
-styleguide.config.js
-tsconfig.json
 .*
 docusaurus
 rollup.config.mjs
+tsconfig*.json
